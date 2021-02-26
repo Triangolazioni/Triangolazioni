@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Triangolazioni</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+<style>
+
+@font-face {
+  font-family: PoppinsMedium;
+  src: url(Poppins-Medium.ttf);
+}
+
+html, body {
+  font-family: PoppinsMedium;
+  padding:0px; margin:0px;
+  height:100%;
+}
+
+#container {
+  position: relative;
+  width: 500px;
+}
+
+#map {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;      
+}
+
+#windowbg {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  
+  background-color: rgba(255, 255, 255, 0);     
+}
+
+#windowbg.shown {
+  display: inline;
+
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0.001;}
+  100% {opacity: 1;}
+}
+
+#window {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 1);
+  overflow-y: scroll;
+  border-radius: 2%;
+}
+
+.section {
+  display: none;
+}
+
+.section.shown {
+  display: inline;
+}
+
+.x {
+  position: fixed;
+  right: 5%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
+
+button {
+  border-style: none;
+}
+
+h1 {
+  text-align:center
+}
+
+iframe {
+  position: relative;
+  left: 5%;
+  width: 90%;
+}
+
+</style>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="map"></div>
+
+<div id="windowbg">
+<div id="window">
+<button class="x" onclick="window_close()"><img src="x.svg"></button>
+<div class="section" id="illuminazione">
+ILLUMINAZIONE
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur lorem a ligula eleifend, vitae aliquam tortor pretium. Aliquam porttitor tortor et erat aliquam condimentum. Aliquam purus purus, placerat a erat non, sagittis posuere libero. Maecenas rhoncus ipsum ut elit volutpat porta. Curabitur vel pellentesque leo. Nullam mi mauris, elementum eget rhoncus sed, lobortis vestibulum dolor. Sed eu ligula vitae nisl consequat vestibulum vitae nec nisl. In ultricies accumsan ex, nec tempor nulla vulputate eu. Pellentesque nec risus leo. Duis semper sit amet eros sit amet auctor. Etiam aliquet diam sed lacinia ultricies. Morbi vitae semper odio, eu gravida tortor. Nulla scelerisque enim mattis libero porta, at mollis orci scelerisque. Sed dignissim, sapien nec lacinia venenatis, nisi risus aliquam est, sit amet consectetur lacus ante at mi.
+
+In nec posuere lacus, ac gravida risus. Quisque non lectus sit amet massa ullamcorper porta. Curabitur sed libero tortor. Donec fermentum imperdiet nisi, nec viverra massa pharetra vel. Aliquam at diam eu nulla efficitur feugiat. Integer posuere arcu vitae lectus accumsan, dictum finibus odio tincidunt. Pellentesque lobortis nisi risus, vel euismod tortor pharetra a. Praesent nec metus urna.
+
+Duis augue tellus, interdum in sodales eu, volutpat sit amet massa. Nam vel nisl placerat arcu ornare condimentum nec ut tortor. Praesent hendrerit maximus euismod. Pellentesque a lorem quis sapien laoreet gravida sit amet sit amet augue. Nulla viverra dolor eros, et ultrices nisl porttitor eu. Praesent et porttitor libero, vel rutrum magna. Integer non sagittis ante. Curabitur hendrerit tortor ut magna sodales egestas. Proin tristique ipsum vel lacus laoreet suscipit. Vivamus sodales nulla nec nisi finibus feugiat. Maecenas nec iaculis felis. Suspendisse eu lorem ac velit lobortis accumsan. Nunc nunc arcu, placerat laoreet interdum vitae, pharetra vitae libero. Quisque neque nisi, elementum eu laoreet ut, scelerisque ac tortor. Proin vulputate orci eu arcu scelerisque, eu feugiat massa vestibulum.
+
+Nullam velit risus, sodales ut luctus et, sollicitudin sed nulla. Praesent sed sapien cursus, tempor ipsum id, dignissim sapien. Aliquam in suscipit ex. Nullam cursus, massa at varius tempor, neque enim maximus lectus, vitae lacinia dui lacus et magna. Suspendisse potenti. Nam suscipit metus nisl, quis laoreet nibh placerat vitae. Cras nunc eros, hendrerit ut nunc a, suscipit luctus purus. Sed auctor facilisis tortor nec luctus. Morbi massa felis, aliquet vitae magna sed, tincidunt suscipit purus. Sed dapibus bibendum ullamcorper. Integer vitae turpis dictum, sodales felis quis, vehicula dolor. In tempor pharetra tortor sed venenatis.
+
+Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere a risus. Nullam quis magna justo. Etiam et risus ligula. Maecenas ut pellentesque turpis. Duis volutpat, leo a efficitur sagittis, mauris eros semper elit, nec ullamcorper erat tellus et urna. Aenean posuere orci odio, a faucibus sapien tempus sagittis. In hac habitasse platea dictumst. Aliquam vehicula in nibh sed egestas. Donec ac gravida turpis. Mauris viverra facilisis quam, eu fringilla massa lobortis quis. Donec eu aliquam tortor. Fusce eget venenatis dolor, sit amet iaculis eros. In tristique mi eu nunc porttitor, vel vestibulum nisl mollis. Maecenas facilisis mi hendrerit, dictum neque eget, consectetur sapien. 
+</div>
+
+<div class="section" id="inventori">
+<h1>TRA SCIENZA E INDUSTRIA</h1>
+<iframe width="560" height="349" src="https://www.youtube.com/embed/3sCMMhHOmDQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.
+</div>
+<div class="section" id="industria">
+<h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
+<iframe width="729" height="410" src="https://www.youtube.com/embed/VkE_EJAtTtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur lorem a ligula eleifend, vitae aliquam tortor pretium. Aliquam porttitor tortor et erat aliquam condimentum. Aliquam purus purus, placerat a erat non, sagittis posuere libero. Maecenas rhoncus ipsum ut elit volutpat porta. Curabitur vel pellentesque leo. Nullam mi mauris, elementum eget rhoncus sed, lobortis vestibulum dolor. Sed eu ligula vitae nisl consequat vestibulum vitae nec nisl. In ultricies accumsan ex, nec tempor nulla vulputate eu. Pellentesque nec risus leo. Duis semper sit amet eros sit amet auctor. Etiam aliquet diam sed lacinia ultricies. Morbi vitae semper odio, eu gravida tortor. Nulla scelerisque enim mattis libero porta, at mollis orci scelerisque. Sed dignissim, sapien nec lacinia venenatis, nisi risus aliquam est, sit amet consectetur lacus ante at mi.
+
+In nec posuere lacus, ac gravida risus. Quisque non lectus sit amet massa ullamcorper porta. Curabitur sed libero tortor. Donec fermentum imperdiet nisi, nec viverra massa pharetra vel. Aliquam at diam eu nulla efficitur feugiat. Integer posuere arcu vitae lectus accumsan, dictum finibus odio tincidunt. Pellentesque lobortis nisi risus, vel euismod tortor pharetra a. Praesent nec metus urna.
+
+Duis augue tellus, interdum in sodales eu, volutpat sit amet massa. Nam vel nisl placerat arcu ornare condimentum nec ut tortor. Praesent hendrerit maximus euismod. Pellentesque a lorem quis sapien laoreet gravida sit amet sit amet augue. Nulla viverra dolor eros, et ultrices nisl porttitor eu. Praesent et porttitor libero, vel rutrum magna. Integer non sagittis ante. Curabitur hendrerit tortor ut magna sodales egestas. Proin tristique ipsum vel lacus laoreet suscipit. Vivamus sodales nulla nec nisi finibus feugiat. Maecenas nec iaculis felis. Suspendisse eu lorem ac velit lobortis accumsan. Nunc nunc arcu, placerat laoreet interdum vitae, pharetra vitae libero. Quisque neque nisi, elementum eu laoreet ut, scelerisque ac tortor. Proin vulputate orci eu arcu scelerisque, eu feugiat massa vestibulum.
+
+Nullam velit risus, sodales ut luctus et, sollicitudin sed nulla. Praesent sed sapien cursus, tempor ipsum id, dignissim sapien. Aliquam in suscipit ex. Nullam cursus, massa at varius tempor, neque enim maximus lectus, vitae lacinia dui lacus et magna. Suspendisse potenti. Nam suscipit metus nisl, quis laoreet nibh placerat vitae. Cras nunc eros, hendrerit ut nunc a, suscipit luctus purus. Sed auctor facilisis tortor nec luctus. Morbi massa felis, aliquet vitae magna sed, tincidunt suscipit purus. Sed dapibus bibendum ullamcorper. Integer vitae turpis dictum, sodales felis quis, vehicula dolor. In tempor pharetra tortor sed venenatis.
+
+Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere a risus. Nullam quis magna justo. Etiam et risus ligula. Maecenas ut pellentesque turpis. Duis volutpat, leo a efficitur sagittis, mauris eros semper elit, nec ullamcorper erat tellus et urna. Aenean posuere orci odio, a faucibus sapien tempus sagittis. In hac habitasse platea dictumst. Aliquam vehicula in nibh sed egestas. Donec ac gravida turpis. Mauris viverra facilisis quam, eu fringilla massa lobortis quis. Donec eu aliquam tortor. Fusce eget venenatis dolor, sit amet iaculis eros. In tristique mi eu nunc porttitor, vel vestibulum nisl mollis. Maecenas facilisis mi hendrerit, dictum neque eget, consectetur sapien. 
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  let map = L.map("map").setView([45.0692, 7.6826], 13);
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2lhY29tby1tYWxldHRvIiwiYSI6ImNrbGN3dTljNzBjemIycHA3ZnB1MHhmcDMifQ.uTBNVA8j81yiDB0_NHj3GA', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/light-v10',
+    tileSize: 512,
+    zoomOffset: -1,
+    detectRetina: true
+  }).addTo(map);
+
+  let blackIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  let blueIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  let goldIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  let redIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  let sobrero_xy = [45.06818, 7.68989]
+  let ferraris_xy = [45.06457, 7.68698]
+  let cruto_xy = [45.0522, 7.6865]
+  let gasdotto_xy = [45.07202, 7.7018]
+  let fiat_xy = [45.02704,7.63707]
+  let olivetti_xy = [45.45358, 7.8649]
+  let leumann_xy = [45.07132,7.55793]
+
+  let sobrero_marker =  L.marker(sobrero_xy,  {icon: blackIcon}).addTo(map);
+  let ferraris_marker = L.marker(ferraris_xy, {icon: blackIcon}).addTo(map);
+  let cruto_marker =    L.marker(cruto_xy,    {icon: blackIcon}).addTo(map);
+  let gasdotto_marker = L.marker(gasdotto_xy, {icon: blackIcon}).addTo(map);
+  let fiat_marker =     L.marker(fiat_xy,     {icon: blackIcon}).addTo(map);
+  let olivetti_marker = L.marker(olivetti_xy, {icon: blackIcon}).addTo(map);
+  let leumann_marker =  L.marker(leumann_xy,  {icon: blackIcon}).addTo(map);
+
+  //il name non deve avere spazi, e coincide con l'id della relativa sezione
+  let illuminazione = {
+    name:"illuminazione",
+    vertices_xy:[gasdotto_xy, ferraris_xy, cruto_xy],
+    vertices_markers:[gasdotto_marker, ferraris_marker, cruto_marker],
+    map_color_unselected:"#98c1d9",
+    map_color_selected:"#457b9d",
+    map_icon_selected:blueIcon,
+    zoom:13,
+  }
+
+  let inventori = {
+    name:"inventori",
+    vertices_xy:[sobrero_xy, ferraris_xy, cruto_xy],
+    vertices_markers:[sobrero_marker, ferraris_marker, cruto_marker],
+    map_color_unselected:"#ffea00",
+    map_color_selected:"#ffd500",
+    map_icon_selected:goldIcon,
+    zoom:13,
+  }
+
+  let industria = {
+    name:"industria",
+    vertices_xy:[fiat_xy, olivetti_xy, leumann_xy],
+    vertices_markers:[fiat_marker, olivetti_marker, leumann_marker],
+    map_color_unselected:"#eaac8b",
+    map_color_selected:"#e5383b",
+    map_icon_selected:redIcon,
+    zoom:9,
+  }
+
+  //l'ordine è importante: vengono disegnati in quell'ordine
+  let triangoli = [illuminazione, inventori, industria]
+
+  let sel_t = false
+
+  //per salvare la posizione precendente al click
+  saved_xy = map.getCenter()
+  saved_zoom = map.getZoom()
+
+  function clicked_triangle(clicked_t){
+    if(sel_t !== false){
+      sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
+      for(let v of sel_t.vertices_markers){v.setIcon(blackIcon)}
+    }
+
+    sel_t = clicked_t
+    sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
+    for(let v of sel_t.vertices_markers){v.setIcon(sel_t.map_icon_selected)}
+    saved_xy = map.getCenter()
+    saved_zoom = map.getZoom()
+    map.setView(sel_t.center_xy, sel_t.zoom);
+    document.getElementById("windowbg").classList.add("shown");
+    document.getElementById(sel_t.name).classList.add("shown");
+    map.zoomControl.remove()
+  }
+
+  function window_close(){
+    sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
+    for(let v of sel_t.vertices_markers){v.setIcon(blackIcon)}
+    map.setView(saved_xy, saved_zoom);
+    document.getElementById("windowbg").classList.remove("shown");
+    document.getElementById(sel_t.name).classList.remove("shown");
+    map.zoomControl.add()
+    sel_t = false
+  }
+
+  //inizializzo robe
+  for(let t of triangoli){
+    t.polygon = L.polygon(t.vertices_xy, {color: t.map_color_unselected}).addTo(map)
+    t.polygon.on("click", function(){clicked_triangle(t)})
+    for(let v of t.vertices_markers){v.on("click", function(){clicked_triangle(t)})}
+
+    let barycenter = [
+      (t.vertices_xy[0][0]+t.vertices_xy[1][0]+t.vertices_xy[2][0])/3,
+      (t.vertices_xy[0][1]+t.vertices_xy[1][1]+t.vertices_xy[2][1])/3
+    ]
+    t.center_xy = [barycenter[0]-0*2**(7.6-t.zoom), barycenter[1]]
+  }
+
+</script>
+
+</body>
+</html>
