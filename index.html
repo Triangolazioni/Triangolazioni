@@ -212,7 +212,18 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     iconSize: [30, 30],
     iconAnchor: [15, 30],
     popupAnchor: [15, 0],
-    shadowSize: [60, 30],
+    shadowSize: [60, 15],
+    shadowAnchor: [15, 15],
+  });
+
+  let museoIcon = new L.icon({
+    iconUrl: 'museoIcon.png',
+    shadowUrl: 'museoShadow.png',
+    iconSize: [50, 20],
+    iconAnchor: [25, 20],
+    popupAnchor: [25, 0],
+    shadowSize: [80, 20],
+    shadowAnchor: [25, 18],
   });
 
   let sobrero_xy = [45.06818, 7.68989]
@@ -224,7 +235,7 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
   let leumann_xy = [45.07132,7.55793]
 
   let sobrero_marker =  L.marker(sobrero_xy,  {icon: blackIcon}).addTo(map);
-  let ferraris_marker = L.marker(ferraris_xy, {icon: blackIcon}).addTo(map);
+  let ferraris_marker = L.marker(ferraris_xy, {icon: museoIcon}).addTo(map);
   let cruto_marker =    L.marker(cruto_xy,    {icon: blackIcon}).addTo(map);
   let gasdotto_marker = L.marker(gasdotto_xy, {icon: gasIcon}).addTo(map);
   let fiat_marker =     L.marker(fiat_xy,     {icon: blackIcon}).addTo(map);
