@@ -351,6 +351,8 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     }
 
     sel_t = clicked_t
+
+    for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
     sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
 
     for(let n of nodes){n.marker.setOpacity(0)}
@@ -368,7 +370,9 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
   }
 
   function window_close(){
-    sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
+    for(let t of triangoli){
+      t.polygon.setStyle({color: t.map_color_unselected, fillOpacity:0.2})
+    }
 
     for(let n of nodes){n.marker.setOpacity(1)}
     for(let v of sel_t.vertices){v.marker.setIcon(v.BW)}
