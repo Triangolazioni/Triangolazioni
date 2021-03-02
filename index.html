@@ -170,24 +170,6 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     detectRetina: true
   }).addTo(map);
 
-  let leumann_icon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  let leumann_BW = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
   let gasometro_icon = new L.icon({
     iconUrl: 'gasIcon.png',
     shadowUrl: 'gasShadow.png',
@@ -296,6 +278,26 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowAnchor: [15, 15],
   });
 
+  let leumann_icon = new L.icon({
+    iconUrl: 'leumannIcon.png',
+    shadowUrl: 'leumannShadow.png',
+    iconSize: [60, 30],
+    iconAnchor: [30, 30],
+    popupAnchor: [30, 0],
+    shadowSize: [80, 30],
+    shadowAnchor: [30, 30],
+  });
+
+  let leumann_BW = new L.icon({
+    iconUrl: 'leumannBW.png',
+    shadowUrl: 'leumannShadow.png',
+    iconSize: [60, 30],
+    iconAnchor: [30, 30],
+    popupAnchor: [30, 0],
+    shadowSize: [80, 30],
+    shadowAnchor: [30, 30],
+  });
+
   let sobrero   = {xy:[45.06818, 7.68989], icon:sobrero_icon,   BW:sobrero_BW}
   let ferraris  = {xy:[45.06457, 7.68698], icon:ferraris_icon,  BW:ferraris_BW}
   let cruto     = {xy:[45.0522, 7.6865],   icon:cruto_icon,     BW:cruto_BW}
@@ -350,6 +352,9 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
 
     sel_t = clicked_t
     sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
+
+    for(let n of nodes){n.marker.setOpacity(0)}
+    for(let v of sel_t.vertices){v.marker.setOpacity(1)}
     for(let v of sel_t.vertices){v.marker.setIcon(v.icon)}
 
     document.getElementById("windowbg").classList.add("shown");
@@ -364,6 +369,8 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
 
   function window_close(){
     sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
+
+    for(let n of nodes){n.marker.setOpacity(1)}
     for(let v of sel_t.vertices){v.marker.setIcon(v.BW)}
 
     document.getElementById("windowbg").classList.remove("shown");
