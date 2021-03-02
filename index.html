@@ -51,7 +51,7 @@ html, body {
   display: inline;
 
   animation-name: fadeIn;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -170,34 +170,7 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     detectRetina: true
   }).addTo(map);
 
-  let blackIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  let blueIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  let goldIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  let redIcon = new L.Icon({
+  let leumann_icon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
@@ -206,7 +179,16 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowSize: [41, 41]
   });
 
-  let gasIcon = new L.icon({
+  let leumann_BW = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  let gasometro_icon = new L.icon({
     iconUrl: 'gasIcon.png',
     shadowUrl: 'gasShadow.png',
     iconSize: [30, 30],
@@ -216,7 +198,17 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowAnchor: [15, 15],
   });
 
-  let museoIcon = new L.icon({
+  let ferraris_icon = new L.icon({
+    iconUrl: 'museoIcon.png',
+    shadowUrl: 'museoShadow.png',
+    iconSize: [50, 20],
+    iconAnchor: [50, 20],
+    popupAnchor: [25, 0],
+    shadowSize: [80, 20],
+    shadowAnchor: [50, 18],
+  });
+
+  let ferraris_BW = new L.icon({
     iconUrl: 'museoBW.png',
     shadowUrl: 'museoShadow.png',
     iconSize: [50, 20],
@@ -226,7 +218,16 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowAnchor: [50, 18],
   });
 
-  let luceIcon = new L.icon({
+  let cruto_icon = new L.icon({
+    iconUrl: 'luceIcon.png',
+    shadowUrl: 'luceShadow.png',
+    iconSize: [22, 30],
+    iconAnchor: [11, 30],
+    popupAnchor: [11, 0],
+    shadowSize: [50, 30],
+  });
+
+  let cruto_BW = new L.icon({
     iconUrl: 'luceBW.png',
     shadowUrl: 'luceShadow.png',
     iconSize: [22, 30],
@@ -235,7 +236,17 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowSize: [50, 30],
   });
 
-  let nitroIcon = new L.icon({
+  let sobrero_icon = new L.icon({
+    iconUrl: 'nitroIcon.png',
+    shadowUrl: 'nitroShadow.png',
+    iconSize: [50, 50],
+    iconAnchor: [25, 45],
+    popupAnchor: [25, 0],
+    shadowSize: [75, 25],
+    shadowAnchor: [25, 30],
+  });
+
+  let sobrero_BW = new L.icon({
     iconUrl: 'nitroBW.png',
     shadowUrl: 'nitroShadow.png',
     iconSize: [50, 50],
@@ -245,70 +256,81 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowAnchor: [25, 30],
   });
 
-  let fiatIcon = new L.icon({
+  let fiat_icon = new L.icon({
+    iconUrl: 'fiatIcon.png',
+    shadowUrl: 'fiatShadow.png',
+    iconSize: [30, 20],
+    iconAnchor: [15, 20],
+    popupAnchor: [15, 0],
+    shadowSize: [60, 10],
+    shadowAnchor: [15, 10],
+  });
+
+  let fiat_BW = new L.icon({
     iconUrl: 'fiatBW.png',
     shadowUrl: 'fiatShadow.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
+    iconSize: [30, 20],
+    iconAnchor: [15, 20],
     popupAnchor: [15, 0],
-    shadowSize: [60, 15],
-    shadowAnchor: [15, 15],
+    shadowSize: [60, 10],
+    shadowAnchor: [15, 10],
   });
 
-  let olivettiIcon = new L.icon({
-    iconUrl: 'olivettiLogo.png',
+  let olivetti_icon = new L.icon({
+    iconUrl: 'olivettiIcon.png',
     shadowUrl: 'olivettiShadow.png',
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
+    iconSize: [30, 25],
+    iconAnchor: [15, 25],
     popupAnchor: [15, 0],
     shadowSize: [60, 15],
     shadowAnchor: [15, 15],
   });
 
-  let sobrero_xy = [45.06818, 7.68989]
-  let ferraris_xy = [45.06457, 7.68698]
-  let cruto_xy = [45.0522, 7.6865]
-  let gasdotto_xy = [45.07202, 7.7018]
-  let fiat_xy = [45.02704,7.63707]
-  let olivetti_xy = [45.45358, 7.8649]
-  let leumann_xy = [45.07132,7.55793]
+  let olivetti_BW = new L.icon({
+    iconUrl: 'olivettiBW.png',
+    shadowUrl: 'olivettiShadow.png',
+    iconSize: [30, 25],
+    iconAnchor: [15, 25],
+    popupAnchor: [15, 0],
+    shadowSize: [60, 15],
+    shadowAnchor: [15, 15],
+  });
 
-  let sobrero_marker =  L.marker(sobrero_xy,  {icon: nitroIcon}).addTo(map);
-  let ferraris_marker = L.marker(ferraris_xy, {icon: museoIcon}).addTo(map);
-  let cruto_marker =    L.marker(cruto_xy,    {icon: luceIcon}).addTo(map);
-  let gasdotto_marker = L.marker(gasdotto_xy, {icon: gasIcon}).addTo(map);
-  let fiat_marker =     L.marker(fiat_xy,     {icon: fiatIcon}).addTo(map);
-  let olivetti_marker = L.marker(olivetti_xy, {icon: olivettiIcon}).addTo(map);
-  let leumann_marker =  L.marker(leumann_xy,  {icon: blackIcon}).addTo(map);
+  let sobrero   = {xy:[45.06818, 7.68989], icon:sobrero_icon,   BW:sobrero_BW}
+  let ferraris  = {xy:[45.06457, 7.68698], icon:ferraris_icon,  BW:ferraris_BW}
+  let cruto     = {xy:[45.0522, 7.6865],   icon:cruto_icon,     BW:cruto_BW}
+  let gasometro = {xy:[45.07202, 7.7018],  icon:gasometro_icon, BW:gasometro_icon}
+  let fiat      = {xy:[45.02704,7.63707],  icon:fiat_icon,      BW:fiat_BW}
+  let olivetti  = {xy:[45.45358, 7.8649],  icon:olivetti_icon,  BW:olivetti_BW}
+  let leumann   = {xy:[45.07132,7.55793],  icon:leumann_icon,   BW:leumann_BW}
+
+  let nodes = [sobrero, ferraris, cruto, gasometro, fiat, olivetti, leumann]
+  for(let n of nodes){
+    n.marker = L.marker(n.xy,  {icon: n.BW}).addTo(map);
+  }
 
   //il name non deve avere spazi, e coincide con l'id della relativa sezione
   let illuminazione = {
     name:"illuminazione",
-    vertices_xy:[gasdotto_xy, ferraris_xy, cruto_xy],
-    vertices_markers:[gasdotto_marker, ferraris_marker, cruto_marker],
+    vertices:[gasometro, ferraris, cruto],
     map_color_unselected:"#98c1d9",
     map_color_selected:"#457b9d",
-    map_icon_selected:blueIcon,
     zoom:13,
   }
 
   let inventori = {
     name:"inventori",
-    vertices_xy:[sobrero_xy, ferraris_xy, cruto_xy],
-    vertices_markers:[sobrero_marker, ferraris_marker, cruto_marker],
+    vertices:[sobrero, ferraris, cruto],
     map_color_unselected:"#ffea00",
     map_color_selected:"#ffd500",
-    map_icon_selected:goldIcon,
     zoom:13,
   }
 
   let industria = {
     name:"industria",
-    vertices_xy:[fiat_xy, olivetti_xy, leumann_xy],
-    vertices_markers:[fiat_marker, olivetti_marker, leumann_marker],
+    vertices:[fiat, olivetti, leumann],
     map_color_unselected:"#eaac8b",
     map_color_selected:"#e5383b",
-    map_icon_selected:redIcon,
     zoom:9,
   }
 
@@ -318,48 +340,54 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
   let sel_t = false
 
   //per salvare la posizione precendente al click
-  saved_xy = map.getCenter()
-  saved_zoom = map.getZoom()
+  let saved_xy = map.getCenter()
+  let saved_zoom = map.getZoom()
 
   function clicked_triangle(clicked_t){
     if(sel_t !== false){
-      sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
-      for(let v of sel_t.vertices_markers){v.setIcon(blackIcon)}
+      alert("Non sarebbe dovuto succedere!")
     }
 
     sel_t = clicked_t
     sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
-    for(let v of sel_t.vertices_markers){v.setIcon(sel_t.map_icon_selected)}
+    for(let v of sel_t.vertices){v.marker.setIcon(v.icon)}
+
+    document.getElementById("windowbg").classList.add("shown");
+    document.getElementById(sel_t.name).classList.add("shown");
+
     saved_xy = map.getCenter()
     saved_zoom = map.getZoom()
     map.setView(sel_t.center_xy, sel_t.zoom);
-    document.getElementById("windowbg").classList.add("shown");
-    document.getElementById(sel_t.name).classList.add("shown");
+    //rimuove bottoni zoom (antiestetici)
     map.zoomControl.remove()
   }
 
   function window_close(){
     sel_t.polygon.setStyle({color: sel_t.map_color_unselected, fillOpacity:0.2})
-    for(let v of sel_t.vertices_markers){v.setIcon(blackIcon)}
-    map.setView(saved_xy, saved_zoom);
+    for(let v of sel_t.vertices){v.marker.setIcon(v.BW)}
+
     document.getElementById("windowbg").classList.remove("shown");
     document.getElementById(sel_t.name).classList.remove("shown");
-    map.zoomControl.add()
+    
+    map.setView(saved_xy, saved_zoom);
+    map.zoomControl.addTo(map)
+
     sel_t = false
   }
 
   //inizializzo robe
   for(let t of triangoli){
-    t.polygon = L.polygon(t.vertices_xy, {color: t.map_color_unselected}).addTo(map)
+    let vertices = [t.vertices[0].xy, t.vertices[1].xy, t.vertices[2].xy]
+    t.polygon = L.polygon(vertices, {color: t.map_color_unselected}).addTo(map)
     t.polygon.on("click", function(){clicked_triangle(t)})
-    for(let v of t.vertices_markers){v.on("click", function(){clicked_triangle(t)})}
 
-    let barycenter = [
-      (t.vertices_xy[0][0]+t.vertices_xy[1][0]+t.vertices_xy[2][0])/3,
-      (t.vertices_xy[0][1]+t.vertices_xy[1][1]+t.vertices_xy[2][1])/3
+    t.center_xy = [
+      (t.vertices[0].xy[0]+t.vertices[1].xy[0]+t.vertices[2].xy[0])/3,
+      (t.vertices[0].xy[1]+t.vertices[1].xy[1]+t.vertices[2].xy[1])/3
     ]
-    t.center_xy = [barycenter[0]-0*2**(7.6-t.zoom), barycenter[1]]
   }
+
+  //setInterval(function(){alert(sel_t)}, 3000)
 
 </script>
 
