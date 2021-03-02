@@ -89,11 +89,11 @@ html, body {
 }
 
 .section {
-  max-height: 0;
+  display: none;
 }
 
 .section.shown {
-  max-height: auto;
+  display: inline;
 }
 
 .x {
@@ -135,7 +135,7 @@ iframe {
 <div id="windowbg">
 <div id="window">
 <button class="x" onclick="window_close()"><img src="x.svg"></button>
-<div class="section" id="illuminazione">
+<div class="section" id="intro illuminazione">
 ILLUMINAZIONE PUBBLICA
 Di notte la città si accende: i lampioni illuminano le strade e l'attività urbana non si ferma con il calare del sole. 
 Non è sempre stato così. Dal gas all'energia elettrica, la storia dell'illuminazione pubblica è lunga e composta da diverse fasi, date dal susseguirsi di innovazioni tecnologiche. L'opera di personalità importanti come Galileo Ferraris e l'ingegno di inventori come Alessandro Cruto hanno contribuito a questa impresa, che ha rivoluzionato la nostra quotidianità.
@@ -149,13 +149,16 @@ Nullam velit risus, sodales ut luctus et, sollicitudin sed nulla. Praesent sed s
 Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere a risus. Nullam quis magna justo. Etiam et risus ligula. Maecenas ut pellentesque turpis. Duis volutpat, leo a efficitur sagittis, mauris eros semper elit, nec ullamcorper erat tellus et urna. Aenean posuere orci odio, a faucibus sapien tempus sagittis. In hac habitasse platea dictumst. Aliquam vehicula in nibh sed egestas. Donec ac gravida turpis. Mauris viverra facilisis quam, eu fringilla massa lobortis quis. Donec eu aliquam tortor. Fusce eget venenatis dolor, sit amet iaculis eros. In tristique mi eu nunc porttitor, vel vestibulum nisl mollis. Maecenas facilisis mi hendrerit, dictum neque eget, consectetur sapien. 
 </div>
 
-<div class="section" id="inventori">
+<div class="section" id="intro inventori">
 <h1>TRA SCIENZA E INDUSTRIA</h1>
+
 <iframe width="560" height="349" src="https://www.youtube.com/embed/3sCMMhHOmDQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.
 </div>
-<div class="section" id="industria">
+
+
+<div class="section" id="intro industria">
 <h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
 <iframe width="729" height="410" src="https://www.youtube.com/embed/VkE_EJAtTtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur lorem a ligula eleifend, vitae aliquam tortor pretium. Aliquam porttitor tortor et erat aliquam condimentum. Aliquam purus purus, placerat a erat non, sagittis posuere libero. Maecenas rhoncus ipsum ut elit volutpat porta. Curabitur vel pellentesque leo. Nullam mi mauris, elementum eget rhoncus sed, lobortis vestibulum dolor. Sed eu ligula vitae nisl consequat vestibulum vitae nec nisl. In ultricies accumsan ex, nec tempor nulla vulputate eu. Pellentesque nec risus leo. Duis semper sit amet eros sit amet auctor. Etiam aliquet diam sed lacinia ultricies. Morbi vitae semper odio, eu gravida tortor. Nulla scelerisque enim mattis libero porta, at mollis orci scelerisque. Sed dignissim, sapien nec lacinia venenatis, nisi risus aliquam est, sit amet consectetur lacus ante at mi.
@@ -358,6 +361,10 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
   //per salvare la posizione precendente al click
   let saved_xy = map.getCenter()
   let saved_zoom = map.getZoom()
+
+  function jumpTo(divName){
+
+  }
 
   function clicked_triangle(clicked_t){
     if(sel_t !== false){
