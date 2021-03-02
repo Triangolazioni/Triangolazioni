@@ -11,6 +11,20 @@
 
 <style>
 
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2.25rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.75rem;}
+h5 {font-size: 1.5rem;}
+h6 {font-size: 1.25rem;}
+p {font-size: 1rem;}
+
+@media (max-width: 480px) {html {font-size: 15px;}}
+@media (min-width: 480px) {html {font-size: 16px;}}
+@media (min-width: 768px) {html {font-size: 17px;}}
+@media (min-width: 992px) {html {font-size: 18px;}}
+@media (min-width: 1200px) {html {font-size: 20px;}}
+
 @font-face {
   font-family: PoppinsMedium;
   src: url(Poppins-Medium.ttf);
@@ -75,11 +89,11 @@ html, body {
 }
 
 .section {
-  display: none;
+  max-height: 0;
 }
 
 .section.shown {
-  display: inline;
+  max-height: auto;
 }
 
 .x {
