@@ -220,10 +220,10 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     iconUrl: 'museoBW.png',
     shadowUrl: 'museoShadow.png',
     iconSize: [50, 20],
-    iconAnchor: [25, 20],
+    iconAnchor: [50, 20],
     popupAnchor: [25, 0],
     shadowSize: [80, 20],
-    shadowAnchor: [25, 18],
+    shadowAnchor: [50, 18],
   });
 
   let luceIcon = new L.icon({
@@ -235,6 +235,36 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
     shadowSize: [50, 30],
   });
 
+  let nitroIcon = new L.icon({
+    iconUrl: 'nitroBW.png',
+    shadowUrl: 'nitroShadow.png',
+    iconSize: [50, 50],
+    iconAnchor: [25, 45],
+    popupAnchor: [25, 0],
+    shadowSize: [75, 25],
+    shadowAnchor: [25, 30],
+  });
+
+  let fiatIcon = new L.icon({
+    iconUrl: 'fiatBW.png',
+    shadowUrl: 'fiatShadow.png',
+    iconSize: [30, 30],
+    iconAnchor: [15, 30],
+    popupAnchor: [15, 0],
+    shadowSize: [60, 15],
+    shadowAnchor: [15, 15],
+  });
+
+  let olivettiIcon = new L.icon({
+    iconUrl: 'olivettiLogo.png',
+    shadowUrl: 'olivettiShadow.png',
+    iconSize: [30, 30],
+    iconAnchor: [15, 30],
+    popupAnchor: [15, 0],
+    shadowSize: [60, 15],
+    shadowAnchor: [15, 15],
+  });
+
   let sobrero_xy = [45.06818, 7.68989]
   let ferraris_xy = [45.06457, 7.68698]
   let cruto_xy = [45.0522, 7.6865]
@@ -243,12 +273,12 @@ Integer nec velit ipsum. Vivamus nunc libero, condimentum in tempor id, posuere 
   let olivetti_xy = [45.45358, 7.8649]
   let leumann_xy = [45.07132,7.55793]
 
-  let sobrero_marker =  L.marker(sobrero_xy,  {icon: blackIcon}).addTo(map);
+  let sobrero_marker =  L.marker(sobrero_xy,  {icon: nitroIcon}).addTo(map);
   let ferraris_marker = L.marker(ferraris_xy, {icon: museoIcon}).addTo(map);
   let cruto_marker =    L.marker(cruto_xy,    {icon: luceIcon}).addTo(map);
   let gasdotto_marker = L.marker(gasdotto_xy, {icon: gasIcon}).addTo(map);
-  let fiat_marker =     L.marker(fiat_xy,     {icon: blackIcon}).addTo(map);
-  let olivetti_marker = L.marker(olivetti_xy, {icon: blackIcon}).addTo(map);
+  let fiat_marker =     L.marker(fiat_xy,     {icon: fiatIcon}).addTo(map);
+  let olivetti_marker = L.marker(olivetti_xy, {icon: olivettiIcon}).addTo(map);
   let leumann_marker =  L.marker(leumann_xy,  {icon: blackIcon}).addTo(map);
 
   //il name non deve avere spazi, e coincide con l'id della relativa sezione
