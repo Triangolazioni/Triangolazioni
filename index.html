@@ -137,10 +137,20 @@ h1 {
   text-align:center
 }
 
-iframe {
+.video-container {
   position: relative;
-  left: 5%;
-  width: 90%;
+  width: 80%;
+  padding-bottom: 56.25%;
+  left: 10%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 </style>
@@ -164,9 +174,9 @@ iframe {
 <div class="page" id="main illuminazione">
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
-
+<div class="video-container">
 <iframe width="729" height="410" src="https://www.youtube.com/embed/hBR0Kq9boIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</div>
 Di notte la città si accende: i lampioni illuminano le strade e l'attività urbana non si ferma con il calare del sole. 
 Non è sempre stato così. Dal gas all'energia elettrica, la storia dell'illuminazione pubblica è lunga e composta da diverse fasi, date dal susseguirsi di innovazioni tecnologiche. L'opera di personalità importanti come Galileo Ferraris e l'ingegno di inventori come Alessandro Cruto hanno contribuito a questa impresa, che ha rivoluzionato la nostra quotidianità.
 
@@ -182,9 +192,9 @@ Cruto
 <div class="page" id="main inventori">
 
 <h1>TRA SCIENZA E INDUSTRIA</h1>
-
-<p><iframe width="729" height="410" src="https://www.youtube.com/embed/as6C289ogP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
+<div class="video-container">
+<iframe width="729" height="410" src="https://www.youtube.com/embed/as6C289ogP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
 <button class="link" onclick="jumpTo('inventori sobrero')">Sobrero</button>
@@ -494,7 +504,10 @@ Il signore della luce-Vittoria Haziel <br>
 <span class="bookmark" id="intro industria"></span>
 <h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
 
+<div class="video-container">
 <iframe width="729" height="410" src="https://www.youtube.com/embed/VkE_EJAtTtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 
 </div>
 
