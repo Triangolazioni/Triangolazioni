@@ -95,21 +95,23 @@ html, body {
   display: inline;
 }
 
-.x {
-  position: fixed;
-  right: 5%;
+button {
+  border-style: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  overflow: hidden;
   outline: none;
 }
 
-button {
-  border-style: none;
+button.x {
+  position: fixed;
+  right: 5%;
+}
+
+button.x img {
+  width: 2rem;
 }
 
 button.link {
-  background-color: transparent;
   border: 0.2rem solid red;
   font-family: PoppinsMedium;
   font-size: 1rem;
@@ -140,7 +142,7 @@ iframe {
 
 <div id="windowbg">
 <div id="window">
-<button class="x" onclick="window_close()"><img src="x.svg"></button>
+<button class="x" onclick="window_close()"><img src="x.png"></button>
 
 
 <div class="page" id="main illuminazione">
@@ -172,7 +174,7 @@ Cruto
 <button class="link" onclick="jumpTo('inventori sobrero')">Sobrero</button>
 <button class="link" onclick="jumpTo('inventori ferraris')">Ferraris</button>
 <button class="link" onclick="jumpTo('inventori cruto')">Cruto</button>
-<button class="link" onclick="jumpTo('inventori approfondimenti')">altri approfondimenti</button>
+<button class="link" onclick="jumpTo('inventori altri')">altri approfondimenti</button>
 
 </div>
 
@@ -180,74 +182,281 @@ Cruto
 ASCANIO SOBRERO
 UNA SCOPERTA ESPLOSIVA
 
-Ascanio Sobrero
-Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.
+<button class="link" onclick="jumpTo('inventori appro sobrero')">Ascanio Sobrero
+Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</button>
 
-Cos'è la nitroglicerina?
-La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.
+<button class="link" onclick="jumpTo('inventori appro nitro')">Cos'è la nitroglicerina?
+La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.</button>
 
-Alfred Nobel
-Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializzò la nitroglicerina come "olio esplodente". Stabilizzò in seguito la sostanza utilizzando della farina fossile per renderla più stabile. Ottenne quindi una pasta morbida, plasmabile in canne di forma idonea: nacque così la dinamite.
+<button class="link" onclick="jumpTo('inventori appro nobel')">Alfred Nobel
+Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializzò la nitroglicerina come "olio esplodente". Stabilizzò in seguito la sostanza utilizzando della farina fossile per renderla più stabile. Ottenne quindi una pasta morbida, plasmabile in canne di forma idonea: nacque così la dinamite.</button>
 
-Uso in medicina
+<button class="link" onclick="jumpTo('inventori appro medicina')">Uso in medicina
 La nitroglicerina non è però solamente associata alla dinamite o alla sua natura pericolosa: essa è infatti anche usata come farmaco, in forma di tavolette sublinguinali. Questa versatile sostanza ha infatti azione vasodilatante e viene usata come antianginoso (nelle terapie della angina pectoris).
+</button>
+</div>
+
+<div class="page" id="inventori appro sobrero">
+ASCANIO SOBRERO
+Il 12 ottobre 1812 nasce a Casale Monferrato Ascanio Sobrero, destinato a diventare uno dei più importanti chimici italiani della sua epoca, soprattutto per i risvolti applicativi delle sue scoperte.
+Sobrero inizia gli studi universitari a Torino intorno al 1830, allievo di Giobert, distinto chimico dedito alla chimica applicata. In quel periodo però l’ambiente chimico torinese non segue il passo di ciò che accadeva fuori dalla penisola, così il nostro Sobrero  all’età di 28 anni, nel 1840, decide di trasferirsi oltralpe e trovare migliore alimento per la sua conoscenza a Parigi, presso il laboratorio di Pelouze. Nel 1843 si trasferisce per 6 mesi a Giessen, in Germania, presso Justus Von Liebig, il chimico tedesco noto ai più per aver inventato il dado da brodo. 
+
+Figurine Liebeg: mezzo pubblicitario con cui Liebeg promosse il suo estratto di carne
+
+Liebig e il laboratorio di Giessen
+
+L’importanza di Liebig nel campo della chimica va però oltre a questa invenzione culinaria e             alla sua opera di scienziato. Il suo merito è infatti proprio quello di aver istituito la scuola di Giessen, modello di numerose altre scuole di chimica, che attirava studenti da tutta Europa. 
+Nel suo periodo all’estero, Sobrero entra in contatto con un “ambiente nitrico”: molti chimici, specialmente francesi e tedeschi, si occupano in questo periodo di composti nitrici, e Sobrero ha così l’occasione di appassionarsi a questi studi. Tornato poi a Torino, mette in campo ciò che ha appreso dai grandi chimici stranieri. Diventa docente di chimica presso la Scuola di Meccanica e Chimica applicata alle Arti di Via Po. Ed è proprio in via Po, nell’ex laboratorio chimico, che avviene la scoperta: nel 1847 Sobrero sintetizza per la prima volta la nitroglicerina. Il chimico piemontese intuisce il potenziale che la sua scoperta potrebbe rappresentare in campo industriale, ma probabilmente conoscendo anche la pericolosità del composto, continua a dedicarsi ai suoi studi e sono sue altre importanti scoperte ( come ad esempio il sobrerolo, chiamato così in suo onore).
+
+
+By Adam Rędzikowski - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=19587094
+
+Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 Alfred Nobel comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.
+</div>
+<div class="page" id="inventori appro nitro">
+COS’E’ LA NITROGLICERINA
+Ascanio Sobrero sintetizza per primo la nitroglicerina a Torino nel 1847. In quel periodo molti chimici in giro per l’Europa si stavano occupando di esperimenti legati ai composti nitrici, in particolare Sobrero riprende inizialmente gli esperimenti del 1845 del chimico Christian Schönbein di Basilea per la sintesi di nitrocellulosa. 
+Prima ancora della nitroglicerina, Sobrero scopre un altro esplosivo, meno potente della nitroglicerina: il nitrosaccarosio, lo zucchero fulminante, poi chiamato vixorite. Gli esperimenti che portano Sobrero a scoprire il nitrosaccarosio e poi la nitroglicerina si basano sul processo di nitrazione di composti organici.
+
+Formula bruta: C3H5(ONO2)3
+
+
+La nitroglicerina è preparata attraverso la nitrazione della glicerina, in cui si introducono 3 gruppi nitro (-NO2), derivanti dall'acido nitrico (HNO3):
+
+HNO3 + H2SO4 → H2NO3+ + HSO4-
+H2NO3+ → NO2+ + H2O
+HSO4- + H+ → H2SO4
+3HNO3 + C3H5(OH)3 → C3H5(ONO2)3 + 3H2O
+[Si potrebbe spiegare meglio la reazione, magari attraverso un video]
+https://www.youtube.com/watch?v=1IfsvVgwopQ
+La nitroglicerina si presenta come un composto liquido oleoso di colore leggermente volto al giallo. La sua pericolosità deriva dal fatto che i legami tra le molecole sono deboli: si tratta di un composto molto instabile. 
+A proposito delle proprietà esplodenti della nitroglicerina, Sobrero scrive in una nota del 1847 “Quando conobbi questa sua proprietà io ero lontano da credere che essa la possedesse in grado così eminente  (...) volli decomporne una gocciola in un tubo di vetro: una detuonazione ridusse in polvere il tubo, sicchè più nulla non me ne rimase fra le dita. Molte scheggette di vetro mi ferirono la mano ed il viso: un mio amico che era presente ed a più d’un metro di distanza ne ebbe il viso ferito in più luoghi. Questi tentativi sono talmente pericolosi che miglior consiglio è il non farli.”
+La nitroglicerina detona con il calore (alla temperatura di 200°C) ma è pericolosa anche quando congela, a 13°C: al suo interno si formano cristalli sottilissimi che si spezzano facilmente innescando un’esplosione.
+  
+</div>
+<div class="page" id="inventori appro nobel">
+ALFRED NOBEL
+Alfred Nobel nasce nel 1833 a Stoccolma e si trasferisce nel 1842 con la famiglia a San Pietroburgo, dove già si trovava il padre che lavorava nell’industria di armamenti e si occupava di esplosivi. La passione per gli esplosivi viene tramandata al figlio Alfred, che studia privatamente ed eccelle particolarmente in chimica. Quindi, quando Nobel legge della nitroglicerina, è già alla ricerca di nuovi esplosivi. Al tempo, l’industria di armamenti era più o meno ferma alla polvere da sparo. I Nobel provano ad implementare gli effetti della polvere aggiungendo della nitroglicerina e brevettano l’idea nel 1863. Ma già nel 1861 Nobel va in giro per l’Europa a cercare finanziamenti: nel 1864 viene istituita la società Nobel e aperta la prima fabbrica di nitroglicerina a Vinterviken, presso Stoccolma. Il composto, scoperto da Sobrero, viene allora chiamato “l’olio esplosivo di Nobel”: così il nome dello svedese comincia a essere associato alla scoperta.
+Trattare con la nitroglicerina è particolarmente pericoloso, e il merito di Nobel è quello di averla resa più maneggevole, mescolandola con materia inerte assorbente (farina fossile), ottenendo un composto esplosivo ma meno pericoloso. Nel 1867 viene così brevettata la dinamite. 
+Nobel si arricchisce velocemente e apre molti stabilimenti, uno dei quali ad Avigliana, presso Torino: il dinamitificio è oggi visitabile. 
+
+
+Schema di un candelotto di dinamite:
+A. Segatura (o altro tipo di materiale assorbente) intrisa di nitroglicerina
+B. Contenitore del materiale esplosivo
+C. Detonatore
+D. Cavo collegato al detonatore
+
+Di Pbroks13 - Opera propria, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5048336
+
+https://www.comune.avigliana.to.it/it-it/vivere-il-comune/cosa-vedere/museo-dinamitificio-nobel-39388-1-6d63133395d5dae99ccefcfd1d451838
+L’imprenditore svedese è quindi legato all’Italia, luogo che sceglie anche per trascorrere gli ultimi anni della sua vita. Nobel acquista infatti una villa a Sanremo nel 1891. https://villanobel.it/la-villa/
+Foto di Villa Nobel a Sanremo
+
+
+
+Alfred Nobel sembra quindi incarnare la figura dell’industriale spregiudicato, che commercializza un esplosivo letale e oscura i meriti di un altro scienziato. Allora perché lo ricordiamo come un grande filantropo? In effetti, l’istituzione dei premi Nobel e l’opera filantropica dello svedese, nasce proprio da una crisi di coscienza. Nel 1888 il fratello di Alfred, Ludvig, muore a Cannes in una delle fabbriche di dinamite, ma un giornale francese pubblica erroneamente il necrologio di Alfred Nobel. Il titolo recita “Il mercante della morte è morto”,  e l’artiolo continua: “Alfred Nobel, che divenne ricco trovando il modo di uccidere il maggior numero di persone nel modo più veloce possibile, è morto ieri.”
+In un momento epifanico, l’imprenditore comincia a pensare a come sarà considerato dopo la sua morte, e decide di fondare i famosi premi Nobel, lasciando la sua ingente eredità a questo scopo.
+
+</div>
+<div class="page" id="inventori appro medicina">
+USO IN MEDICINA
+Come può la nitroglicerina, usata come esplosivo, essere anche un medicinale?
+Già dalle prime annotazioni di Sobrero, sembra difficile accostare questa sostanza ad un medicinale. Il chimico infatti ne descrive il sapore, “dolcigno, aromatico, pungente”, ma avverte di stare attenti ad esplorare questa qualità e dice di non ingerire la sostanza, perché anche soltanto una gocciolina di nitroglicerina sulla lingua provoca una forte emicrania.
+Come spesso accade, la nuova scoperta scientifica ha dei risvolti applicativi che ci sembrano inaspettati. Ma Ascanio Sobrero, che aveva studiato medicina, si interessa dell’azione fisiologica della nitroglicerina fin dal 1847, anno in cui la sintetizza per la prima volta, e il nuovo composto comincia ad essere usato come medicinale già dal 1854 in America, sotto il nome di glonoina. Il farmaco è un antianginoso, ovvero un medicinale vasodilatatore utilizzato per la cura della angina pectoris. 
+La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali oppure con cerotti transdermici. 
+
+
+By Intropin - Own work, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=9949324
+
+
+
+
+
+https://www.youtube.com/watch?v=wFsBa5t03bM
+
 </div>
 
 <div class="page" id="inventori ferraris">
 GALILEO FERRARIS
 IL MOTORE ELETTRICO
 
-Galileo Ferraris
-L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.
+<button class="link" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris
+L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</button>
 
-Il Regio Museo Industriale
-Il Regio Museo Industriale nacque con lo scopo di promuovere lo sviluppo industriale. Qui nel 1889 Galileo Ferraris fondò una scuola di elettrotecnica dove insegnò fino alla morte.   
+<button class="link" onclick="jumpTo('inventori appro museo')">Il Regio Museo Industriale
+Il Regio Museo Industriale nacque con lo scopo di promuovere lo sviluppo industriale. Qui nel 1889 Galileo Ferraris fondò una scuola di elettrotecnica dove insegnò fino alla morte.</button>
 
-Nikola Tesla
-Tra i numerosi brevetti dell'inventore americano risulta anche quello del campo magnetico rotante, la cui paternità venne in seguito riconosciuta a Galileo Ferraris. Egli in la produzione di motori elettrici su scala industriale.
+<button class="link" onclick="jumpTo('inventori appro tesla')">Nikola Tesla
+Tra i numerosi brevetti dell'inventore americano risulta anche quello del campo magnetico rotante, la cui paternità venne in seguito riconosciuta a Galileo Ferraris. Egli in la produzione di motori elettrici su scala industriale.</button>
 
-Il campo magnetico rotante
-Due bobine perpendicolari tra loro percorse da correnti sfasate generano un campo magnetico rotante: grazie a questa scoperta si diffuse rapidamente l'utilizzo del motore  a induzione.
+<button class="link" onclick="jumpTo('inventori appro magnetico')">Il campo magnetico rotante
+Due bobine perpendicolari tra loro percorse da correnti sfasate generano un campo magnetico rotante: grazie a questa scoperta si diffuse rapidamente l'utilizzo del motore  a induzione.</button>
 
-Le automobili elettriche
-Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.
+<button class="link" onclick="jumpTo('inventori appro auto')">Le automobili elettriche
+Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.</button>
+</div>
+
+<div class="page" id="inventori appro ferraris">
+GALILEO FERRARIS
+
+Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine
+A partire dal 1877 divenne assistente di fisica tecnica presso il Regio Museo Industriale di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.
+
+Nel 1885 scoprì il campo magnetico rotante e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano Nikola Tesla riguardo alla paternità. A questo proposito Galileo Ferraris scrisse ad un amico: “Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome” e in altre occasioni sottolineò di essere “un professore, non un industriale”, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.
+
+Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.
+Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:
+“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.
+
+</div>
+<div class="page" id="inventori appro museo">
+REGIO MUSEO INDUSTRIALE
+
+Il Regio Museo industriale Italiano venne istituito da un decreto nel 1862 con l’obiettivo “di promuovere l’istruzione industriale e il progresso delle industrie e del commercio” sul modello delle scuole di istruzione tecnica superiore che si stavano sviluppando a Londra e Parigi. Esso aveva sede dove oggi sorge Piazzale Valdo Fusi, ma rimase distrutto durante un bombardamento aereo nel 1943.
+Questo fu un luogo di grande rilevanza nello sviluppo della società torinese: esso era non solo un’ Esposizione permanente dei nuovi progressi industriali, ma anche un luogo in cui si tenevano corsi di insegnamento con lo scopo di ampliare le conoscenze tecniche dei giovani ingegneri.
+Qui nel 1879 Galileo Ferraris presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane Alessandro Cruto, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.
+Nel 1887 l’ingegnere piemontese tenne un corso di elettrotecnica che prevedeva, oltre alle tradizionali lezioni, alcune esercitazioni pratiche e nell’anno successivo venne istituito all’interno dei locali del Regio Museo Industriale un vero e proprio Laboratorio di Elettrotecnica, che attirò studenti da tutta Italia; alcuni strumenti e apparecchiature provenienti da tale laboratorio sono oggi conservati presso l’Istituto elettrotecnico nazionale Galileo Ferraris.
+La fama del Museo divenne tale da rendere necessario, nel 1897, un progetto di ampliamento dei locali che dotarono l’edificio di nuove aule per le lezioni e per il disegno e apposite aree per i laboratori.
+L’esposizione generale italiana del 1898 vide la partecipazione diretta del Museo che presentò una propria mostra contenente disegni e progetti degli allievi.
+Nel 1906, dalla fusione di questo istituto con la Scuola di Applicazione per gli ingegneri nacque il Politecnico di Torino.
+Immagini Museo Torino 
+
+</div>
+<div class="page" id="inventori appro tesla">
+NIKOLA TESLA
+
+Nikola Tesla nacque il 10 luglio 1856 in una famiglia serba nei territori dell’attuale Croazia. Frequentò in Austria L’università tecnica di Graz, ai tempi considerata uno dei migliori istituti del mondo, e qui iniziò ad interessarsi agli impieghi della corrente alternata. Nel 1882 si recò a Parigi per lavorare alla Continental Edison Company, dove si occupò di migliorare gli apparati elettrici. Egli affermò di aver ideato in quell’anno il motore a induzione sfruttando il campo magnetico rotante, brevettato poi nel 1888 e la cui originalità venne contestata dal piemontese Galileo Ferraris. Nel 1884 si trasferì negli Stati Uniti dove venne assunto da Thomas Edison nella sua azienda Edison Machine Works, dove si occupò di riprogettare l’esistente generatore di corrente continua.
+Nel 1887 costruì il primo motore a induzione a corrente alternata senza attrito e iniziò inoltre ad occuparsi di quelli che diventeranno poi noti come raggi X, brevettò un primo modello di radio e effettuò diversi esperimenti sulla telegrafia senza fili, sull’elettricità atmosferica e sulla trasmissione di energia su lunghe distanze.
+Egli fu coinvolto in un’altra controversia riguardante un’invenzione: il brevetto della radio venne inizialmente riconosciuto all’inventore italiano Guglielmo Marconi e solo in seguito alla morte di Tesla, avvenuta nel 1943, venne assegnata all’americano la paternità della scoperta.
+Egli si scontrò con Thomas Edison nella cosiddetta “guerra delle correnti”, una competizione commerciale per il controllo del mercato elettrico che vedeva contrapposte la corrente alternata, promossa da Tesla, e la corrente continua, ritenuta la soluzione più adatta dal suo avversario: l’idea di Edison era quella di sviluppare un sistema di distribuzione elettrica che mantenesse lo stesso potenziale lungo tutta la linea, questo metodo aveva però l’inconveniente di dissipare parte dell’energia lungo il trasporto, problema che risultava meno incisivo usando la corrente alternata. Attraverso una serie di dimostrazioni pubbliche Tesla riuscì a mostrare l’efficienza del suo progetto e a convincere l’opinione pubblica nonostante la campagna diffamatoria di Edison che sottolineava la presunta pericolosità dell’idea: nel 1889 venne costruito il primo impianto idroelettrico a corrente alternata e nel 1892 Tesla ottenne l’appalto per la realizzazione di una centrale idroelettrica sulle cascate del Niagara.
+
+Statua di Nikola Tesla presso le cascate del Niagara Milan Suvajac, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+
+</div>
+<div class="page" id="inventori appro magnetico">
+IL CAMPO MAGNETICO ROTANTE
+
+L’idea del campo magnetico rotante sembra essere nata da una passeggiata durante la quale Galileo Ferraris si soffermò ad osservare la successione dei portici di via Cernaia: egli intuì che due bobine disposte perpendicolarmente percorse da correnti alternate sfasate generavano un campo magnetico rotante. I risultati dei suoi studi vennero mostrati in pubblico per la prima volta nel 1885, quando l’ingegnere piemontese presentò “il suo giocattolo”, come era solito chiamare il primo prototipo di motore a corrente alternata. Egli realizzò negli anni successivi quattro modelli di motore che sfruttavano il campo magnetico rotante e nel 1888 ricevette un premio dalla società americana Westinghouse per la sua scoperta.
+Negli stessi anni anche l’americano Nikola Tesla stava svolgendo esperimenti simili, riuscendo poi  a sfruttare la scoperta producendo motori elettrici su scala industriale.
+Immagini primi prototipi 
+
+</div>
+<div class="page" id="inventori appro auto">
+LE AUTOMOBILI ELETTRICHE
+
+Tra fine ‘800 e inizio ‘900 non era ancora ben definito quale sarebbe stato il modello di motore più usato nel futuro e pertanto si assistette inizialmente ad uno sviluppo parallelo di automobili elettriche ed automobili a benzina. Le auto elettriche non sono infatti un’idea recente, ma una realtà la cui storia inizia negli anni ‘30 dell’Ottocento: il motore elettrico sembrava inizialmente essere il modello più adatto sia per quanto riguarda l’affidabilità, sia perché più silenzioso. Negli anni finali dell’’800 i modelli a batteria vennero sia usati per il trasporto pubblico, sia venduti a privati e avevano una migliore resa rispetto ai motori a scoppio; inoltre già nei primi anni del ‘900 una ditta torinese, la STAE, iniziò a produrre i primi veicoli ibridi, in cui i due motori venivano utilizzati in maniera accoppiata.
+Il motore a combustione interna ebbe però un’evoluzione tecnica maggiore e l’introduzione del motorino di avviamento rese questo sistema il più adatto alle esigenze dell’epoca: con l’avvento della Grande Guerra e la necessità di compiere spostamenti più lunghi la durata limitata delle batterie iniziò a risultare un problema rilevante. Lo sviluppo di motori elettrici riprenderà nel secondo dopoguerra.
+Presso il Museo dell’Auto di Torino sono presenti numerosi esemplari di vetture elettriche del passato e alcuni prototipi di particolari “veicoli del futuro” alimentati da pannelli fotovoltaici o ad idrogeno.
+
 </div>
 
 <div class="page" id="inventori cruto">
 ALESSANDRO CRUTO
 L'INVENZIONE LUMINOSA
 
-Alessandro Cruto
+<button class="link" onclick="jumpTo('inventori appro cruto')">Alessandro Cruto
 Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
-Brevettò la sua lampadina ad incandescenza nel 1884.
+Brevettò la sua lampadina ad incandescenza nel 1884.</button>
 
-La lampadina
-La lampada ad incandescenza è formata da un bulbo di vetro attraversato da un filamento carbonizzato. Molti scienziati lavoravano per trovare il materiale migliore con cui realizzare il filamento.
+<button class="link" onclick="jumpTo('inventori appro lampadina')">La lampadina
+La lampada ad incandescenza è formata da un bulbo di vetro attraversato da un filamento carbonizzato. Molti scienziati lavoravano per trovare il materiale migliore con cui realizzare il filamento.</button>
 
-L'esposizione industriale 
-Nel 1884, all'Esposizione generale italiana tenutasi al parco del Valentino di Torino, Cruto presentò la sua lampadina realizzata con filamento in carbonio, ricevendo ottime recensioni.
+<button class="link" onclick="jumpTo('inventori appro expo')">L'esposizione industriale 
+Nel 1884, all'Esposizione generale italiana tenutasi al parco del Valentino di Torino, Cruto presentò la sua lampadina realizzata con filamento in carbonio, ricevendo ottime recensioni.</button>
 
-La fabbrica di Alpignano 
-La lampadina di Cruto convinse alcuni investitori, e il piccolo laboratorio di Piossasco non bastava più all'inventore, che aprì la sua industria ad Alpignano. Oggi la fabbrica è un museo.
+<button class="link" onclick="jumpTo('inventori appro fabbrica')">La fabbrica di Alpignano 
+La lampadina di Cruto convinse alcuni investitori, e il piccolo laboratorio di Piossasco non bastava più all'inventore, che aprì la sua industria ad Alpignano. Oggi la fabbrica è un museo.</button>
 
-Thomas Edison
-L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.
+<button class="link" onclick="jumpTo('inventori appro edison')">Thomas Edison
+L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.</button>
 </div>
 
-<div class="page" id="inventori approfondimenti">
-L'industria piemontese
-Sobrero, Cruto e Ferraris si inseriscono nel panorama industriale piemontese della seconda metà dell'Ottocento, in un periodo di sviluppo e competizione straniera.
+<div class="page" id="inventori appro cruto">
+ALESSANDRO CRUTO
+Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il diamante in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico. 
+Piossasco si trova a 20 chilometri da Torino. Non sono pochi da fare a piedi, ma Cruto compie spesso questo tragitto per ascoltare lezioni e conferenze nel capoluogo. 
+Nel maggio 1879 Galileo Ferraris è a Torino per un ciclo di conferenze sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa. 
+Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La lampadina ad incandescenza ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le lamine di carbonio che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua industria ad Alpignano e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.
+</div>
+<div class="page" id="inventori appro lampadina">
+UN’INVENZIONE LUMINOSA
 
-Invenzioni e brevetti
+
+1) Bulbo di vetro
+2) Gas inerte o vuoto
+3) Filamento
+4) Filo di andata
+5) Filo di ritorno
+6) Supporto del filamento
+7) Supporto della lampada
+8) Contatto con la base
+9) Base a vite
+10) Isolante
+11) Contatto sulla base
+
+[Si potrebbe spiegare meglio il funzionamento, magari attraverso un video; lo schema è preso da wikipedia come esempio]+una spiegazione sulle tecnologie successive
+https://www.youtube.com/watch?v=nQoot7HZL_o
+La storia della lampadina è lunga e Edison e Cruto non sono gli unici ad aver contribuito a questa invenzione.
+La lampadina ad incandescenza è formata da un bulbo di vetro, al cui interno c’è un filamento che, attraversato dalla corrente, emette luce. Già nella prima metà dell’Ottocento molti scienziati compivano esperimenti per trovare il filamento più adatto per la lampadina. Vengono usati per esempio il carbone, che però non ha lunga durata, e metalli come il platino, che durano di più ma hanno lo svantaggio di produrre una luce rossastra e poco potente.
+Nel 1878 Joseph Swan, inventore inglese, si distingue per la sua lampadina con filamento di filo di cotone trattato con acido solforico. Solamente un anno dopo lo statunitense Edison brevetta la sua lampadina, e tra i due scoppiano le battaglie legali, che terminano con un accordo commerciale e la costituzione della società elettrica “Edison&Swan”. La fama di Edison ha però oscurato la memoria dell’inglese, nonostante il primato temporale di quest’ultimo. Le ricerche di Edison però non si fermano; la luce della sua lampadina viene definita da una rivista scientifica come la luce di un “caldo tramonto di un autunno italiano”. Edison prova con i materiali più disparati, come tele di sacco, celluloide, trucioli di cedro. Si procura anche fibre esotiche: prova con la fibra di un bambù gigante dell’isola di Ceylon (Sri Lanka). 
+Sarà però Cruto a realizzare, nel marzo 1880, una lampadina definita dalla Gazzetta Piemontese (ottobre 1882) di luce “costante, limpida, molto meno costosa delle altre luci elettriche”.
+La lampadina Cruto ha un filamento di carbonio puro sintetico, realizzato dal piossaschese in laboratorio, che permette di produrre una luce bianca e potente.
+
+</div>
+<div class="page" id="inventori appro expo">
+L’ESPOSIZIONE INDUSTRIALE
+
+A partire dal 1881 si sviluppò l’idea di ospitare a Torino un’esposizione universale sul modello di quelle che si andavano sviluppando in quegli anni: a partire dalla Great Exhibition tenutasi  a Londra nel 1851 le più importanti città europee iniziarono a organizzare grandi mostre con lo scopo di mostrare i progressi della società e aprire il dialogo sulle ultime innovazioni.
+Nel 1884 si tenne presso il Parco del Valentino l’Esposizione industriale e artistica italiana: in questa occasione vennero realizzati padiglioni appositi per ospitare le mostre, tra essi il Borgo medievale ancora oggi visitabile. L’esposizione si estendeva per un’area molto vasta e comprendeva otto sezioni: Belle Arti, Produzioni scientifiche e letterarie, Didattica, Previdenza e assistenza pubblica, Industrie estrattive e chimiche, Industrie manifatturiere, Economia rurale. Parteciparono più di 14.000 espositori e circa tre milioni di visitatori italiani e stranieri riempirono le strade di Torino.
+All’interno dell’Esposizione vi era un padiglione dedicato all’elettricità, la cui supervisione fu assegnata a Galileo Ferraris: al suo interno l’illuminazione era completamente affidata all’elettricità, in parte utilizzando lampade ad arco, in parte utilizzando le nuove lampadine a filamento sviluppate da Alessandro Cruto e Thomas Edison in quegli anni, che avrebbero segnato il futuro dell’illuminazione.
+
+</div>
+<div class="page" id="inventori appro fabbrica">
+LA FABBRICA DI ALPIGNANO
+L’esperienza industriale
+Nel 1880 Alessandro Cruto ha realizzato la sua lampadina ad incandescenza. A questo punto, deve trovare degli investitori interessati alla sua invenzione. Nel 1882 alcuni “capitalisti” (così li definisce Cruto) investono su di lui e fondano una società.
+La lampadina Cruto è di ottima qualità e ha un prezzo economico: la società americana Westinghouse acquista i diritti della lampadina italiana, preferendola a quella del connazionale Edison!
+Riconosciuto il valore dell’invenzione, è ormai l’ora dell’industrializzazione: la prima rudimentale fabbrica si trova a Piossasco ed è ancora un ibrido con il vecchio laboratorio. Presto gli spazi risultano insufficienti e la fabbrica si sposta ad Alpignano, cittadina a meno di 20 chilometri da Piossasco. 
+Alessandro Cruto è un uomo intelligente è attento, tiene molto alle sue lampadine, frutto di tanta fatica, e vorrebbe seguire da vicino la produzione. Il piossaschese è però anche un uomo sensibile e poco abituato ad avere a che fare con i capitalisti. I suoi soci vogliono arricchirsi e creano un clima di tensione e discordia, al punto che Cruto decide alla fine di allontanarsi da Alpignano. D’altronde l’industria è per Cruto un bel traguardo, ma il suo interesse rimane la ricerca. Nell’ultima parte della sua vita continua i suoi studi e si diletta in invenzioni come un “sistema di fontane luminose”. Egli stesso scriverà: “Ma vi dirò che meglio essere industriale desidero continuare i miei studi. Fui industriale e non desidero ritornarvi. Non mi trovo fatto per tale cosa”.
+
+
+La sede di Alpignano
+Dal 1886 la società italiana di Elettricità Sistema Cruto ha la sua fabbrica di lampadine ad Alpignano, in via Matteotti 2. Questa sede continua a essere legata alle lampade a lungo: nel 1927 viene rilevata dalla PHILIPS. Dal 2004 è un museo dedicato all’inventore piossaschese e alla sua lampadina.
+http://www.ecomuseocruto.it/museo/
+  
+</div>
+<div class="page" id="inventori appro edison">
+THOMAS EDISON 
+Thomas Edison e Alessandro Cruto nascono nello stesso anno, il 1847. I due inventori sono però figli di due mondi molto distanti.
+Cruto è un uomo modesto e schivo, Edison una personalità ingombrante, un uomo ricco e scaltro. Ciò che certamente li accomuna è la totale dedizione al lavoro, l’instancabilità nello sperimentare nuove soluzioni, la passione nello studio. D’altronde, come diceva Edison, “il genio è per l’1% ispirazione. per il 99% traspirazione, ovvero sudore”.
+Edison, nel momento in cui comincia a lavorare alla sua lampadina, è già famoso per altre invenzioni (per esempio il fonografo), ed ha molti capitalisti disposti ad investire sul suo lavoro. Un gruppo di società gli ha assicurato una rendita annua e creato due laboratori per i suoi esperimenti (prima a Newark, poi a Menlo Park, presso New Jersey). Inoltre a lavorare agli esperimenti di Edison ci sono 300 uomini specializzati.
+Ben diversa è la situazione di Cruto, nato a Piossasco, cittadina alle porte di Torino. Alessandro Cruto è figlio di un capomastro, non può permettersi gli studi così deve lavorare con il padre e studiare da autodidatta. Il contesto in cui vive non è incoraggiante: costruisce un rudimentale laboratorio presso la sua abitazione, sogna di diventare un inventore, e i suoi concittadini lo chiamano “il matto”. Non ha nessuno che investe su di lui, può contare solo su pochi prestiti di amici e sui suoi risparmi. I suoi esperimenti poi, inizialmente sono rivolti al tentativo di produrre del diamante artificiale, solo ad un certo punto scopre che le lamine di carbonio puro che è riuscito ad ottenere possono essere ottimali per il filamento della lampadina.
+Il lavoro di Edison è invece fin dall’inizio caratterizzato da metodo e senso pratico, secondo una mentalità fortemente imprenditoriale. L’inventore statunitense è pioniere di un’imprenditoria a “ciclo completo”, dalla ricerca fino alla commercializzazione del prodotto. Per esempio, prima ancora di brevettare la lampadina, si preoccupa dell’effettiva possibilità di distribuire la corrente elettrica per la città, affinché il prodotto sia realmente commercializzabile. 
+Al contrario, quando l’invenzione di Cruto attira l’attenzione degli investitori, questi ultimi vogliono speculare sul nuovo prodotto, e cercano di esautorare l'inventore dalla dirigenza dell’industria.
+Edison quindi dispone sia di mezzi che di metodo potentissimi. Il suo successo è preannunciato, probabilmente data anche la fama che l’americano già vantava. 
+Cruto parte in grande svantaggio, ma alla fine riesce a raggiungere importanti traguardi, sebbene modesti di fronte ai capitali gestiti dalla società americana.
+Ciò che lascia più amarezza è il fatto che l’inventore italiano sia così poco noto, anche nella sua stessa patria. Probabilmente il fatto che Cruto non abbia avuto la possibilità di studiare ha negato all’inventore di ottenere visibilità a livello accademico e anche questo potrebbe aver contribuito a oscurarne la memoria.
+La storia però non è fatta di se: l’impegno che la società può prendersi ora è quello di ricordare le menti brillanti del passato, per assicurare il massimo sostegno a quelle del presente.
+</div>
+
+<div class="page" id="inventori altri">
+ALTRI APPROFONDIMENTI
+
+<button class="link" onclick="jumpTo('inventori appro industria')">L'industria piemontese
+Sobrero, Cruto e Ferraris si inseriscono nel panorama industriale piemontese della seconda metà dell'Ottocento, in un periodo di sviluppo e competizione straniera.</button>
+
+<button class="link" onclick="jumpTo('inventori appro brevetti')">Invenzioni e brevetti
 Il periodo in cui operarono i tre scienziati è caratterizzato da grandi invenzioni. Molte persone lavorano sulle stesse frontiere di sviluppo tecnologico e in questo ambiente di competizione internazionale, il brevetto è il mezzo con il quale salvaguardare la proprietà intellettuale.
+</button>
 </div>
 
-<div class="page" id="approfondimenti inventori">
-<h1>APPROFONDIMENTI</h1>
+<div class="page" id="inventori appro industria">
 <h2>L’INDUSTRIA PIEMONTESE</h2>
 
 <p>Nel 1864 la capitale d’Italia si sposta da Torino a Firenze. Tutte le attività legate alla politica e alla diplomazia vengono trasferite, e questo cambiamento, sebbene preannunciato, affligge un duro colpo al capoluogo piemontese, dove si verificano disordini popolari e malcontento. La crisi sembra inevitabile, ma non manca la volontà di arginare il problema. Nel 1865 l’allora sindaco Emanuele Luserna di Rorà lancia un <b><i>Appello diretto agli industriali esteri e nazionali</i></b>; la popolazione torinese non si abbatte e la città promuove iniziative e opere pubbliche. La crisi preannunciata non si rivela in realtà drammatica e il contesto industriale si risolleva. L’esposizione generale italiana tenutasi a Torino nel 1884 rappresenta a pieno questa ripresa.</p>
-
+</div>
+<div class="page" id="inventori appro brevetti">
 <h2>INVENZIONI E BREVETTI</h2>
 <h3>Cos’è un brevetto?</h3>
 <p>Un brevetto è un attestato ufficiale (rilasciato da un apposito ufficio) che conferisce un diritto esclusivo di disporre di un’invenzione. Il brevetto impedisce a chi non ne è titolare di sfruttare un’invenzione senza autorizzazione,  protegge quindi la proprietà intellettuale ma anche la possibilità di guadagnare sulle invenzioni. </p>
@@ -262,8 +471,6 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 <a href="https://it.wikipedia.org/wiki/Brevetto">https://it.wikipedia.org/wiki/Brevetto</a><br>
 <a href="https://www.treccani.it/vocabolario/brevetto/">https://www.treccani.it/vocabolario/brevetto/</a><br>
 Il signore della luce-Vittoria Haziel <br>
-
-
 </div>
 
 <div class="page" id="main industria">
@@ -542,9 +749,67 @@ Il signore della luce-Vittoria Haziel <br>
     map.zoomControl.addTo(map)
 
     stopVideo(current_page)
-    document.getElementById("windowbg").classList.remove("shown");
+    document.getElementById("windowbg").classList.remove("shown")
+    current_page.classList.remove("shown")
     current_page = false
   }
+
+  function addIcon(div_name, div_back, div_left, div_right){
+    let div = document.getElementById(div_name)
+
+    let back_button = document.createElement("button")
+    back_button.className = "back"
+    back_button.onclick = function(){jumpTo(div_back)}
+    let back_img = document.createElement("img")
+    back_img.src = "back.png"
+    back_button.appendChild(back_img)
+    div.appendChild(back_button)
+
+    let br = document.createElement("br")
+    div.appendChild(br)
+
+    if(div_left !== false){
+      let left_button = document.createElement("button")
+      left_button.className = "left"
+      left_button.onclick = function(){jumpTo(div_left)}
+      let left_img = document.createElement("img")
+      left_img.src = "left.png"
+      left_button.appendChild(left_img)
+      div.appendChild(left_button)
+    }
+
+    if(div_right !== false){
+      let right_button = document.createElement("button")
+      right_button.className = "right"
+      right_button.onclick = function(){jumpTo(div_right)}
+      let right_img = document.createElement("img")
+      right_img.src = "right.png"
+      right_button.appendChild(right_img)
+      div.appendChild(right_button)
+    }
+  }
+
+  addIcon("inventori sobrero",  "main inventori", false,                "inventori ferraris")
+  addIcon("inventori ferraris", "main inventori", "inventori sobrero",  "inventori cruto")
+  addIcon("inventori cruto",    "main inventori", "inventori ferraris", "inventori altri")
+  addIcon("inventori altri",    "main inventori", "inventori cruto",    false)
+
+  addIcon("inventori appro sobrero",   "inventori sobrero",   false,                        "inventori appro nitro"    )
+  addIcon("inventori appro nitro",     "inventori sobrero",   "inventori appro sobrero",    "inventori appro nobel"    )
+  addIcon("inventori appro nobel",     "inventori sobrero",   "inventori appro nitro",      "inventori appro medicina" )
+  addIcon("inventori appro medicina",  "inventori sobrero",   "inventori appro nobel",      "inventori appro ferraris" )
+  addIcon("inventori appro ferraris",  "inventori ferraris",  "inventori appro medicina",   "inventori appro museo"    )
+  addIcon("inventori appro museo",     "inventori ferraris",  "inventori appro ferraris",   "inventori appro tesla"    )
+  addIcon("inventori appro tesla",     "inventori ferraris",  "inventori appro museo",      "inventori appro magnetico")
+  addIcon("inventori appro magnetico", "inventori ferraris",  "inventori appro tesla",      "inventori appro auto"     )
+  addIcon("inventori appro auto",      "inventori ferraris",  "inventori appro magnetico",  "inventori appro cruto"    )
+  addIcon("inventori appro cruto",     "inventori cruto",     "inventori appro auto",       "inventori appro lampadina")
+  addIcon("inventori appro lampadina", "inventori cruto",     "inventori appro cruto",      "inventori appro expo"     )
+  addIcon("inventori appro expo",      "inventori cruto",     "inventori appro lampadina",  "inventori appro fabbrica" )
+  addIcon("inventori appro fabbrica",  "inventori cruto",     "inventori appro expo",       "inventori appro edison"   )
+  addIcon("inventori appro edison",    "inventori cruto",     "inventori appro fabbrica",   "inventori appro industria")
+  addIcon("inventori appro industria", "inventori altri",     "inventori appro edison",     "inventori appro brevetti" )
+  addIcon("inventori appro brevetti",  "inventori altri",     "inventori appro industria",  false                      )
 
 </script>
 
