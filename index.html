@@ -38,7 +38,6 @@ html, body {
 
 #container {
   position: relative;
-  width: 500px;
 }
 
 #map {
@@ -109,6 +108,13 @@ button {
   border-style: none;
 }
 
+button.link {
+  background-color: transparent;
+  border: 0.2rem solid red;
+  font-family: PoppinsMedium;
+  font-size: 1rem;
+}
+
 h1 {
   text-align:center
 }
@@ -139,7 +145,6 @@ iframe {
 
 <div class="page" id="main illuminazione">
 
-<span class="bookmark" id="intro illuminazione"></span>
 <h1>ILLUMINAZIONE PUBBLICA</h1>
 
 <iframe width="729" height="410" src="https://www.youtube.com/embed/hBR0Kq9boIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -158,30 +163,20 @@ Cruto
 
 <div class="page" id="main inventori">
 
-<span class="bookmark" id="intro inventori"></span>
 <h1>TRA SCIENZA E INDUSTRIA</h1>
 
-<iframe width="729" height="410" src="https://www.youtube.com/embed/as6C289ogP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><iframe width="729" height="410" src="https://www.youtube.com/embed/as6C289ogP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.
+<p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
 <button class="link" onclick="jumpTo('inventori sobrero')">Sobrero</button>
 <button class="link" onclick="jumpTo('inventori ferraris')">Ferraris</button>
 <button class="link" onclick="jumpTo('inventori cruto')">Cruto</button>
+<button class="link" onclick="jumpTo('inventori approfondimenti')">altri approfondimenti</button>
 
-APPROFONDIMENTI
-
-L'industria piemontese
-Sobrero, Cruto e Ferraris si inseriscono nel panorama industriale piemontese della seconda metà dell'Ottocento, in un periodo di sviluppo e competizione straniera.
-
-Invenzioni e brevetti
-Il periodo in cui operarono i tre scienziati è caratterizzato da grandi invenzioni. Molte persone lavorano sulle stesse frontiere di sviluppo tecnologico e in questo ambiente di competizione internazionale, il brevetto è il mezzo con il quale salvaguardare la proprietà intellettuale.
 </div>
 
-
-<div class="page" id="vertici inventori">
-
-<span class="bookmark" id="inventori sobrero"></span>
+<div class="page" id="inventori sobrero">
 ASCANIO SOBRERO
 UNA SCOPERTA ESPLOSIVA
 
@@ -196,8 +191,9 @@ Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializz�
 
 Uso in medicina
 La nitroglicerina non è però solamente associata alla dinamite o alla sua natura pericolosa: essa è infatti anche usata come farmaco, in forma di tavolette sublinguinali. Questa versatile sostanza ha infatti azione vasodilatante e viene usata come antianginoso (nelle terapie della angina pectoris).
+</div>
 
-<span class="bookmark" id="inventori ferraris"></span>
+<div class="page" id="inventori ferraris">
 GALILEO FERRARIS
 IL MOTORE ELETTRICO
 
@@ -215,8 +211,9 @@ Due bobine perpendicolari tra loro percorse da correnti sfasate generano un camp
 
 Le automobili elettriche
 Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.
+</div>
 
-<span class="bookmark" id="inventori cruto"></span>
+<div class="page" id="inventori cruto">
 ALESSANDRO CRUTO
 L'INVENZIONE LUMINOSA
 
@@ -237,6 +234,37 @@ Thomas Edison
 L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.
 </div>
 
+<div class="page" id="inventori approfondimenti">
+L'industria piemontese
+Sobrero, Cruto e Ferraris si inseriscono nel panorama industriale piemontese della seconda metà dell'Ottocento, in un periodo di sviluppo e competizione straniera.
+
+Invenzioni e brevetti
+Il periodo in cui operarono i tre scienziati è caratterizzato da grandi invenzioni. Molte persone lavorano sulle stesse frontiere di sviluppo tecnologico e in questo ambiente di competizione internazionale, il brevetto è il mezzo con il quale salvaguardare la proprietà intellettuale.
+</div>
+
+<div class="page" id="approfondimenti inventori">
+<h1>APPROFONDIMENTI</h1>
+<h2>L’INDUSTRIA PIEMONTESE</h2>
+
+<p>Nel 1864 la capitale d’Italia si sposta da Torino a Firenze. Tutte le attività legate alla politica e alla diplomazia vengono trasferite, e questo cambiamento, sebbene preannunciato, affligge un duro colpo al capoluogo piemontese, dove si verificano disordini popolari e malcontento. La crisi sembra inevitabile, ma non manca la volontà di arginare il problema. Nel 1865 l’allora sindaco Emanuele Luserna di Rorà lancia un <b><i>Appello diretto agli industriali esteri e nazionali</i></b>; la popolazione torinese non si abbatte e la città promuove iniziative e opere pubbliche. La crisi preannunciata non si rivela in realtà drammatica e il contesto industriale si risolleva. L’esposizione generale italiana tenutasi a Torino nel 1884 rappresenta a pieno questa ripresa.</p>
+
+<h2>INVENZIONI E BREVETTI</h2>
+<h3>Cos’è un brevetto?</h3>
+<p>Un brevetto è un attestato ufficiale (rilasciato da un apposito ufficio) che conferisce un diritto esclusivo di disporre di un’invenzione. Il brevetto impedisce a chi non ne è titolare di sfruttare un’invenzione senza autorizzazione,  protegge quindi la proprietà intellettuale ma anche la possibilità di guadagnare sulle invenzioni. </p>
+
+<h3>XIX secolo</h3>
+<p>Nell’Ottocento si assiste a un periodo di grande fermento per quanto riguarda le nuove invenzioni. L’avanzare della conoscenza scientifica provoca uno sviluppo tecnologico che coinvolge molti scienziati da diverse parti del mondo, che spesso studiano gli stessi fenomeni nello stesso periodo. Questo provoca non poche controversie e spesso, per nuove scoperte e invenzioni, non si riesce a risalire ad un unico inventore. Non sempre poi il comportamento di chi si contende un brevetto può essere definito cristallino: emblematica è la vicenda dell’invenzione del telefono, che coinvolge l’italiano Antonio Meucci, emigrato a New York, e lo statunitense Alexander Graham Bell. Meucci brevetta la sua invenzione, ma non può sfruttarla per motivi economici, così si appoggia a un certo signor Grant, direttore di una grande compagnia telegrafica, consegnando tutto il suo materiale. Ma dopo mesi di attesa, l’italiano chiede la restituzione del materiale, che non avviene. Meucci non ha i soldi per rinnovare il brevetto e poco dopo, nel 1876, Bell presenta il suo brevetto e con l’appoggio di potenti investitori, crea una fiorente compagnia telefonica. Nel 1885 è accusato di frode: viene fuori che Bell aveva un accordo con il signor Grant, alla cui compagnia telegrafica versava il 20% dei guadagni. Il telefono di Bell era effettivamente una copia di quello i Meucci, e anche se non ne abbiamo le prove certe, possiamo immaginare come siano andate le cose.</p>
+
+<h3>Individuare l’inventore</h3>
+<p>Spesso tendiamo a ricercare nel passato delle personalità solitarie che si stagliano sulla conoscenza comune e incarnano il progresso. Così vorremmo che l’innovazione fosse il risultato di facili equazioni, che associano a un’invenzione un unico inventore. La realtà è come sempre più complessa di queste semplificazioni. Il caso appena citato per esempio, ci ricorda come chi ha una disponibilità economica, una certa visibilità e l’annessa possibilità di competere in campo industriale, parte con estremo vantaggio al fine di passare alla storia. 
+Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di molteplici contributi, a partire dalle scoperte scientifiche che aprono nuovi campi di applicazione, ed è normale, soprattutto in un secolo come il XIX, che persone in contesti anche molto lontani arrivino agli stessi risultati nello stesso periodo.</p>
+
+<a href="https://it.wikipedia.org/wiki/Brevetto">https://it.wikipedia.org/wiki/Brevetto</a><br>
+<a href="https://www.treccani.it/vocabolario/brevetto/">https://www.treccani.it/vocabolario/brevetto/</a><br>
+Il signore della luce-Vittoria Haziel <br>
+
+
+</div>
 
 <div class="page" id="main industria">
 
@@ -449,11 +477,12 @@ L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thoma
   let current_page = false
   function jumpTo(divId){
     if(current_page !== false){
+
       current_page.classList.remove("shown")
       stopVideo(current_page)
     }
-    let div = document.getElementById(divId)
-    current_page = div.closest(".page")
+    current_page = document.getElementById(divId)
+
     current_page.classList.add("shown")
     document.getElementById(divId).scrollIntoView()
   }
@@ -493,7 +522,7 @@ L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thoma
 
     //apri la pagina giusta
     document.getElementById("windowbg").classList.add("shown");
-    jumpTo("intro "+ sel_t.name)
+    jumpTo("main "+ sel_t.name)
   }
 
   function window_close(){
@@ -514,6 +543,7 @@ L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thoma
 
     stopVideo(current_page)
     document.getElementById("windowbg").classList.remove("shown");
+    current_page = false
   }
 
 </script>
