@@ -111,6 +111,31 @@ button.x img {
   width: 2rem;
 }
 
+button.back {
+  position: fixed;
+  left: 5%;
+}
+
+button.back img {
+  width: 2rem;
+}
+
+button.left {
+  float: left;
+}
+
+button.left img {
+  width: 2rem;
+}
+
+button.right {
+  float: right;
+}
+
+button.right img {
+  width: 2rem;
+}
+
 button.link {
   border: 0.2rem solid red;
   font-family: PoppinsMedium;
@@ -763,7 +788,7 @@ Il signore della luce-Vittoria Haziel <br>
     let back_img = document.createElement("img")
     back_img.src = "back.png"
     back_button.appendChild(back_img)
-    div.appendChild(back_button)
+    div.insertBefore(back_button, div.firstChild)
 
     let br = document.createElement("br")
     div.appendChild(br)
