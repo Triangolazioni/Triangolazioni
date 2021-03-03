@@ -77,7 +77,7 @@ html, body {
 #window {
   position: absolute;
   width: 90%;
-  height: calc(90% - 4rem);
+  height: calc(100% - 4rem);
   top: 2rem;
   bottom: 2rem;
   right: 5%;
@@ -120,11 +120,11 @@ button.icon img {
 }
 #left_button {
   left: 5%;
-  bottom: 2rem;
+  bottom: 0rem;
 }
 #right_button {
   right: 5%;
-  bottom: 2rem;
+  bottom: 0rem;
 }
 
 button.link {
@@ -158,8 +158,8 @@ iframe {
 
 <div id="windowbg">
 <div id="window">
-<button class="icon" id="back_button"><img id="back_img"></button>
-<button class="icon" id="x_button" onclick="window_close()"><img id="x_img"></button>
+<button class="icon" id="back_button" onclick="back_function()"><img id="back_img"></button>
+<button class="icon" id="x_button" onclick="x_function()"><img id="x_img"></button>
 
 <div class="page" id="main illuminazione">
 
@@ -499,8 +499,8 @@ Il signore della luce-Vittoria Haziel <br>
 </div>
 
 <br>
-<button class="icon" id="left_button"><img id="left_img"></button>
-<button class="icon" id="right_button"><img id="right_img"></button>
+<button class="icon" id="left_button" onclick="left_function()"><img id="left_img"></button>
+<button class="icon" id="right_button" onclick="right_function()"><img id="right_img"></button>
 </div>
 </div>
 </div>
@@ -711,6 +711,31 @@ Il signore della luce-Vittoria Haziel <br>
     }
   }
 
+  let pages = new Map()
+  pages.set("main illuminazione",        {back:false,                 left:false,                        right:false,                       triangle:illuminazione})
+  pages.set("main inventori",            {back:false,                 left:false,                        right:false,                       triangle:inventori    })
+  pages.set("main industria",            {back:false,                 left:false,                        right:false,                       triangle:industria    })
+  pages.set("inventori sobrero",         {back:"main inventori",      left:false,                        right:"inventori ferraris",        triangle:inventori    })
+  pages.set("inventori ferraris",        {back:"main inventori",      left:"inventori sobrero",          right:"inventori cruto",           triangle:inventori    })
+  pages.set("inventori cruto",           {back:"main inventori",      left:"inventori ferraris",         right:"inventori altri",           triangle:inventori    })
+  pages.set("inventori altri",           {back:"main inventori",      left:"inventori cruto",            right:false,                       triangle:inventori    })
+  pages.set("inventori appro sobrero",   {back:"inventori sobrero",   left:false,                        right:"inventori appro nitro",     triangle:inventori    })
+  pages.set("inventori appro nitro",     {back:"inventori sobrero",   left:"inventori appro sobrero",    right:"inventori appro nobel",     triangle:inventori    })
+  pages.set("inventori appro nobel",     {back:"inventori sobrero",   left:"inventori appro nitro",      right:"inventori appro medicina",  triangle:inventori    })
+  pages.set("inventori appro medicina",  {back:"inventori sobrero",   left:"inventori appro nobel",      right:"inventori appro ferraris",  triangle:inventori    })
+  pages.set("inventori appro ferraris",  {back:"inventori ferraris",  left:"inventori appro medicina",   right:"inventori appro museo",     triangle:inventori    })
+  pages.set("inventori appro museo",     {back:"inventori ferraris",  left:"inventori appro ferraris",   right:"inventori appro tesla",     triangle:inventori    })
+  pages.set("inventori appro tesla",     {back:"inventori ferraris",  left:"inventori appro museo",      right:"inventori appro magnetico", triangle:inventori    })
+  pages.set("inventori appro magnetico", {back:"inventori ferraris",  left:"inventori appro tesla",      right:"inventori appro auto",      triangle:inventori    })
+  pages.set("inventori appro auto",      {back:"inventori ferraris",  left:"inventori appro magnetico",  right:"inventori appro cruto",     triangle:inventori    })
+  pages.set("inventori appro cruto",     {back:"inventori cruto",     left:"inventori appro auto",       right:"inventori appro lampadina", triangle:inventori    })
+  pages.set("inventori appro lampadina", {back:"inventori cruto",     left:"inventori appro cruto",      right:"inventori appro expo",      triangle:inventori    })
+  pages.set("inventori appro expo",      {back:"inventori cruto",     left:"inventori appro lampadina",  right:"inventori appro fabbrica",  triangle:inventori    })
+  pages.set("inventori appro fabbrica",  {back:"inventori cruto",     left:"inventori appro expo",       right:"inventori appro edison",    triangle:inventori    })
+  pages.set("inventori appro edison",    {back:"inventori cruto",     left:"inventori appro fabbrica",   right:"inventori appro industria", triangle:inventori    })
+  pages.set("inventori appro industria", {back:"inventori altri",     left:"inventori appro edison",     right:"inventori appro brevetti",  triangle:inventori    })
+  pages.set("inventori appro brevetti",  {back:"inventori altri",     left:"inventori appro industria",  right:false,                       triangle:inventori    })
+
   let current_page = false
   function jumpTo(divId){
     if(current_page !== false){
@@ -722,6 +747,13 @@ Il signore della luce-Vittoria Haziel <br>
 
     current_page.classList.add("shown")
     document.getElementById(divId).scrollIntoView()
+
+    //cambia icone
+    let p = pages.get(current_page.id)
+    document.getElementById("x_img").src = p.triangle.x_img
+    document.getElementById("left_img").src = (p.left == false) ? "" : p.triangle.left_img
+    document.getElementById("right_img").src = (p.right == false) ? "" : p.triangle.right_img
+    document.getElementById("back_img").src = (p.back == false) ? "" : p.triangle.back_img
   }
 
   //per salvare la posizione precendente al click
@@ -754,21 +786,16 @@ Il signore della luce-Vittoria Haziel <br>
     saved_xy = map.getCenter()
     saved_zoom = map.getZoom()
     map.setView(sel_t.center_xy, sel_t.zoom);
-    //rimuove bottoni zoom (antiestetici)
+    //rimuove bottoni zoom e attribution(antiestetici)
     map.zoomControl.remove()
+    map.attributionControl.remove()
 
     //apri la pagina giusta
     document.getElementById("windowbg").classList.add("shown");
     jumpTo("main "+ sel_t.name)
-
-    //metti icone dei colori giusti
-    document.getElementById("x_img").src =      sel_t.x_img
-    document.getElementById("left_img").src =   sel_t.left_img
-    document.getElementById("right_img").src =  sel_t.right_img
-    document.getElementById("back_img").src =   sel_t.back_img
   }
 
-  function window_close(){
+  function x_function(){
     //triangoli tornano normali
     for(let t of triangoli){
       t.polygon.setStyle({color: t.map_color_unselected, fillOpacity:0.2})
@@ -780,9 +807,10 @@ Il signore della luce-Vittoria Haziel <br>
       n.marker.setIcon(n.BW)
     }
 
-    //posizione torna normale
+    //posizione e altre robe tornano normali
     map.setView(saved_xy, saved_zoom);
     map.zoomControl.addTo(map)
+    map.attributionControl.addTo(map)
 
     stopVideo(current_page)
     document.getElementById("windowbg").classList.remove("shown")
@@ -790,62 +818,20 @@ Il signore della luce-Vittoria Haziel <br>
     current_page = false
   }
 
-  // function addIcon(div_name, div_back, div_left, div_right){
-  //   let div = document.getElementById(div_name)
+  function back_function(){
+    p = pages.get(current_page.id)
+    jumpTo(p.back)
+  }
 
-  //   let back_button = document.createElement("button")
-  //   back_button.className = "back"
-  //   back_button.onclick = function(){jumpTo(div_back)}
-  //   let back_img = document.createElement("img")
-  //   back_img.src = "back.png"
-  //   back_button.appendChild(back_img)
-  //   div.insertBefore(back_button, div.firstChild)
+  function left_function(){
+    p = pages.get(current_page.id)
+    jumpTo(p.left)
+  }
 
-  //   let br = document.createElement("br")
-  //   div.appendChild(br)
-
-  //   if(div_left !== false){
-  //     let left_button = document.createElement("button")
-  //     left_button.className = "left"
-  //     left_button.onclick = function(){jumpTo(div_left)}
-  //     let left_img = document.createElement("img")
-  //     left_img.src = "left.png"
-  //     left_button.appendChild(left_img)
-  //     div.appendChild(left_button)
-  //   }
-
-  //   if(div_right !== false){
-  //     let right_button = document.createElement("button")
-  //     right_button.className = "right"
-  //     right_button.onclick = function(){jumpTo(div_right)}
-  //     let right_img = document.createElement("img")
-  //     right_img.src = "right.png"
-  //     right_button.appendChild(right_img)
-  //     div.appendChild(right_button)
-  //   }
-  // }
-
-  // addIcon("inventori sobrero",  "main inventori", false,                "inventori ferraris")
-  // addIcon("inventori ferraris", "main inventori", "inventori sobrero",  "inventori cruto")
-  // addIcon("inventori cruto",    "main inventori", "inventori ferraris", "inventori altri")
-  // addIcon("inventori altri",    "main inventori", "inventori cruto",    false)
-
-  // addIcon("inventori appro sobrero",   "inventori sobrero",   false,                        "inventori appro nitro"    )
-  // addIcon("inventori appro nitro",     "inventori sobrero",   "inventori appro sobrero",    "inventori appro nobel"    )
-  // addIcon("inventori appro nobel",     "inventori sobrero",   "inventori appro nitro",      "inventori appro medicina" )
-  // addIcon("inventori appro medicina",  "inventori sobrero",   "inventori appro nobel",      "inventori appro ferraris" )
-  // addIcon("inventori appro ferraris",  "inventori ferraris",  "inventori appro medicina",   "inventori appro museo"    )
-  // addIcon("inventori appro museo",     "inventori ferraris",  "inventori appro ferraris",   "inventori appro tesla"    )
-  // addIcon("inventori appro tesla",     "inventori ferraris",  "inventori appro museo",      "inventori appro magnetico")
-  // addIcon("inventori appro magnetico", "inventori ferraris",  "inventori appro tesla",      "inventori appro auto"     )
-  // addIcon("inventori appro auto",      "inventori ferraris",  "inventori appro magnetico",  "inventori appro cruto"    )
-  // addIcon("inventori appro cruto",     "inventori cruto",     "inventori appro auto",       "inventori appro lampadina")
-  // addIcon("inventori appro lampadina", "inventori cruto",     "inventori appro cruto",      "inventori appro expo"     )
-  // addIcon("inventori appro expo",      "inventori cruto",     "inventori appro lampadina",  "inventori appro fabbrica" )
-  // addIcon("inventori appro fabbrica",  "inventori cruto",     "inventori appro expo",       "inventori appro edison"   )
-  // addIcon("inventori appro edison",    "inventori cruto",     "inventori appro fabbrica",   "inventori appro industria")
-  // addIcon("inventori appro industria", "inventori altri",     "inventori appro edison",     "inventori appro brevetti" )
-  // addIcon("inventori appro brevetti",  "inventori altri",     "inventori appro industria",  false                      )
+  function right_function(){
+    p = pages.get(current_page.id)
+    jumpTo(p.right)
+  }
 
 </script>
 
