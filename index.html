@@ -12,27 +12,19 @@
 
 <style>
 
-h1 {font-size: 2.5rem;}
-h2 {font-size: 2.25rem;}
-h3 {
-  font-size: 2rem;
-}
-h4 {
-  font-size: 1.75rem;
-}
-h5 {
-  font-size: 1.5rem;
-}
-h6 {
-  font-size: 1.25rem;
-}
+h1 {font-size: 2.2rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.8rem;}
+h4 {font-size: 1.6rem;}
+h5 {font-size: 1.4rem;}
+h6 {font-size: 1.2rem;}
 p {font-size: 1rem;}
 
-@media (max-width: 480px) {html {font-size: 15px;}}
-@media (min-width: 480px) {html {font-size: 16px;}}
-@media (min-width: 768px) {html {font-size: 17px;}}
-@media (min-width: 992px) {html {font-size: 18px;}}
-@media (min-width: 1200px) {html {font-size: 20px;}}
+@media (max-width: 480px) {html {font-size: 14px;}}
+@media (min-width: 480px) {html {font-size: 15px;}}
+@media (min-width: 768px) {html {font-size: 16px;}}
+@media (min-width: 992px) {html {font-size: 17px;}}
+@media (min-width: 1200px) {html {font-size: 19px;}}
 
 @font-face {
   font-family: PoppinsMedium;
@@ -165,7 +157,12 @@ h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-.inventori h1, h2, h3, h4, h5, h6{
+.inventori h1,
+.inventori h2,
+.inventori h3,
+.inventori h4,
+.inventori h5,
+.inventori h6{
   color: rgba(238, 201, 43, 1);
 }
 
@@ -242,6 +239,30 @@ figcaption {
   font-size: 0.8rem;
 }
 
+#main_industria img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.industria h1,
+.industria h2,
+.industria h3,
+.industria h4,
+.industria h5,
+.industria h6{
+  color: rgba(241, 110, 77);
+}
+
+.industria button.link,
+.industria figcaption {
+  border: 0.2rem solid rgb(253, 244, 243);
+  background-color: rgb(253, 244, 243);
+}
+
+.industria a {
+  color: rgb(133, 43, 21);
+}
+
 </style>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -262,7 +283,7 @@ figcaption {
 
 <span class="illuminazione">
 
-<div class="page" id="main illuminazione">
+<div class="page" id="main_illuminazione">
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
 <div class="video-container">
@@ -283,7 +304,7 @@ Cruto
 
 <span class="inventori">
 
-<div class="page" id="main inventori">
+<div class="page" id="main_inventori">
 
 <h1>TRA SCIENZA E INDUSTRIA</h1>
 <div class="video-container">
@@ -291,53 +312,53 @@ Cruto
 </div>
 <p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
-<button class="link left" onclick="jumpTo('inventori sobrero')">
+<button class="link left" onclick="jumpTo('inv_sobrero')">
 <h6>Ascanio Sobrero</h6>
 <img src="icone inventori/sobrero.png">
 <p>Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</p>
 </button>
 
-<button class="link right" onclick="jumpTo('inventori ferraris')">
+<button class="link right" onclick="jumpTo('inv_ferraris')">
 <h6>Galileo Ferraris</h6>
 <img src="icone inventori/ferraris giallo.png">
 <p>L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</p>
 </button>
 
-<button class="link left" onclick="jumpTo('inventori cruto')">
+<button class="link left" onclick="jumpTo('inv_cruto')">
 <h6>Alessandro Cruto</h6>
 <img src="icone inventori/cruto giallo.png">
 <p>Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
 Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 </button>
 
-<button class="link right" onclick="jumpTo('inventori altri')">
+<button class="link right" onclick="jumpTo('inv_altri')">
 <h6>Altri approfondimenti</h6>
 </button>
 
 </div>
 
-<div class="page" id="inventori sobrero">
+<div class="page" id="inv_sobrero">
 <h3>ASCANIO SOBRERO</h3>
 <h5>UNA SCOPERTA ESPLOSIVA</h5>
 
-<button class="link left" onclick="jumpTo('inventori appro sobrero')">
+<button class="link left" onclick="jumpTo('inv_ap_sobrero')">
 <h6>Ascanio Sobrero</h6>
 <img src="icone inventori/sobrero.png">
 <p>Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</p>
 
 </button>
 
-<button class="link right" onclick="jumpTo('inventori appro nitro')">
+<button class="link right" onclick="jumpTo('inv_ap_nitro')">
 <h6>Cos'è la nitroglicerina?</h6>
 <img src="icone inventori/nitroglicerina.png">
 <p>La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.</p></button>
 
-<button class="link left" onclick="jumpTo('inventori appro nobel')">
+<button class="link left" onclick="jumpTo('inv_ap_nobel')">
 <h6>Alfred Nobel</h6>
 <img src="icone inventori/nobel giallo.png">
 <p>Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializzò la nitroglicerina come "olio esplodente". Stabilizzò in seguito la sostanza utilizzando della farina fossile per renderla più stabile. Ottenne quindi una pasta morbida, plasmabile in canne di forma idonea: nacque così la dinamite.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro medicina')">
+<button class="link right" onclick="jumpTo('inv_ap_medicina')">
 <h6>Uso in medicina</h6>
 <img src="icone inventori/Senza titolo.png">
 <p>La nitroglicerina non è però solamente associata alla dinamite o alla sua natura pericolosa: essa è infatti anche usata come farmaco, in forma di tavolette sublinguinali. Questa versatile sostanza ha infatti azione vasodilatante e viene usata come antianginoso (nelle terapie della angina pectoris).</p>
@@ -345,7 +366,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 
 </div>
 
-<div class="page" id="inventori appro sobrero">
+<div class="page" id="inv_ap_sobrero">
 <img class="inizio" src="icone inventori/sobrero.png">
 <h4>ASCANIO SOBRERO</h4>
 <p>Il 12 ottobre 1812 nasce a Casale Monferrato Ascanio Sobrero, destinato a diventare uno dei più importanti chimici italiani della sua epoca, soprattutto per i risvolti applicativi delle sue scoperte.</p>
@@ -362,16 +383,16 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 </figure>
 
 <p>L’importanza di Liebig nel campo della chimica va però oltre a questa invenzione culinaria e alla sua opera di scienziato. Il suo merito è infatti proprio quello di aver istituito la scuola di Giessen, modello di numerose altre scuole di chimica, che attirava studenti da tutta Europa.</p> 
-<p>Nel suo periodo all’estero, Sobrero entra in contatto con un “ambiente nitrico”: molti chimici, specialmente francesi e tedeschi, si occupano in questo periodo di composti nitrici, e Sobrero ha così l’occasione di appassionarsi a questi studi. Tornato poi a Torino, mette in campo ciò che ha appreso dai grandi chimici stranieri. Diventa docente di chimica presso la Scuola di Meccanica e Chimica applicata alle Arti di Via Po. Ed è proprio in via Po, nell’ex laboratorio chimico, che avviene la scoperta: nel 1847 Sobrero sintetizza per la prima volta la <a class="texty" onclick="jumpTo('inventori appro nitro')">nitroglicerina</a></b>. Il chimico piemontese intuisce il potenziale che la sua scoperta potrebbe rappresentare in campo industriale, ma probabilmente conoscendo anche la pericolosità del composto, continua a dedicarsi ai suoi studi e sono sue altre importanti scoperte ( come ad esempio il sobrerolo, chiamato così in suo onore).</p>
+<p>Nel suo periodo all’estero, Sobrero entra in contatto con un “ambiente nitrico”: molti chimici, specialmente francesi e tedeschi, si occupano in questo periodo di composti nitrici, e Sobrero ha così l’occasione di appassionarsi a questi studi. Tornato poi a Torino, mette in campo ciò che ha appreso dai grandi chimici stranieri. Diventa docente di chimica presso la Scuola di Meccanica e Chimica applicata alle Arti di Via Po. Ed è proprio in via Po, nell’ex laboratorio chimico, che avviene la scoperta: nel 1847 Sobrero sintetizza per la prima volta la <a class="texty" onclick="jumpTo('inv_ap_nitro')">nitroglicerina</a></b>. Il chimico piemontese intuisce il potenziale che la sua scoperta potrebbe rappresentare in campo industriale, ma probabilmente conoscendo anche la pericolosità del composto, continua a dedicarsi ai suoi studi e sono sue altre importanti scoperte ( come ad esempio il sobrerolo, chiamato così in suo onore).</p>
 
 <figure>
 <img id="img_nitro_lines" src="immagini inventori/800px-Nitroglycerin_3d_lines.png">
 <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=19587094" target="_blank">Adam Rędzikowski - Own work, CC BY-SA 3.0, </a></figcaption> 
 </figure>
 
-<p>Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 <a class="texty" onclick="jumpTo('inventori appro nobel')">Alfred Nobel</a> comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.</p>
+<p>Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 <a class="texty" onclick="jumpTo('inv_ap_nobel')">Alfred Nobel</a> comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.</p>
 </div>
-<div class="page" id="inventori appro nitro">
+<div class="page" id="inv_ap_nitro">
 <img class="inizio" src="icone inventori/nitroglicerina.png">
 <h4>COS’E’ LA NITROGLICERINA</h4>
 <p>Ascanio Sobrero sintetizza per primo la nitroglicerina a Torino nel 1847. In quel periodo molti chimici in giro per l’Europa si stavano occupando di esperimenti legati ai composti nitrici, in particolare Sobrero riprende inizialmente gli esperimenti del 1845 del chimico Christian Schönbein di Basilea per la sintesi di nitrocellulosa.</p>
@@ -402,7 +423,7 @@ https://www.youtube.com/watch?v=1IfsvVgwopQ-->
 <p><a href="https://www.youtube.com/watch?v=1IfsvVgwopQ" target="_blank">Video sulla dinamite</a></p>
 
 </div>
-<div class="page" id="inventori appro nobel">
+<div class="page" id="inv_ap_nobel">
 <img class="inizio" src="icone inventori/nobel giallo.png">
 <h4>ALFRED NOBEL</h4>
 <p>Alfred Nobel nasce nel 1833 a Stoccolma e si trasferisce nel 1842 con la famiglia a San Pietroburgo, dove già si trovava il padre che lavorava nell’industria di armamenti e si occupava di esplosivi. La passione per gli esplosivi viene tramandata al figlio Alfred, che studia privatamente ed eccelle particolarmente in chimica. Quindi, quando Nobel legge della nitroglicerina, è già alla ricerca di nuovi esplosivi. Al tempo, l’industria di armamenti era più o meno ferma alla polvere da sparo. I Nobel provano ad implementare gli effetti della polvere aggiungendo della <b>nitroglicerina</b> e brevettano l’idea nel 1863. Ma già nel 1861 Nobel va in giro per l’Europa a cercare finanziamenti: nel 1864 viene istituita la società Nobel e aperta la prima fabbrica di nitroglicerina a Vinterviken, presso Stoccolma. Il composto, scoperto da Sobrero, viene allora chiamato “l’olio esplosivo di Nobel”: così il nome dello svedese comincia a essere associato alla scoperta.</p>
@@ -438,7 +459,7 @@ L’imprenditore svedese è quindi legato all’Italia, luogo che sceglie anche 
 </figure>
 
 </div>
-<div class="page" id="inventori appro medicina">
+<div class="page" id="inv_ap_medicina">
 <img class="inizio" src="icone inventori/Senza titolo.png">
 <h4>USO IN MEDICINA</h4>
 <p>Come può la nitroglicerina, usata come esplosivo, essere anche un <b>medicinale</b>?</p>
@@ -459,58 +480,58 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 
 </div>
 
-<div class="page" id="inventori ferraris">
+<div class="page" id="inv_ferraris">
 <h4>GALILEO FERRARIS</h4>
 <h5>IL MOTORE ELETTRICO</h5>
 
-<button class="link left" onclick="jumpTo('inventori appro ferraris')">
+<button class="link left" onclick="jumpTo('inv_ap_ferraris')">
 <h6>Galileo Ferraris</h6>
 <img src="icone inventori/ferraris giallo.png">
 <p>L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro museo')">
+<button class="link right" onclick="jumpTo('inv_ap_museo')">
 <h6>Il Regio Museo Industriale</h6>
 <img src="icone inventori/museo giallo.png">
 <p>Il Regio Museo Industriale nacque con lo scopo di promuovere lo sviluppo industriale. Qui nel 1889 Galileo Ferraris fondò una scuola di elettrotecnica dove insegnò fino alla morte.</p></button>
 
-<button class="link left" onclick="jumpTo('inventori appro tesla')">
+<button class="link left" onclick="jumpTo('inv_ap_tesla')">
 <h6>Nikola Tesla</h6>
 <img src="icone inventori/tesla giallo.png">
 <p>Tra i numerosi brevetti dell'inventore americano risulta anche quello del campo magnetico rotante, la cui paternità venne in seguito riconosciuta a Galileo Ferraris. Egli in la produzione di motori elettrici su scala industriale.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro magnetico')">
+<button class="link right" onclick="jumpTo('inv_ap_magnetico')">
 <h6>Il campo magnetico rotante</h6>
 <img src="icone inventori/motore elettrico.png">
 <p>Due bobine perpendicolari tra loro percorse da correnti sfasate generano un campo magnetico rotante: grazie a questa scoperta si diffuse rapidamente l'utilizzo del motore  a induzione.
 </p></button>
 
-<button class="link left" onclick="jumpTo('inventori appro auto')">
+<button class="link left" onclick="jumpTo('inv_ap_auto')">
 <img src="icone inventori/automobile gialla.png">
 <h6>Le automobili elettriche</h6>
 <p>Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.</p></button>
 </div>
 
-<div class="page" id="inventori appro ferraris">
+<div class="page" id="inv_ap_ferraris">
 <img class="inizio" src="icone inventori/ferraris giallo.png">
 <h4>GALILEO FERRARIS</h4>
 
 <p>Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine.</p>
-<p>A partire dal 1877 divenne assistente di fisica tecnica presso il <a class="texty" onclick="jumpTo('inventori appro museo')">Regio Museo Industriale</a> di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.</p>
+<p>A partire dal 1877 divenne assistente di fisica tecnica presso il <a class="texty" onclick="jumpTo('inv_ap_museo')">Regio Museo Industriale</a> di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.</p>
 
-<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('inventori appro magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('inventori appro tesla')">Nikola Tesla riguardo alla paternità</a>. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
+<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('inv_ap_magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('inv_ap_tesla')">Nikola Tesla riguardo alla paternità</a>. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
 
 <p>Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.</p>
 <p>Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:<br>
 <i>“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.</i></p>
 
 </div>
-<div class="page" id="inventori appro museo">
+<div class="page" id="inv_ap_museo">
 <img class="inizio" src="icone inventori/museo giallo.png">
 <h4>REGIO MUSEO INDUSTRIALE</h4>
 
 <p>Il Regio Museo industriale Italiano venne istituito da un decreto nel 1862 con l’obiettivo <i>“di promuovere l’istruzione industriale e il progresso delle industrie e del commercio”</i> sul modello delle scuole di istruzione tecnica superiore che si stavano sviluppando a Londra e Parigi. Esso aveva sede dove oggi sorge Piazzale Valdo Fusi, ma rimase distrutto durante un bombardamento aereo nel 1943.</p>
 <p>Questo fu un luogo di grande rilevanza nello sviluppo della società torinese: esso era non solo un’esposizione permanente dei nuovi progressi industriali, ma anche un luogo in cui si tenevano corsi di insegnamento con lo scopo di ampliare le conoscenze tecniche dei giovani ingegneri.</p>
-<p>Qui nel 1879 <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane <a class="texty" onclick="jumpTo('inventori appro cruto')">Alessandro Cruto</a>, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.</p>
+<p>Qui nel 1879 <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a> presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane <a class="texty" onclick="jumpTo('inv_ap_cruto')">Alessandro Cruto</a>, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.</p>
 <p>Nel 1887 l’ingegnere piemontese tenne un corso di elettrotecnica che prevedeva, oltre alle tradizionali lezioni, alcune esercitazioni pratiche e nell’anno successivo venne istituito all’interno dei locali del Regio Museo Industriale un vero e proprio Laboratorio di Elettrotecnica, che attirò studenti da tutta Italia; alcuni strumenti e apparecchiature provenienti da tale laboratorio sono oggi conservati presso l’Istituto elettrotecnico nazionale Galileo Ferraris.</p>
 <p>La fama del Museo divenne tale da rendere necessario, nel 1897, un progetto di ampliamento dei locali che dotarono l’edificio di nuove aule per le lezioni e per il disegno e apposite aree per i laboratori.</p>
 <p>L’esposizione generale italiana del 1898 vide la partecipazione diretta del Museo che presentò una propria mostra contenente disegni e progetti degli allievi.</p>
@@ -518,11 +539,11 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <p><a href="https://www.museotorino.it/view/s/12fab9b75ccd4f8596cdf2a44f27b6ab" target="_blank">Immagini Museo Torino</a></p>
 
 </div>
-<div class="page" id="inventori appro tesla">
+<div class="page" id="inv_ap_tesla">
 <img class="inizio" src="icone inventori/tesla giallo.png">
 <h4>NIKOLA TESLA</h4>
 
-<p>Nikola Tesla nacque il 10 luglio 1856 in una famiglia serba nei territori dell’attuale Croazia. Frequentò in Austria L’università tecnica di Graz, ai tempi considerata uno dei migliori istituti del mondo, e qui iniziò ad interessarsi agli impieghi della corrente alternata. Nel 1882 si recò a Parigi per lavorare alla Continental Edison Company, dove si occupò di migliorare gli apparati elettrici. Egli affermò di aver ideato in quell’anno il motore a induzione sfruttando il <a class="texty" onclick="jumpTo('inventori appro magnetico')">campo magnetico rotante</a>, brevettato poi nel 1888 e la cui originalità venne contestata dal piemontese <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a>. Nel 1884 si trasferì negli Stati Uniti dove venne assunto da <a class="texty" onclick="jumpTo('inventori appro edison')">Thomas Edison</a> nella sua azienda Edison Machine Works, dove si occupò di riprogettare l’esistente generatore di corrente continua.</p>
+<p>Nikola Tesla nacque il 10 luglio 1856 in una famiglia serba nei territori dell’attuale Croazia. Frequentò in Austria L’università tecnica di Graz, ai tempi considerata uno dei migliori istituti del mondo, e qui iniziò ad interessarsi agli impieghi della corrente alternata. Nel 1882 si recò a Parigi per lavorare alla Continental Edison Company, dove si occupò di migliorare gli apparati elettrici. Egli affermò di aver ideato in quell’anno il motore a induzione sfruttando il <a class="texty" onclick="jumpTo('inv_ap_magnetico')">campo magnetico rotante</a>, brevettato poi nel 1888 e la cui originalità venne contestata dal piemontese <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a>. Nel 1884 si trasferì negli Stati Uniti dove venne assunto da <a class="texty" onclick="jumpTo('inv_ap_edison')">Thomas Edison</a> nella sua azienda Edison Machine Works, dove si occupò di riprogettare l’esistente generatore di corrente continua.</p>
 <p>Nel 1887 costruì il primo motore a induzione a corrente alternata senza attrito e iniziò inoltre ad occuparsi di quelli che diventeranno poi noti come raggi X, brevettò un primo modello di radio e effettuò diversi esperimenti sulla telegrafia senza fili, sull’elettricità atmosferica e sulla trasmissione di energia su lunghe distanze.</p>
 <p>Egli fu coinvolto in un’altra controversia riguardante un’invenzione: il brevetto della radio venne inizialmente riconosciuto all’inventore italiano Guglielmo Marconi e solo in seguito alla morte di Tesla, avvenuta nel 1943, venne assegnata all’americano la paternità della scoperta.</p>
 <p>Egli si scontrò con Thomas Edison nella cosiddetta “guerra delle correnti”, una competizione commerciale per il controllo del mercato elettrico che vedeva contrapposte la corrente alternata, promossa da Tesla, e la corrente continua, ritenuta la soluzione più adatta dal suo avversario: l’idea di Edison era quella di sviluppare un sistema di distribuzione elettrica che mantenesse lo stesso potenziale lungo tutta la linea, questo metodo aveva però l’inconveniente di dissipare parte dell’energia lungo il trasporto, problema che risultava meno incisivo usando la corrente alternata. Attraverso una serie di dimostrazioni pubbliche Tesla riuscì a mostrare l’efficienza del suo progetto e a convincere l’opinione pubblica nonostante la campagna diffamatoria di Edison che sottolineava la presunta pericolosità dell’idea: nel 1889 venne costruito il primo impianto idroelettrico a corrente alternata e nel 1892 Tesla ottenne l’appalto per la realizzazione di una centrale idroelettrica sulle cascate del Niagara.</p>
@@ -535,17 +556,17 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 </figure>
 
 </div>
-<div class="page" id="inventori appro magnetico">
+<div class="page" id="inv_ap_magnetico">
 <img class="inizio" src="icone inventori/motore elettrico.png">
 <h4>IL CAMPO MAGNETICO ROTANTE</h4>
 
-<p>L’idea del campo magnetico rotante sembra essere nata da una passeggiata durante la quale <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> si soffermò ad osservare la successione dei portici di via Cernaia: egli intuì che due bobine disposte perpendicolarmente percorse da correnti alternate sfasate generavano un campo magnetico rotante. I risultati dei suoi studi vennero mostrati in pubblico per la prima volta nel 1885, quando l’ingegnere piemontese presentò <i>“il suo giocattolo”</i>, come era solito chiamare il primo prototipo di motore a corrente alternata. Egli realizzò negli anni successivi quattro modelli di motore che sfruttavano il campo magnetico rotante e nel 1888 ricevette un premio dalla società americana <i>Westinghouse</i> per la sua scoperta.</p>
+<p>L’idea del campo magnetico rotante sembra essere nata da una passeggiata durante la quale <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a> si soffermò ad osservare la successione dei portici di via Cernaia: egli intuì che due bobine disposte perpendicolarmente percorse da correnti alternate sfasate generavano un campo magnetico rotante. I risultati dei suoi studi vennero mostrati in pubblico per la prima volta nel 1885, quando l’ingegnere piemontese presentò <i>“il suo giocattolo”</i>, come era solito chiamare il primo prototipo di motore a corrente alternata. Egli realizzò negli anni successivi quattro modelli di motore che sfruttavano il campo magnetico rotante e nel 1888 ricevette un premio dalla società americana <i>Westinghouse</i> per la sua scoperta.</p>
 <p>Negli stessi anni anche l’americano Nikola Tesla stava svolgendo esperimenti simili, riuscendo poi a sfruttare la scoperta producendo motori elettrici su scala industriale.</p>
 <p><a href="http://www.museoferraris.it/index.php/gferraris/" target="_blank">Immagini primi prototipi</a></p>
 <p><a href="https://www.youtube.com/watch?v=7IMh2D0LE_Q&feature=emb_title" target="_blank">Video del funzionamento</a></p>
 
 </div>
-<div class="page" id="inventori appro auto">
+<div class="page" id="inv_ap_auto">
 <img class="inizio" src="icone inventori/automobile gialla.png">
 <h4>LE AUTOMOBILI ELETTRICHE</h4>
 
@@ -555,44 +576,44 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 
 </div>
 
-<div class="page" id="inventori cruto">
+<div class="page" id="inv_cruto">
 <h4>ALESSANDRO CRUTO</h4>
 <h5>L'INVENZIONE LUMINOSA</h5>
 
-<button class="link left" onclick="jumpTo('inventori appro cruto')">
+<button class="link left" onclick="jumpTo('inv_ap_cruto')">
 <h6>Alessandro Cruto</h6>
 <img src="icone inventori/cruto giallo.png">
 <p>Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
 Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro lampadina')">
+<button class="link right" onclick="jumpTo('inv_ap_lampadina')">
 <h6>La lampadina</h6>
 <img src="icone inventori/lampadina gialla.png">
 <p>La lampada ad incandescenza è formata da un bulbo di vetro attraversato da un filamento carbonizzato. Molti scienziati lavoravano per trovare il materiale migliore con cui realizzare il filamento.</p></button>
 
-<button class="link left" onclick="jumpTo('inventori appro expo')">
+<button class="link left" onclick="jumpTo('inv_ap_expo')">
 <h6>L'esposizione industriale</h6>
 <img src="icone inventori/esposizione generale gialla.png">
 <p>Nel 1884, all'Esposizione generale italiana tenutasi al parco del Valentino di Torino, Cruto presentò la sua lampadina realizzata con filamento in carbonio, ricevendo ottime recensioni.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro fabbrica')">
+<button class="link right" onclick="jumpTo('inv_ap_fabbrica')">
 <h6>La fabbrica di Alpignano</h6>
 <img src="icone inventori/fabbrica gialla.png">
 <p>La lampadina di Cruto convinse alcuni investitori, e il piccolo laboratorio di Piossasco non bastava più all'inventore, che aprì la sua industria ad Alpignano. Oggi la fabbrica è un museo.</p></button>
 
-<button class="link left" onclick="jumpTo('inventori appro edison')">
+<button class="link left" onclick="jumpTo('inv_ap_edison')">
 <h6>Thomas Edison</h6>
 <img src="icone inventori/edison giallo.png">
 <p>L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.</p></button>
 </div>
 
-<div class="page" id="inventori appro cruto">
+<div class="page" id="inv_ap_cruto">
 <img class="inizio" src="icone inventori/cruto giallo.png">
 <h4>ALESSANDRO CRUTO</h4>
 <p>Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il <b>diamante</b> in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico.</p>
 <p>Piossasco si trova a 20 chilometri da Torino. Non sono pochi da fare a piedi, ma Cruto compie spesso questo tragitto per ascoltare lezioni e conferenze nel capoluogo.</p>
-<p>Nel maggio 1879 <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> è a Torino per un <b>ciclo di conferenze</b> sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa.</p>
-<p>Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La <a class="texty" onclick="jumpTo('inventori appro lampadina')">lampadina ad incandescenza</a> ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le <b>lamine di carbonio</b> che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua <a class="texty" onclick="jumpTo('inventori appro fabbrica')">industria ad Alpignano</a> e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.</p>
+<p>Nel maggio 1879 <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a> è a Torino per un <b>ciclo di conferenze</b> sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa.</p>
+<p>Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La <a class="texty" onclick="jumpTo('inv_ap_lampadina')">lampadina ad incandescenza</a> ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le <b>lamine di carbonio</b> che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua <a class="texty" onclick="jumpTo('inv_ap_fabbrica')">industria ad Alpignano</a> e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.</p>
 <div class="fumetto">
   <button onclick="img_prima_function()"><img id="img_prima"></button>
   <button onclick="img_dopo_function()"><img id="img_dopo" src="immagine_dopo.png"></button>
@@ -600,7 +621,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </div>
 
 </div>
-<div class="page" id="inventori appro lampadina">
+<div class="page" id="inv_ap_lampadina">
 <img class="inizio" src="icone inventori/lampadina gialla.png">
 <h4>UN’INVENZIONE LUMINOSA</h4>
 
@@ -635,18 +656,18 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="https://www.youtube.com/watch?v=nQoot7HZL_o" target="_blank">Funzionamento delle lampadine moderne</a></p>
 
 </div>
-<div class="page" id="inventori appro expo">
+<div class="page" id="inv_ap_expo">
 <img class="inizio" src="icone inventori/esposizione generale gialla.png">
 <h4>L’ESPOSIZIONE INDUSTRIALE</h4>
 
 <p>A partire dal 1881 si sviluppò l’idea di ospitare a Torino un’esposizione universale sul modello di quelle che si andavano sviluppando in quegli anni: a partire dalla Great Exhibition tenutasi  a Londra nel 1851 le più importanti città europee iniziarono a organizzare grandi mostre con lo scopo di mostrare i progressi della società e aprire il dialogo sulle ultime innovazioni.</p>
 <p>Nel 1884 si tenne presso il Parco del Valentino l’Esposizione industriale e artistica italiana: in questa occasione vennero realizzati padiglioni appositi per ospitare le mostre, tra essi il Borgo medievale ancora oggi visitabile. L’esposizione si estendeva per un’area molto vasta e comprendeva otto sezioni: Belle Arti, Produzioni scientifiche e letterarie, Didattica, Previdenza e assistenza pubblica, Industrie estrattive e chimiche, Industrie manifatturiere, Economia rurale. Parteciparono più di 14.000 espositori e circa tre milioni di visitatori italiani e stranieri riempirono le strade di Torino.</p>
-<p>All’interno dell’Esposizione vi era un padiglione dedicato all’elettricità, la cui supervisione fu assegnata a <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a>: al suo interno l’illuminazione era completamente affidata all’elettricità, in parte utilizzando lampade ad arco, in parte utilizzando le nuove <a class="texty" onclick="jumpTo('inventori appro lampadina')">lampadine a filamento</a> sviluppate da <a class="texty" onclick="jumpTo('inventori appro cruto')">Alessandro Cruto</a> e <a class="texty" onclick="jumpTo('inventori appro edison')">Thomas Edison</a> in quegli anni, che avrebbero segnato il futuro dell’illuminazione.</p>
+<p>All’interno dell’Esposizione vi era un padiglione dedicato all’elettricità, la cui supervisione fu assegnata a <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a>: al suo interno l’illuminazione era completamente affidata all’elettricità, in parte utilizzando lampade ad arco, in parte utilizzando le nuove <a class="texty" onclick="jumpTo('inv_ap_lampadina')">lampadine a filamento</a> sviluppate da <a class="texty" onclick="jumpTo('inv_ap_cruto')">Alessandro Cruto</a> e <a class="texty" onclick="jumpTo('inv_ap_edison')">Thomas Edison</a> in quegli anni, che avrebbero segnato il futuro dell’illuminazione.</p>
 
 <figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
 
 </div>
-<div class="page" id="inventori appro fabbrica">
+<div class="page" id="inv_ap_fabbrica">
 <img class="inizio" src="icone inventori/fabbrica gialla.png">
 <h4>LA FABBRICA DI ALPIGNANO</h4>
 <br>
@@ -661,7 +682,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="http://www.ecomuseocruto.it/museo/" target="_blank">Sito web del museo</a></p>
   
 </div>
-<div class="page" id="inventori appro edison">
+<div class="page" id="inv_ap_edison">
 <img class="inizio" src="icone inventori/edison giallo.png">
 <h4>THOMAS EDISON</h4>
 <p>Thomas Edison e Alessandro Cruto nascono nello stesso anno, il 1847. I due inventori sono però figli di due mondi molto distanti.</p>
@@ -676,27 +697,27 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p>La storia però non è fatta di se: l’impegno che la società può prendersi ora è quello di ricordare le menti brillanti del passato, per assicurare il massimo sostegno a quelle del presente.</p>
 </div>
 
-<div class="page" id="inventori altri">
+<div class="page" id="inv_altri">
 <h4>ALTRI APPROFONDIMENTI</h4>
 
-<button class="link left" onclick="jumpTo('inventori appro industria')">
+<button class="link left" onclick="jumpTo('inv_ap_industria')">
 <h6>L'industria piemontese</h6>
 <img src="icone inventori/fabbrica gialla.png">
 <p>Sobrero, Cruto e Ferraris si inseriscono nel panorama industriale piemontese della seconda metà dell'Ottocento, in un periodo di sviluppo e competizione straniera.</p></button>
 
-<button class="link right" onclick="jumpTo('inventori appro brevetti')">
+<button class="link right" onclick="jumpTo('inv_ap_brevetti')">
 <h6>Invenzioni e brevetti</h6>
 <img src="icone inventori/brevetti.png">
 <p>Il periodo in cui operarono i tre scienziati è caratterizzato da grandi invenzioni. Molte persone lavorano sulle stesse frontiere di sviluppo tecnologico e in questo ambiente di competizione internazionale, il brevetto è il mezzo con il quale salvaguardare la proprietà intellettuale.</p>
 </button>
 </div>
 
-<div class="page" id="inventori appro industria">
+<div class="page" id="inv_ap_industria">
 <img class="inizio" src="icone inventori/fabbrica gialla.png">
 <h4>L’INDUSTRIA PIEMONTESE</h4>
 <p>Nel 1864 la capitale d’Italia si sposta da Torino a Firenze. Tutte le attività legate alla politica e alla diplomazia vengono trasferite, e questo cambiamento, sebbene preannunciato, affligge un duro colpo al capoluogo piemontese, dove si verificano disordini popolari e malcontento. La crisi sembra inevitabile, ma non manca la volontà di arginare il problema. Nel 1865 l’allora sindaco Emanuele Luserna di Rorà lancia un <b><i>Appello diretto agli industriali esteri e nazionali</i></b>; la popolazione torinese non si abbatte e la città promuove iniziative e opere pubbliche. La crisi preannunciata non si rivela in realtà drammatica e il contesto industriale si risolleva. L’esposizione generale italiana tenutasi a Torino nel 1884 rappresenta a pieno questa ripresa.</p>
 </div>
-<div class="page" id="inventori appro brevetti">
+<div class="page" id="inv_ap_brevetti">
 <img class="inizio" src="icone inventori/brevetti.png">
 <h4>INVENZIONI E BREVETTI</h4>
 <h6>Cos’è un brevetto?</h6>
@@ -714,17 +735,167 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
 <span class="industria">
 
-<div class="page" id="main industria">
+<div class="page" id="main_industria">
 
-<span class="bookmark" id="intro industria"></span>
-<h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
+<h3>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h3>
 
 <div class="video-container">
 <iframe width="729" height="410" src="https://www.youtube.com/embed/VkE_EJAtTtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<div>La rivoluzione industriale è stata il trampolino di lancio per lo sviluppo di molte regioni italiane, il Piemonte, in particolare, è stato coinvolto in questa crescita non solo dal punto di vista dell'arricchimento generale, ma anche per i profondi cambiamenti di tipo urbanistico di cui sono state protagoniste le sue città. Il caso emblematico è Torino, che ha visto la rapida crescita del quartiere Mirafiori Sud con l'avvento della Fiat. Non è, però, l'unico caso in cui l'industria ha influenzato lo sviluppo urbano, è noto, infatti, il caso del piccolo Villaggio Leumann, anch'esso realizzato per garantire un'abitazione ai dipendenti dell'industria tessile Leumann, in dimensioni nettamente più piccole, e la situazione ad Ivrea con l'azienda Olivetti.</div>
+
+<button class="link" onclick="jumpTo('ind_fiat')">
+<h6>Mirafiori Sud e la Fiat</h6>
+<img src="immagini industria/fiat/ingresso fiat.jpg">
+</button>
+
+<button class="link" onclick="jumpTo('ind_olivetti')">
+<h6>Ivrea e l'Olivetti</h6>
+<img src="immagini industria/olivetti/ingresso olivetti.jpg">
+</button>
+
+<button class="link" onclick="jumpTo('ind_leumann')">
+<h6>Borgata Leumann</h6>
+<img src="immagini industria/leumann/ingresso.jpg">
+</button>
 
 </div>
+
+<div class="page" id="ind_fiat">
+<h3>MIRAFIORI SUD</h3>
+<h5>LA FIAT</h5>
+
+<button class="link left" onclick="jumpTo('ind_ap_agnelli')">
+<h6>La famiglia Agnelli</h6>
+<img src="icone industria/Agnelli.png">
+<p>Nel 1866 a Villar Perosa nacque uno dei più importanti personaggi della storia industriale italiana, Giovanni Agnelli, fondatore della Fiat.
+L'intraprendenza e il coraggio di quest'uomo e in seguito dei suoi discendenti portarono una ventata di novità nel capoluogo piemontese.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_f_storia')">
+<h6>La storia della Fiat </h6>
+<img src="icone industria/fabbrica.png">
+<p>Un'azienda a conduzione famigliare, nata dagli interessati d Giovanni Agnelli per la tecnologia divenne in breve tempo la più grande industria automobilistica italiana, con l'ambizione di conquistare uno spazio nel mercato internazionale.</p></button>
+
+<button class="link left" onclick="jumpTo('ind_ap_dipendenti')">
+<h6>I dipendenti della Fiat</h6>
+<img src="icone industria/operai2.png">
+<p>La rapida espansione della Fiat ebbe come conseguenza immediata la migrazione di famiglie da tutta Italia, in particolare dal Meridione, in cerca di lavoro e di condizioni di vita più stabili. Ci fu, dunque, una grande crescita demografica, soprattutto nei quartieri adiacenti alla fabbrica.
+</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_artom')">
+<h6>L'impatto urbanistico</h6>
+<img src="icone industria/città.png">
+<p>L'aumento rapido della popolazione portò alla necessità di costruire nuovi quartieri residenziali in cui alloggiare le famiglie dei lavoratori; nacque così il quartiere Mirafiori Sud, caratterizzato da alti palazzi con numerosi alloggi molto ravvicinati.</p>
+</button>
+
+<button class="link left" onclick="jumpTo('ind_ap_dipendenti')">
+<h6>Uno sguardo al futuro</h6>
+<img src="icone industria/futuro.png">
+<p>Le nuove necessità e il cambiamento del punto di vista sull'architettura urbana hanno portato alla nascita di progetti di riqualificazione degli spazi e ricostruzione dei palazzi dei quartieri costruiti durante il boom economico.</p>
+</button>
+</div>
+
+<div class="page" id="ind_ap_agnelli">
+</div>
+<div class="page" id="ind_ap_f_storia">
+</div>
+<div class="page" id="ind_ap_dipendenti">
+</div>
+<div class="page" id="ind_ap_artom">
+</div>
+<div class="page" id="ind_ap_futuro">
+</div>
+
+<div class="page" id="ind_olivetti">
+<h3>IVREA</h3>
+<h5>L'OLIVETTI</h5>
+
+<button class="link left" onclick="jumpTo('ind_ap_olivetti')">
+<h6>La famiglia Olivetti</h6>
+<img src="icone industria/olivetti.png">
+<p>Padre e figlio Camillo e Adriano Olivetti riuscirono, collaborando in tempi diversi, nello sviluppo di una delle aziende cardine del panorama industriale del ‘900: “L’Olivetti”.
+Le idee concrete del padre ne hanno permesso la creazione, ma fu proprio grazie ad Adriano, e alle sue inclinazioni più vicine allo stampo umanistico, se l’azienda di famiglia riuscì ad acquisire stima e prestigio.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_o_storia')">
+<h6>L'azienda e i dipendenti</h6>
+<img src="icone industria/Dipendenti_olivetti.png">
+<p>Ciò che Adriano Olivetti si proponeva di realizzare era una “fabbrica dal volto umano”: una comunità di lavoro al passo con le tecnologie più aggiornate, ma senza che il macchinismo avesse il sopravvento sul fattore umano; con i conti dell’azienda in attivo, ma senza che la logica del profitto fosse l’unico metro di giudizio e di condotta.</p></button>
+
+<button class="link left" onclick="jumpTo('ind_ap_o_archi')">
+<h6>L'impatto urbanistico</h6>
+<img src="icone industria/città.png">
+<p>“Architetture industriali capaci di integrare la funzionalità della fabbrica con la bellezza estetica e il rispetto ambientale”
+Questa visione, propria di Adriano Olivetti, guida le scelte aziendali, mai lasciate al caso o all'improvvisazione, in tema di architetture industriali: scelte dei luoghi, degli architetti, dei disegni, dell'impatto urbanistico e ambientale.
+</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_o_22')">
+<h6>La lettera 22</h6>
+<img src="icone industria/lettera_22_olivetti.png">
+<p>La Lettera 22 rappresenta il primo esempio di macchina per scrivere portatile, leggera, compatta, facile da trasportare e maneggevole. Venduta in una custodia con maniglia, prima di cartone e poi in similpelle.
+La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum of Modern Art) di New York.</p>
+</button>
+
+</div>
+ 
+<div class="page" id="ind_ap_olivetti">
+</div>
+<div class="page" id="ind_ap_o_storia">
+</div>
+<div class="page" id="ind_ap_o_archi">
+</div>
+<div class="page" id="ind_ap_o_22">
+</div>
+
+<div class="page" id="ind_leumann">
+<h3>BORGATA LEUMANN</h3>
+<h5>TRA ARTE E VITA QUOTIDIANA</h5>
+
+<button class="link left" onclick="jumpTo('ind_ap_napoleone')">
+<h6>Napoleone Leumann</h6>
+<img src="icone industria/leumann.png">
+<p>Giovane imprenditore di origini svizzere con la passione per le tecnologie e l'ideale che perché un'azienda fosse prospera, sarebbe stato necessario curare i suoi lavoratori.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_l_storia')">
+<h6>Il cotonificio e il villaggio Leumann</h6>
+<img src="icone industria/fabbrica.png">
+<p>Nel 1875 Isacco Leumann trasferisce la sua azienda da Voghera a Collegno, alle porte di Torino, per sfruttare i vantaggi economici di una città in forte sviluppo. Per agevolare i dipendenti il figlio Napoleone fa costruire un villaggio nei pressi della fabbrica dotato di tutti i servizi necessari alle famiglie.</p></button>
+
+<button class="link left" onclick="jumpTo('ind_ap_l_dip')">
+<h6>I dipendenti e la popolazione</h6>
+<img src="icone industria/popolazione Leumann.png">
+<p>Il villaggio era abitato dai dipendenti del cotonificio e dalle loro famiglie ed era organizzato secondo l'idea che il modo migliore affinché i dipendenti lavorassero in maniera produttiva era mettere loro e i propri figli nelle migliori condizioni di vita.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('ind_ap_l_urb')">
+<h6>L'impianto urbanistico</h6>
+<img src="icone industria/città.png">
+<p>Il villaggio è costruito in stile Liberty ed era completamente autosufficiente, dotato di una scuola, una biblioteca, un dormitorio e una mensa, una chiesa, bagni pubblici e una stazionetta per poter usufruire della linea tranviaria Torino-Rivoli.</p>
+</button>
+
+<button class="link left" onclick="jumpTo('ind_ap_l_futuro')">
+<h6>Uno sguardo al presente e al futuro</h6>
+<img src="icone industria/futuro.png">
+<p>Dopo la chiusura del cotonificio le case sono state acquistate dal comune e ad oggi vengono utilizzate come case popolari, inoltre il villaggio è sede di un museo e di un'Associazione che portano avanti progetti culturali come concerti e spettacoli teatrali.</p>
+</button>
+</div>
+  
+<div class="page" id="ind_ap_napoleone">
+</div>
+<div class="page" id="ind_ap_l_storia">
+</div>
+<div class="page" id="ind_ap_l_dip">
+</div>
+<div class="page" id="ind_ap_l_urb">
+</div>
+<div class="page" id="ind_ap_l_futuro">
+</div>
+
 
 </span>
 
@@ -929,7 +1100,6 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
   
   //per fermare un video youtube in un dato elemento
   var stopVideo = function(element) {
-    
     var iframe = element.querySelector("iframe")
     var video = element.querySelector("video")
     if (iframe !== null) {
@@ -942,29 +1112,46 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
   }
 
   let pages = new Map()
-  pages.set("main illuminazione",        {back:false,                 left:false,                        right:false,                       triangle:illuminazione})
-  pages.set("main inventori",            {back:false,                 left:false,                        right:false,                       triangle:inventori    })
-  pages.set("main industria",            {back:false,                 left:false,                        right:false,                       triangle:industria    })
-  pages.set("inventori sobrero",         {back:"main inventori",      left:false,                        right:"inventori ferraris",        triangle:inventori    })
-  pages.set("inventori ferraris",        {back:"main inventori",      left:"inventori sobrero",          right:"inventori cruto",           triangle:inventori    })
-  pages.set("inventori cruto",           {back:"main inventori",      left:"inventori ferraris",         right:"inventori altri",           triangle:inventori    })
-  pages.set("inventori altri",           {back:"main inventori",      left:"inventori cruto",            right:false,                       triangle:inventori    })
-  pages.set("inventori appro sobrero",   {back:"inventori sobrero",   left:false,                        right:"inventori appro nitro",     triangle:inventori    })
-  pages.set("inventori appro nitro",     {back:"inventori sobrero",   left:"inventori appro sobrero",    right:"inventori appro nobel",     triangle:inventori    })
-  pages.set("inventori appro nobel",     {back:"inventori sobrero",   left:"inventori appro nitro",      right:"inventori appro medicina",  triangle:inventori    })
-  pages.set("inventori appro medicina",  {back:"inventori sobrero",   left:"inventori appro nobel",      right:"inventori appro ferraris",  triangle:inventori    })
-  pages.set("inventori appro ferraris",  {back:"inventori ferraris",  left:"inventori appro medicina",   right:"inventori appro museo",     triangle:inventori    })
-  pages.set("inventori appro museo",     {back:"inventori ferraris",  left:"inventori appro ferraris",   right:"inventori appro tesla",     triangle:inventori    })
-  pages.set("inventori appro tesla",     {back:"inventori ferraris",  left:"inventori appro museo",      right:"inventori appro magnetico", triangle:inventori    })
-  pages.set("inventori appro magnetico", {back:"inventori ferraris",  left:"inventori appro tesla",      right:"inventori appro auto",      triangle:inventori    })
-  pages.set("inventori appro auto",      {back:"inventori ferraris",  left:"inventori appro magnetico",  right:"inventori appro cruto",     triangle:inventori    })
-  pages.set("inventori appro cruto",     {back:"inventori cruto",     left:"inventori appro auto",       right:"inventori appro lampadina", triangle:inventori    })
-  pages.set("inventori appro lampadina", {back:"inventori cruto",     left:"inventori appro cruto",      right:"inventori appro expo",      triangle:inventori    })
-  pages.set("inventori appro expo",      {back:"inventori cruto",     left:"inventori appro lampadina",  right:"inventori appro fabbrica",  triangle:inventori    })
-  pages.set("inventori appro fabbrica",  {back:"inventori cruto",     left:"inventori appro expo",       right:"inventori appro edison",    triangle:inventori    })
-  pages.set("inventori appro edison",    {back:"inventori cruto",     left:"inventori appro fabbrica",   right:"inventori appro industria", triangle:inventori    })
-  pages.set("inventori appro industria", {back:"inventori altri",     left:"inventori appro edison",     right:"inventori appro brevetti",  triangle:inventori    })
-  pages.set("inventori appro brevetti",  {back:"inventori altri",     left:"inventori appro industria",  right:false,                       triangle:inventori    })
+  pages.set("main_illuminazione", {back:false,            left:false,               right:false                })
+  pages.set("main_inventori",     {back:false,            left:false,               right:false                })
+  pages.set("main_industria",     {back:false,            left:false,               right:false                })
+  pages.set("inv_sobrero",        {back:"main_inventori", left:false,               right:"inv_ferraris"       })
+  pages.set("inv_ferraris",       {back:"main_inventori", left:"inv_sobrero",       right:"inv_cruto"          })
+  pages.set("inv_cruto",          {back:"main_inventori", left:"inv_ferraris",      right:"inv_altri"          })
+  pages.set("inv_altri",          {back:"main_inventori", left:"inv_cruto",         right:false                })
+  pages.set("inv_ap_sobrero",     {back:"inv_sobrero",    left:false,               right:"inv_ap_nitro"       })
+  pages.set("inv_ap_nitro",       {back:"inv_sobrero",    left:"inv_ap_sobrero",    right:"inv_ap_nobel"       })
+  pages.set("inv_ap_nobel",       {back:"inv_sobrero",    left:"inv_ap_nitro",      right:"inv_ap_medicina"    })
+  pages.set("inv_ap_medicina",    {back:"inv_sobrero",    left:"inv_ap_nobel",      right:"inv_ap_ferraris"    })
+  pages.set("inv_ap_ferraris",    {back:"inv_ferraris",   left:"inv_ap_medicina",   right:"inv_ap_museo"       })
+  pages.set("inv_ap_museo",       {back:"inv_ferraris",   left:"inv_ap_ferraris",   right:"inv_ap_tesla"       })
+  pages.set("inv_ap_tesla",       {back:"inv_ferraris",   left:"inv_ap_museo",      right:"inv_ap_magnetico"   })
+  pages.set("inv_ap_magnetico",   {back:"inv_ferraris",   left:"inv_ap_tesla",      right:"inv_ap_auto"        })
+  pages.set("inv_ap_auto",        {back:"inv_ferraris",   left:"inv_ap_magnetico",  right:"inv_ap_cruto"       })
+  pages.set("inv_ap_cruto",       {back:"inv_cruto",      left:"inv_ap_auto",       right:"inv_ap_lampadina"   })
+  pages.set("inv_ap_lampadina",   {back:"inv_cruto",      left:"inv_ap_cruto",      right:"inv_ap_expo"        })
+  pages.set("inv_ap_expo",        {back:"inv_cruto",      left:"inv_ap_lampadina",  right:"inv_ap_fabbrica"    })
+  pages.set("inv_ap_fabbrica",    {back:"inv_cruto",      left:"inv_ap_expo",       right:"inv_ap_edison"      })
+  pages.set("inv_ap_edison",      {back:"inv_cruto",      left:"inv_ap_fabbrica",   right:"inv_ap_industria"   })
+  pages.set("inv_ap_industria",   {back:"inv_altri",      left:"inv_ap_edison",     right:"inv_ap_brevetti"    })
+  pages.set("inv_ap_brevetti",    {back:"inv_altri",      left:"inv_ap_industria",  right:false                })
+  pages.set("ind_fiat",           {back:"main_industria", left:false,               right:"ind_olivetti"       })
+  pages.set("ind_olivetti",       {back:"main_industria", left:"ind_fiat",          right:"ind_leumann"        })
+  pages.set("ind_leumann",        {back:"main_industria", left:"ind_olivetti",      right:false                })
+  pages.set("ind_ap_agnelli",     {back:"ind_fiat",       left:false,               right:"ind_ap_f_storia"    })
+  pages.set("ind_ap_f_storia",    {back:"ind_fiat",       left:"ind_ap_agnelli",    right:"ind_ap_dipendenti"  })
+  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"       })                                                                                          
+  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"      })                                                                                      
+  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"    })                                                                                      
+  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"    })                                                                                        
+  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"     })                                                                                        
+  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"        })                                                                                        
+  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone"   })                                                                                    
+  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"    })                                                                                          
+  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"       })                                                                                        
+  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"       })                                                                                      
+  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"    })                                                                                      
+  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false                })                                                                                        
 
   let current_page = false
   function jumpTo(divId){
@@ -980,10 +1167,10 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
     //cambia icone
     let p = pages.get(current_page.id)
-    document.getElementById("x_img").src = p.triangle.x_img
-    document.getElementById("left_img").src = (p.left == false) ? "" : p.triangle.left_img
-    document.getElementById("right_img").src = (p.right == false) ? "" : p.triangle.right_img
-    document.getElementById("back_img").src = (p.back == false) ? "" : p.triangle.back_img
+    document.getElementById("x_img").src = sel_t.x_img
+    document.getElementById("left_img").src = (p.left == false) ? "" : sel_t.left_img
+    document.getElementById("right_img").src = (p.right == false) ? "" : sel_t.right_img
+    document.getElementById("back_img").src = (p.back == false) ? "" : sel_t.back_img
   }
 
   //per salvare la posizione precendente al click
@@ -1003,7 +1190,9 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
     ]
   }
 
-  function clicked_triangle(sel_t){
+  let sel_t = false
+  function clicked_triangle(clicked_t){
+    sel_t = clicked_t
     //cambia colore triangoli
     for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
     sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
@@ -1023,7 +1212,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
     //apri la pagina giusta
     document.getElementById("windowbg").classList.add("shown");
-    jumpTo("main "+ sel_t.name)
+    jumpTo("main_"+ sel_t.name)
   }
 
   function x_function(){
@@ -1047,6 +1236,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
     document.getElementById("windowbg").classList.remove("shown")
     current_page.classList.remove("shown")
     current_page = false
+    sel_t = false
   }
 
   function back_function(){
