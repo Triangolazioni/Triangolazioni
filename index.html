@@ -791,7 +791,7 @@ L'intraprendenza e il coraggio di quest'uomo e in seguito dei suoi discendenti p
 <p>L'aumento rapido della popolazione portò alla necessità di costruire nuovi quartieri residenziali in cui alloggiare le famiglie dei lavoratori; nacque così il quartiere Mirafiori Sud, caratterizzato da alti palazzi con numerosi alloggi molto ravvicinati.</p>
 </button>
 
-<button class="link left" onclick="jumpTo('ind_ap_dipendenti')">
+<button class="link left" onclick="jumpTo('ind_ap_futuro')">
 <h6>Uno sguardo al futuro</h6>
 <img src="icone industria/futuro.png">
 <p>Le nuove necessità e il cambiamento del punto di vista sull'architettura urbana hanno portato alla nascita di progetti di riqualificazione degli spazi e ricostruzione dei palazzi dei quartieri costruiti durante il boom economico.</p>
@@ -1140,18 +1140,18 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
   pages.set("ind_leumann",        {back:"main_industria", left:"ind_olivetti",      right:false                })
   pages.set("ind_ap_agnelli",     {back:"ind_fiat",       left:false,               right:"ind_ap_f_storia"    })
   pages.set("ind_ap_f_storia",    {back:"ind_fiat",       left:"ind_ap_agnelli",    right:"ind_ap_dipendenti"  })
-  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"       })                                                                                          
-  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"      })                                                                                      
-  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"    })                                                                                      
-  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"    })                                                                                        
-  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"     })                                                                                        
-  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"        })                                                                                        
-  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone"   })                                                                                    
-  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"    })                                                                                          
-  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"       })                                                                                        
-  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"       })                                                                                      
-  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"    })                                                                                      
-  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false                })                                                                                        
+  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"       })
+  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"      })
+  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"    })
+  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"    })
+  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"     })
+  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"        })
+  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone"   })
+  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"    })
+  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"       })
+  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"       })
+  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"    })
+  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false                })
 
   let current_page = false
   function jumpTo(divId){
