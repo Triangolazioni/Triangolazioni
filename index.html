@@ -141,7 +141,7 @@ button.link {
   font-size: 1rem;
   border-radius: 0.5rem;
   padding: 0.2rem;
-  margin: 0.2rem;
+  margin: 0.5rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -158,7 +158,8 @@ h3, h4, h5, h6 {
 }
 
 .inventori button.link {
-  border: 0.2rem solid rgba(238, 201, 43, .8);
+  border: 0.2rem solid rgb(244, 255, 215);
+  background-color: rgb(244, 255, 215);
 }
 
 .video-container {
@@ -188,6 +189,15 @@ iframe {
 
 .left img {
   float: right;
+  height: 10rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.right img {
+  float: left;
   height: 10rem;
 }
 
@@ -240,10 +250,28 @@ Cruto
 </div>
 <p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
-<button class="link" onclick="jumpTo('inventori sobrero')">Sobrero</button>
-<button class="link" onclick="jumpTo('inventori ferraris')">Ferraris</button>
-<button class="link" onclick="jumpTo('inventori cruto')">Cruto</button>
-<button class="link" onclick="jumpTo('inventori altri')">altri approfondimenti</button>
+<button class="link left" onclick="jumpTo('inventori sobrero')">
+<h6>Ascanio Sobrero</h6>
+<img src="icone inventori/sobrero.png">
+<p>Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('inventori ferraris')">
+<h6>Galileo Ferraris</h6>
+<img src="icone inventori/ferraris giallo.png">
+<p>L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</p>
+</button>
+
+<button class="link left" onclick="jumpTo('inventori cruto')">
+<h6>Alessandro Cruto</h6>
+<img src="icone inventori/cruto giallo.png">
+<p>Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
+Brevettò la sua lampadina ad incandescenza nel 1884.</p>
+</button>
+
+<button class="link right" onclick="jumpTo('inventori altri')">
+<h6>Altri approfondimenti</h6>
+</button>
 
 </div>
 
@@ -258,14 +286,20 @@ Cruto
 
 </button>
 
-<button class="link" onclick="jumpTo('inventori appro nitro')">Cos'è la nitroglicerina?
-La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.</button>
+<button class="link right" onclick="jumpTo('inventori appro nitro')">
+<h6>Cos'è la nitroglicerina?</h6>
+<img src="icone inventori/nitroglicerina.png">
+<p>La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.</p></button>
 
-<button class="link" onclick="jumpTo('inventori appro nobel')">Alfred Nobel
-Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializzò la nitroglicerina come "olio esplodente". Stabilizzò in seguito la sostanza utilizzando della farina fossile per renderla più stabile. Ottenne quindi una pasta morbida, plasmabile in canne di forma idonea: nacque così la dinamite.</button>
+<button class="link left" onclick="jumpTo('inventori appro nobel')">
+<h6>Alfred Nobel</h6>
+<img src="icone inventori/nobel giallo.png">
+<p>Il chimico svedese Alfred Nobel sfruttò la scoperta di Sobrero e commercializzò la nitroglicerina come "olio esplodente". Stabilizzò in seguito la sostanza utilizzando della farina fossile per renderla più stabile. Ottenne quindi una pasta morbida, plasmabile in canne di forma idonea: nacque così la dinamite.</p></button>
 
-<button class="link" onclick="jumpTo('inventori appro medicina')">Uso in medicina
-La nitroglicerina non è però solamente associata alla dinamite o alla sua natura pericolosa: essa è infatti anche usata come farmaco, in forma di tavolette sublinguinali. Questa versatile sostanza ha infatti azione vasodilatante e viene usata come antianginoso (nelle terapie della angina pectoris).
+<button class="link right" onclick="jumpTo('inventori appro medicina')">
+<h6>Uso in medicina</h6>
+<img src="icone inventori/Senza titolo.png">
+<p>La nitroglicerina non è però solamente associata alla dinamite o alla sua natura pericolosa: essa è infatti anche usata come farmaco, in forma di tavolette sublinguinali. Questa versatile sostanza ha infatti azione vasodilatante e viene usata come antianginoso (nelle terapie della angina pectoris).</p>
 </button>
 </div>
 
