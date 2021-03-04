@@ -266,7 +266,7 @@ figcaption {
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
 <div class="video-container">
-<div id="player_illuminazione"></div>
+<div class="player" id="player_illuminazione"></div>
 </div>
 Di notte la città si accende: i lampioni illuminano le strade e l'attività urbana non si ferma con il calare del sole. 
 Non è sempre stato così. Dal gas all'energia elettrica, la storia dell'illuminazione pubblica è lunga e composta da diverse fasi, date dal susseguirsi di innovazioni tecnologiche. L'opera di personalità importanti come Galileo Ferraris e l'ingegno di inventori come Alessandro Cruto hanno contribuito a questa impresa, che ha rivoluzionato la nostra quotidianità.
@@ -287,7 +287,7 @@ Cruto
 
 <h1>TRA SCIENZA E INDUSTRIA</h1>
 <div class="video-container">
-<div id="player_inventori"></div>
+<div class="player" id="player_inventori"></div>
 </div>
 <p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
@@ -720,7 +720,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 <h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
 
 <div class="video-container">
-<div id="player_industria"></div>
+<div class="player" id="player_industria"></div>
 </div>
 
 
@@ -931,27 +931,19 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
   tag.src = "https://www.youtube.com/iframe_api"
   let firstScriptTag = document.getElementsByTagName('script')[0]
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
-  let player_illuminazione
+  let player_illuminazione, player_industria, player_inventori
   function onYouTubeIframeAPIReady() {
-    player_illuminazione = new YT.Player('player_illuminazione', {
-      videoId: 'hBR0Kq9boIU',
-    });
+    player_illuminazione = new YT.Player('player_illuminazione', {videoId: 'hBR0Kq9boIU'})
+    player_industria = new YT.Player('player_industria', {videoId: 'VkE_EJAtTtU'})
+    player_inventori = new YT.Player('player_inventori', {videoId: 'as6C289ogP4'})
   }
 
-
-
   //per fermare un video youtube in un dato elemento
-  var stopVideo = function(element) {
-
-    var iframe = element.querySelector("iframe")
-    var video = element.querySelector("video")
-    if (iframe !== null) {
-      var iframeSrc = iframe.src
-      //iframe.src = iframeSrc
-    }
-    if (video !== null) {
-      video.pause()
-    }
+  let stopVideo = function(element) {
+    let pl = element.querySelector(".player")
+    if(pl.id==='player_illuminazione'){player_illuminazione.stopVideo()}
+    if(pl.id==='player_industria'){player_industria.stopVideo()}
+    if(pl.id==='player_inventori'){player_inventori.stopVideo()}
   }
 
   let pages = new Map()
