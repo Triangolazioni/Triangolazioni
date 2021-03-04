@@ -146,6 +146,14 @@ button.link {
   margin: 0.5rem;
 }
 
+a.texty {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-family: PoppinsMedium;
+  white-space: normal;
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5 {
   text-align:center;
 }
@@ -162,6 +170,10 @@ h3, h4, h5, h6 {
 .inventori button.link, .inventori figcaption {
   border: 0.2rem solid rgb(255, 255, 235);
   background-color: rgb(255, 255, 235);
+}
+
+.inventori a {
+  color: rgb(156, 131, 20);
 }
 
 .video-container {
@@ -340,14 +352,14 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 </figure>
 
 <p>L’importanza di Liebig nel campo della chimica va però oltre a questa invenzione culinaria e alla sua opera di scienziato. Il suo merito è infatti proprio quello di aver istituito la scuola di Giessen, modello di numerose altre scuole di chimica, che attirava studenti da tutta Europa.</p> 
-<p>Nel suo periodo all’estero, Sobrero entra in contatto con un “ambiente nitrico”: molti chimici, specialmente francesi e tedeschi, si occupano in questo periodo di composti nitrici, e Sobrero ha così l’occasione di appassionarsi a questi studi. Tornato poi a Torino, mette in campo ciò che ha appreso dai grandi chimici stranieri. Diventa docente di chimica presso la Scuola di Meccanica e Chimica applicata alle Arti di Via Po. Ed è proprio in via Po, nell’ex laboratorio chimico, che avviene la scoperta: nel 1847 Sobrero sintetizza per la prima volta la <b>nitroglicerina</b>. Il chimico piemontese intuisce il potenziale che la sua scoperta potrebbe rappresentare in campo industriale, ma probabilmente conoscendo anche la pericolosità del composto, continua a dedicarsi ai suoi studi e sono sue altre importanti scoperte ( come ad esempio il sobrerolo, chiamato così in suo onore).</p>
+<p>Nel suo periodo all’estero, Sobrero entra in contatto con un “ambiente nitrico”: molti chimici, specialmente francesi e tedeschi, si occupano in questo periodo di composti nitrici, e Sobrero ha così l’occasione di appassionarsi a questi studi. Tornato poi a Torino, mette in campo ciò che ha appreso dai grandi chimici stranieri. Diventa docente di chimica presso la Scuola di Meccanica e Chimica applicata alle Arti di Via Po. Ed è proprio in via Po, nell’ex laboratorio chimico, che avviene la scoperta: nel 1847 Sobrero sintetizza per la prima volta la <a class="texty" onclick="jumpTo('inventori appro nitro')">nitroglicerina</a></b>. Il chimico piemontese intuisce il potenziale che la sua scoperta potrebbe rappresentare in campo industriale, ma probabilmente conoscendo anche la pericolosità del composto, continua a dedicarsi ai suoi studi e sono sue altre importanti scoperte ( come ad esempio il sobrerolo, chiamato così in suo onore).</p>
 
 <figure>
 <img id="img_nitro_lines" src="immagini inventori/800px-Nitroglycerin_3d_lines.png">
-<figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=19587094">Adam Rędzikowski - Own work, CC BY-SA 3.0, </a></figcaption> 
+<figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=19587094" target="_blank">Adam Rędzikowski - Own work, CC BY-SA 3.0, </a></figcaption> 
 </figure>
 
-<p>Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 <b>Alfred Nobel</b> comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.</p>
+<p>Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 <a class="texty" onclick="jumpTo('inventori appro nobel')">Alfred Nobel</a> comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.</p>
 </div>
 <div class="page" id="inventori appro nitro">
 <img class="inizio" src="icone inventori/nitroglicerina.png">
@@ -362,59 +374,70 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
   </figcaption> 
 </figure>
 
-La nitroglicerina è preparata attraverso la nitrazione della glicerina, in cui si introducono 3 gruppi nitro (-NO2), derivanti dall'acido nitrico (HNO3):
+<!-- <p>La nitroglicerina è preparata attraverso la nitrazione della glicerina, in cui si introducono <sub>3</sub> gruppi nitro (-NO<sub>2</sub>), derivanti dall'acido nitrico (HNO<sub>3</sub>):<br>
 
-HNO3 + H2SO4 → H2NO3+ + HSO4-
-H2NO3+ → NO2+ + H2O
-HSO4- + H+ → H2SO4
-3HNO3 + C3H5(OH)3 → C3H5(ONO2)3 + 3H2O
-[Si potrebbe spiegare meglio la reazione, magari attraverso un video]
-https://www.youtube.com/watch?v=1IfsvVgwopQ
-La nitroglicerina si presenta come un composto liquido oleoso di colore leggermente volto al giallo. La sua pericolosità deriva dal fatto che i legami tra le molecole sono deboli: si tratta di un composto molto instabile. 
-A proposito delle proprietà esplodenti della nitroglicerina, Sobrero scrive in una nota del 1847 “Quando conobbi questa sua proprietà io ero lontano da credere che essa la possedesse in grado così eminente  (...) volli decomporne una gocciola in un tubo di vetro: una detuonazione ridusse in polvere il tubo, sicchè più nulla non me ne rimase fra le dita. Molte scheggette di vetro mi ferirono la mano ed il viso: un mio amico che era presente ed a più d’un metro di distanza ne ebbe il viso ferito in più luoghi. Questi tentativi sono talmente pericolosi che miglior consiglio è il non farli.”
-La nitroglicerina detona con il calore (alla temperatura di 200°C) ma è pericolosa anche quando congela, a 13°C: al suo interno si formano cristalli sottilissimi che si spezzano facilmente innescando un’esplosione.
+HNO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> → H<sub>2</sub>NO<sub>3</sub><sup>+</sup> + HSO<sub>4</sub><sup>-</sup> <br>
+
+H<sub>2</sub>NO<sub>3</sub>+ → NO<sub>2</sub><sup>+</sup> + H<sub>2</sub>O <br>
+
+HSO<sub>4</sub><sup>-</sup> + H<sup>+</sup> → H<sub>2</sub>SO<sub>4</sub> <br>
+
+3HNO<sub>3</sub> + C<sub>3</sub>H5(OH)<sub>3</sub> → C<sub>3</sub>H5(ONO<sub>2</sub>)<sub>3</sub> + 3H<sub>2</sub>O <br> 
+https://www.youtube.com/watch?v=1IfsvVgwopQ-->
+
+<p>La nitroglicerina si presenta come un composto liquido oleoso di colore leggermente volto al giallo. La sua pericolosità deriva dal fatto che i legami tra le molecole sono deboli: si tratta di un composto molto instabile.</p>
+<p>A proposito delle proprietà esplodenti della nitroglicerina, Sobrero scrive in una nota del 1847 <i>“Quando conobbi questa sua proprietà io ero lontano da credere che essa la possedesse in grado così eminente  (...) volli decomporne una gocciola in un tubo di vetro: una detuonazione ridusse in polvere il tubo, sicchè più nulla non me ne rimase fra le dita. Molte scheggette di vetro mi ferirono la mano ed il viso: un mio amico che era presente ed a più d’un metro di distanza ne ebbe il viso ferito in più luoghi. <b>Questi tentativi sono talmente pericolosi che miglior consiglio è il non farli.</b>”</i></p>
+<p>La nitroglicerina detona con il calore (alla temperatura di 200°C) ma è pericolosa anche quando congela, a 13°C: al suo interno si formano cristalli sottilissimi che si spezzano facilmente innescando un’esplosione.</p>
   
 </div>
 <div class="page" id="inventori appro nobel">
-ALFRED NOBEL
-Alfred Nobel nasce nel 1833 a Stoccolma e si trasferisce nel 1842 con la famiglia a San Pietroburgo, dove già si trovava il padre che lavorava nell’industria di armamenti e si occupava di esplosivi. La passione per gli esplosivi viene tramandata al figlio Alfred, che studia privatamente ed eccelle particolarmente in chimica. Quindi, quando Nobel legge della nitroglicerina, è già alla ricerca di nuovi esplosivi. Al tempo, l’industria di armamenti era più o meno ferma alla polvere da sparo. I Nobel provano ad implementare gli effetti della polvere aggiungendo della nitroglicerina e brevettano l’idea nel 1863. Ma già nel 1861 Nobel va in giro per l’Europa a cercare finanziamenti: nel 1864 viene istituita la società Nobel e aperta la prima fabbrica di nitroglicerina a Vinterviken, presso Stoccolma. Il composto, scoperto da Sobrero, viene allora chiamato “l’olio esplosivo di Nobel”: così il nome dello svedese comincia a essere associato alla scoperta.
-Trattare con la nitroglicerina è particolarmente pericoloso, e il merito di Nobel è quello di averla resa più maneggevole, mescolandola con materia inerte assorbente (farina fossile), ottenendo un composto esplosivo ma meno pericoloso. Nel 1867 viene così brevettata la dinamite. 
-Nobel si arricchisce velocemente e apre molti stabilimenti, uno dei quali ad Avigliana, presso Torino: il dinamitificio è oggi visitabile. 
+<img class="inizio" src="icone inventori/nobel giallo.png">
+<h4>ALFRED NOBEL</h4>
+<p>Alfred Nobel nasce nel 1833 a Stoccolma e si trasferisce nel 1842 con la famiglia a San Pietroburgo, dove già si trovava il padre che lavorava nell’industria di armamenti e si occupava di esplosivi. La passione per gli esplosivi viene tramandata al figlio Alfred, che studia privatamente ed eccelle particolarmente in chimica. Quindi, quando Nobel legge della nitroglicerina, è già alla ricerca di nuovi esplosivi. Al tempo, l’industria di armamenti era più o meno ferma alla polvere da sparo. I Nobel provano ad implementare gli effetti della polvere aggiungendo della <b>nitroglicerina</b> e brevettano l’idea nel 1863. Ma già nel 1861 Nobel va in giro per l’Europa a cercare finanziamenti: nel 1864 viene istituita la società Nobel e aperta la prima fabbrica di nitroglicerina a Vinterviken, presso Stoccolma. Il composto, scoperto da Sobrero, viene allora chiamato “l’olio esplosivo di Nobel”: così il nome dello svedese comincia a essere associato alla scoperta.</p>
+<p>Trattare con la nitroglicerina è particolarmente pericoloso, e il merito di Nobel è quello di averla resa più maneggevole, mescolandola con materia inerte assorbente (farina fossile), ottenendo un composto esplosivo ma meno pericoloso. Nel 1867 viene così brevettata la dinamite.</p>
+<p>Nobel si arricchisce velocemente e apre molti stabilimenti, uno dei quali ad Avigliana, presso Torino: <a href="https://www.comune.avigliana.to.it/it-it/vivere-il-comune/cosa-vedere/museo-dinamitificio-nobel-39388-1-6d63133395d5dae99ccefcfd1d451838" target="_blank">il dinamitificio è oggi visitabile</a>.</p>
 
-
+<figure>
+  <img src="immagini inventori/800px-Dynamite-5.svg.png">
+  <figcaption>
 Schema di un candelotto di dinamite:
-A. Segatura (o altro tipo di materiale assorbente) intrisa di nitroglicerina
-B. Contenitore del materiale esplosivo
-C. Detonatore
-D. Cavo collegato al detonatore
-
-Di Pbroks13 - Opera propria, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5048336
-
-https://www.comune.avigliana.to.it/it-it/vivere-il-comune/cosa-vedere/museo-dinamitificio-nobel-39388-1-6d63133395d5dae99ccefcfd1d451838
-L’imprenditore svedese è quindi legato all’Italia, luogo che sceglie anche per trascorrere gli ultimi anni della sua vita. Nobel acquista infatti una villa a Sanremo nel 1891. https://villanobel.it/la-villa/
-Foto di Villa Nobel a Sanremo
-
+<ol type="A">
+  <li>Segatura (o altro tipo di materiale assorbente) intrisa di nitroglicerina</li>
+  <li>Contenitore del materiale esplosivo</li>
+  <li>Detonatore</li>
+  <li>Cavo collegato al detonatore</li>
+</ol>
+<a href="https://commons.wikimedia.org/w/index.php?curid=5048336" target="_blank">Di Pbroks13 - Opera propria, CC BY-SA 3.0</a>
+  </figcaption> 
+</figure>
 
 
-Alfred Nobel sembra quindi incarnare la figura dell’industriale spregiudicato, che commercializza un esplosivo letale e oscura i meriti di un altro scienziato. Allora perché lo ricordiamo come un grande filantropo? In effetti, l’istituzione dei premi Nobel e l’opera filantropica dello svedese, nasce proprio da una crisi di coscienza. Nel 1888 il fratello di Alfred, Ludvig, muore a Cannes in una delle fabbriche di dinamite, ma un giornale francese pubblica erroneamente il necrologio di Alfred Nobel. Il titolo recita “Il mercante della morte è morto”,  e l’artiolo continua: “Alfred Nobel, che divenne ricco trovando il modo di uccidere il maggior numero di persone nel modo più veloce possibile, è morto ieri.”
-In un momento epifanico, l’imprenditore comincia a pensare a come sarà considerato dopo la sua morte, e decide di fondare i famosi premi Nobel, lasciando la sua ingente eredità a questo scopo.
+L’imprenditore svedese è quindi legato all’Italia, luogo che sceglie anche per trascorrere gli ultimi anni della sua vita. <a href="https://villanobel.it/la-villa/" target="_blank">Nobel acquista infatti una villa a Sanremo nel 1891</a>. 
+<figure>
+  <img src="immagini inventori/villa-nobel-84733_960_720.jpg">
+  <figcaption> Foto di Villa Nobel a Sanremo </figcaption>
+</figure>
+
+<p>Alfred Nobel sembra quindi incarnare la figura dell’industriale spregiudicato, che commercializza un esplosivo letale e oscura i meriti di un altro scienziato. Allora perché lo ricordiamo come un grande filantropo? In effetti, l’istituzione dei premi Nobel e l’opera filantropica dello svedese, nasce proprio da una crisi di coscienza. Nel 1888 il fratello di Alfred, Ludvig, muore a Cannes in una delle fabbriche di dinamite, ma un giornale francese pubblica erroneamente il necrologio di Alfred Nobel. Il titolo recita “<b>Il mercante della morte è morto</b>”,  e l’articolo continua: <i>“Alfred Nobel, che divenne ricco trovando il modo di uccidere il maggior numero di persone nel modo più veloce possibile, è morto ieri.”</i></p>
+<p>In un momento epifanico, l’imprenditore comincia a pensare a come sarà considerato dopo la sua morte, e decide di fondare i famosi premi Nobel, lasciando la sua ingente eredità a questo scopo.</p>
 
 </div>
 <div class="page" id="inventori appro medicina">
-USO IN MEDICINA
-Come può la nitroglicerina, usata come esplosivo, essere anche un medicinale?
-Già dalle prime annotazioni di Sobrero, sembra difficile accostare questa sostanza ad un medicinale. Il chimico infatti ne descrive il sapore, “dolcigno, aromatico, pungente”, ma avverte di stare attenti ad esplorare questa qualità e dice di non ingerire la sostanza, perché anche soltanto una gocciolina di nitroglicerina sulla lingua provoca una forte emicrania.
-Come spesso accade, la nuova scoperta scientifica ha dei risvolti applicativi che ci sembrano inaspettati. Ma Ascanio Sobrero, che aveva studiato medicina, si interessa dell’azione fisiologica della nitroglicerina fin dal 1847, anno in cui la sintetizza per la prima volta, e il nuovo composto comincia ad essere usato come medicinale già dal 1854 in America, sotto il nome di glonoina. Il farmaco è un antianginoso, ovvero un medicinale vasodilatatore utilizzato per la cura della angina pectoris. 
+<img class="inizio" src="icone inventori/Senza titolo.png">
+<h4>USO IN MEDICINA</h4>
+<p>Come può la nitroglicerina, usata come esplosivo, essere anche un <b>medicinale</b>?</p>
+<p>Già dalle prime annotazioni di Sobrero, sembra difficile accostare questa sostanza ad un medicinale. Il chimico infatti ne descrive il sapore, “dolcigno, aromatico, pungente”, ma avverte di stare attenti ad esplorare questa qualità e dice di non ingerire la sostanza, perché anche soltanto una gocciolina di nitroglicerina sulla lingua provoca una forte emicrania.</p>
+<p>Come spesso accade, la nuova scoperta scientifica ha dei risvolti applicativi che ci sembrano inaspettati. Ma Ascanio Sobrero, che aveva studiato medicina, si interessa dell’azione fisiologica della nitroglicerina fin dal 1847, anno in cui la sintetizza per la prima volta, e il nuovo composto comincia ad essere usato come medicinale già dal 1854 in America, sotto il nome di glonoina. Il farmaco è un <b>antianginoso</b>, ovvero un medicinale vasodilatatore utilizzato per la cura della angina pectoris.</p>
 La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali oppure con cerotti transdermici. 
 
+<figure>
+  <img src="immagini inventori/130px-Nitroglycerin_(1).JPG">
+  <figcaption> 
+    <a href="https://commons.wikimedia.org/w/index.php?curid=9949324" target="_blank">By Intropin - Own work, CC BY 3.0</a>
+  </figcaption>
+</figure>
 
-By Intropin - Own work, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=9949324
-
-
-
-
-
-https://www.youtube.com/watch?v=wFsBa5t03bM
+<!-- https://www.youtube.com/watch?v=wFsBa5t03bM -->
 
 </div>
 
@@ -450,56 +473,67 @@ https://www.youtube.com/watch?v=wFsBa5t03bM
 </div>
 
 <div class="page" id="inventori appro ferraris">
-GALILEO FERRARIS
+<img class="inizio" src="icone inventori/ferraris giallo.png">
+<h4>GALILEO FERRARIS</h4>
 
-Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine
-A partire dal 1877 divenne assistente di fisica tecnica presso il Regio Museo Industriale di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.
+<p>Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine.</p>
+<p>A partire dal 1877 divenne assistente di fisica tecnica presso il <a class="texty" onclick="jumpTo('inventori appro museo')">Regio Museo Industriale</a> di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.</p>
 
-Nel 1885 scoprì il campo magnetico rotante e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano Nikola Tesla riguardo alla paternità. A questo proposito Galileo Ferraris scrisse ad un amico: “Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome” e in altre occasioni sottolineò di essere “un professore, non un industriale”, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.
+<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('inventori appro magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('inventori appro tesla')">Nikola Tesla riguardo alla paternità</a>. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
 
-Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.
-Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:
-“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.
+<p>Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.</p>
+<p>Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:<br>
+<i>“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.</i></p>
 
 </div>
 <div class="page" id="inventori appro museo">
-REGIO MUSEO INDUSTRIALE
+<img class="inizio" src="icone inventori/museo giallo.png">
+<h4>REGIO MUSEO INDUSTRIALE</h4>
 
-Il Regio Museo industriale Italiano venne istituito da un decreto nel 1862 con l’obiettivo “di promuovere l’istruzione industriale e il progresso delle industrie e del commercio” sul modello delle scuole di istruzione tecnica superiore che si stavano sviluppando a Londra e Parigi. Esso aveva sede dove oggi sorge Piazzale Valdo Fusi, ma rimase distrutto durante un bombardamento aereo nel 1943.
-Questo fu un luogo di grande rilevanza nello sviluppo della società torinese: esso era non solo un’ Esposizione permanente dei nuovi progressi industriali, ma anche un luogo in cui si tenevano corsi di insegnamento con lo scopo di ampliare le conoscenze tecniche dei giovani ingegneri.
-Qui nel 1879 Galileo Ferraris presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane Alessandro Cruto, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.
-Nel 1887 l’ingegnere piemontese tenne un corso di elettrotecnica che prevedeva, oltre alle tradizionali lezioni, alcune esercitazioni pratiche e nell’anno successivo venne istituito all’interno dei locali del Regio Museo Industriale un vero e proprio Laboratorio di Elettrotecnica, che attirò studenti da tutta Italia; alcuni strumenti e apparecchiature provenienti da tale laboratorio sono oggi conservati presso l’Istituto elettrotecnico nazionale Galileo Ferraris.
-La fama del Museo divenne tale da rendere necessario, nel 1897, un progetto di ampliamento dei locali che dotarono l’edificio di nuove aule per le lezioni e per il disegno e apposite aree per i laboratori.
-L’esposizione generale italiana del 1898 vide la partecipazione diretta del Museo che presentò una propria mostra contenente disegni e progetti degli allievi.
-Nel 1906, dalla fusione di questo istituto con la Scuola di Applicazione per gli ingegneri nacque il Politecnico di Torino.
-Immagini Museo Torino 
+<p>Il Regio Museo industriale Italiano venne istituito da un decreto nel 1862 con l’obiettivo <i>“di promuovere l’istruzione industriale e il progresso delle industrie e del commercio”</i> sul modello delle scuole di istruzione tecnica superiore che si stavano sviluppando a Londra e Parigi. Esso aveva sede dove oggi sorge Piazzale Valdo Fusi, ma rimase distrutto durante un bombardamento aereo nel 1943.</p>
+<p>Questo fu un luogo di grande rilevanza nello sviluppo della società torinese: esso era non solo un’esposizione permanente dei nuovi progressi industriali, ma anche un luogo in cui si tenevano corsi di insegnamento con lo scopo di ampliare le conoscenze tecniche dei giovani ingegneri.</p>
+<p>Qui nel 1879 <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane <a class="texty" onclick="jumpTo('inventori appro cruto')">Alessandro Cruto</a>, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.</p>
+<p>Nel 1887 l’ingegnere piemontese tenne un corso di elettrotecnica che prevedeva, oltre alle tradizionali lezioni, alcune esercitazioni pratiche e nell’anno successivo venne istituito all’interno dei locali del Regio Museo Industriale un vero e proprio Laboratorio di Elettrotecnica, che attirò studenti da tutta Italia; alcuni strumenti e apparecchiature provenienti da tale laboratorio sono oggi conservati presso l’Istituto elettrotecnico nazionale Galileo Ferraris.</p>
+<p>La fama del Museo divenne tale da rendere necessario, nel 1897, un progetto di ampliamento dei locali che dotarono l’edificio di nuove aule per le lezioni e per il disegno e apposite aree per i laboratori.</p>
+<p>L’esposizione generale italiana del 1898 vide la partecipazione diretta del Museo che presentò una propria mostra contenente disegni e progetti degli allievi.</p>
+<p>Nel 1906, dalla fusione di questo istituto con la Scuola di Applicazione per gli ingegneri nacque il Politecnico di Torino.</p>
+<p><a href="https://www.museotorino.it/view/s/12fab9b75ccd4f8596cdf2a44f27b6ab" target="_blank">Immagini Museo Torino</a></p>
 
 </div>
 <div class="page" id="inventori appro tesla">
-NIKOLA TESLA
+<img class="inizio" src="icone inventori/tesla giallo.png">
+<h4>NIKOLA TESLA</h4>
 
-Nikola Tesla nacque il 10 luglio 1856 in una famiglia serba nei territori dell’attuale Croazia. Frequentò in Austria L’università tecnica di Graz, ai tempi considerata uno dei migliori istituti del mondo, e qui iniziò ad interessarsi agli impieghi della corrente alternata. Nel 1882 si recò a Parigi per lavorare alla Continental Edison Company, dove si occupò di migliorare gli apparati elettrici. Egli affermò di aver ideato in quell’anno il motore a induzione sfruttando il campo magnetico rotante, brevettato poi nel 1888 e la cui originalità venne contestata dal piemontese Galileo Ferraris. Nel 1884 si trasferì negli Stati Uniti dove venne assunto da Thomas Edison nella sua azienda Edison Machine Works, dove si occupò di riprogettare l’esistente generatore di corrente continua.
-Nel 1887 costruì il primo motore a induzione a corrente alternata senza attrito e iniziò inoltre ad occuparsi di quelli che diventeranno poi noti come raggi X, brevettò un primo modello di radio e effettuò diversi esperimenti sulla telegrafia senza fili, sull’elettricità atmosferica e sulla trasmissione di energia su lunghe distanze.
-Egli fu coinvolto in un’altra controversia riguardante un’invenzione: il brevetto della radio venne inizialmente riconosciuto all’inventore italiano Guglielmo Marconi e solo in seguito alla morte di Tesla, avvenuta nel 1943, venne assegnata all’americano la paternità della scoperta.
-Egli si scontrò con Thomas Edison nella cosiddetta “guerra delle correnti”, una competizione commerciale per il controllo del mercato elettrico che vedeva contrapposte la corrente alternata, promossa da Tesla, e la corrente continua, ritenuta la soluzione più adatta dal suo avversario: l’idea di Edison era quella di sviluppare un sistema di distribuzione elettrica che mantenesse lo stesso potenziale lungo tutta la linea, questo metodo aveva però l’inconveniente di dissipare parte dell’energia lungo il trasporto, problema che risultava meno incisivo usando la corrente alternata. Attraverso una serie di dimostrazioni pubbliche Tesla riuscì a mostrare l’efficienza del suo progetto e a convincere l’opinione pubblica nonostante la campagna diffamatoria di Edison che sottolineava la presunta pericolosità dell’idea: nel 1889 venne costruito il primo impianto idroelettrico a corrente alternata e nel 1892 Tesla ottenne l’appalto per la realizzazione di una centrale idroelettrica sulle cascate del Niagara.
+<p>Nikola Tesla nacque il 10 luglio 1856 in una famiglia serba nei territori dell’attuale Croazia. Frequentò in Austria L’università tecnica di Graz, ai tempi considerata uno dei migliori istituti del mondo, e qui iniziò ad interessarsi agli impieghi della corrente alternata. Nel 1882 si recò a Parigi per lavorare alla Continental Edison Company, dove si occupò di migliorare gli apparati elettrici. Egli affermò di aver ideato in quell’anno il motore a induzione sfruttando il <a class="texty" onclick="jumpTo('inventori appro magnetico')">campo magnetico rotante</a>, brevettato poi nel 1888 e la cui originalità venne contestata dal piemontese <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a>. Nel 1884 si trasferì negli Stati Uniti dove venne assunto da <a class="texty" onclick="jumpTo('inventori appro edison')">Thomas Edison</a> nella sua azienda Edison Machine Works, dove si occupò di riprogettare l’esistente generatore di corrente continua.</p>
+<p>Nel 1887 costruì il primo motore a induzione a corrente alternata senza attrito e iniziò inoltre ad occuparsi di quelli che diventeranno poi noti come raggi X, brevettò un primo modello di radio e effettuò diversi esperimenti sulla telegrafia senza fili, sull’elettricità atmosferica e sulla trasmissione di energia su lunghe distanze.</p>
+<p>Egli fu coinvolto in un’altra controversia riguardante un’invenzione: il brevetto della radio venne inizialmente riconosciuto all’inventore italiano Guglielmo Marconi e solo in seguito alla morte di Tesla, avvenuta nel 1943, venne assegnata all’americano la paternità della scoperta.</p>
+<p>Egli si scontrò con Thomas Edison nella cosiddetta “guerra delle correnti”, una competizione commerciale per il controllo del mercato elettrico che vedeva contrapposte la corrente alternata, promossa da Tesla, e la corrente continua, ritenuta la soluzione più adatta dal suo avversario: l’idea di Edison era quella di sviluppare un sistema di distribuzione elettrica che mantenesse lo stesso potenziale lungo tutta la linea, questo metodo aveva però l’inconveniente di dissipare parte dell’energia lungo il trasporto, problema che risultava meno incisivo usando la corrente alternata. Attraverso una serie di dimostrazioni pubbliche Tesla riuscì a mostrare l’efficienza del suo progetto e a convincere l’opinione pubblica nonostante la campagna diffamatoria di Edison che sottolineava la presunta pericolosità dell’idea: nel 1889 venne costruito il primo impianto idroelettrico a corrente alternata e nel 1892 Tesla ottenne l’appalto per la realizzazione di una centrale idroelettrica sulle cascate del Niagara.</p>
 
-Statua di Nikola Tesla presso le cascate del Niagara Milan Suvajac, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+<figure>
+  <img src="immagini inventori/640px-Niagara-Falls_ON_Monument_Nikola-Tesla_2015-08-13_(7).jpg">
+  <figcaption> 
+    <a href="https://commons.wikimedia.org/wiki/File:Niagara-Falls_ON_Monument_Nikola-Tesla_2015-08-13_(7).jpg" target="_blank">Statua di Nikola Tesla presso le cascate del Niagara Milan Suvajac, CC BY-SA 4.0</a>
+  </figcaption>
+</figure>
 
 </div>
 <div class="page" id="inventori appro magnetico">
-IL CAMPO MAGNETICO ROTANTE
+<img class="inizio" src="icone inventori/Senza titolo.png">
+<h4>IL CAMPO MAGNETICO ROTANTE</h4>
 
-L’idea del campo magnetico rotante sembra essere nata da una passeggiata durante la quale Galileo Ferraris si soffermò ad osservare la successione dei portici di via Cernaia: egli intuì che due bobine disposte perpendicolarmente percorse da correnti alternate sfasate generavano un campo magnetico rotante. I risultati dei suoi studi vennero mostrati in pubblico per la prima volta nel 1885, quando l’ingegnere piemontese presentò “il suo giocattolo”, come era solito chiamare il primo prototipo di motore a corrente alternata. Egli realizzò negli anni successivi quattro modelli di motore che sfruttavano il campo magnetico rotante e nel 1888 ricevette un premio dalla società americana Westinghouse per la sua scoperta.
-Negli stessi anni anche l’americano Nikola Tesla stava svolgendo esperimenti simili, riuscendo poi  a sfruttare la scoperta producendo motori elettrici su scala industriale.
-Immagini primi prototipi 
+<p>L’idea del campo magnetico rotante sembra essere nata da una passeggiata durante la quale <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> si soffermò ad osservare la successione dei portici di via Cernaia: egli intuì che due bobine disposte perpendicolarmente percorse da correnti alternate sfasate generavano un campo magnetico rotante. I risultati dei suoi studi vennero mostrati in pubblico per la prima volta nel 1885, quando l’ingegnere piemontese presentò <i>“il suo giocattolo”</i>, come era solito chiamare il primo prototipo di motore a corrente alternata. Egli realizzò negli anni successivi quattro modelli di motore che sfruttavano il campo magnetico rotante e nel 1888 ricevette un premio dalla società americana <i>Westinghouse</i> per la sua scoperta.</p>
+<p>Negli stessi anni anche l’americano Nikola Tesla stava svolgendo esperimenti simili, riuscendo poi a sfruttare la scoperta producendo motori elettrici su scala industriale.</p>
+<p><a href="http://www.museoferraris.it/index.php/gferraris/" target="_blank">Immagini primi prototipi</a></p>
+<p><a href="https://www.youtube.com/watch?v=7IMh2D0LE_Q&feature=emb_title" target="_blank">Video del funzionamento</a></p>
 
 </div>
 <div class="page" id="inventori appro auto">
-LE AUTOMOBILI ELETTRICHE
+<img class="inizio" src="icone inventori/automobile gialla.png">
+<h4>LE AUTOMOBILI ELETTRICHE</h4>
 
-Tra fine ‘800 e inizio ‘900 non era ancora ben definito quale sarebbe stato il modello di motore più usato nel futuro e pertanto si assistette inizialmente ad uno sviluppo parallelo di automobili elettriche ed automobili a benzina. Le auto elettriche non sono infatti un’idea recente, ma una realtà la cui storia inizia negli anni ‘30 dell’Ottocento: il motore elettrico sembrava inizialmente essere il modello più adatto sia per quanto riguarda l’affidabilità, sia perché più silenzioso. Negli anni finali dell’’800 i modelli a batteria vennero sia usati per il trasporto pubblico, sia venduti a privati e avevano una migliore resa rispetto ai motori a scoppio; inoltre già nei primi anni del ‘900 una ditta torinese, la STAE, iniziò a produrre i primi veicoli ibridi, in cui i due motori venivano utilizzati in maniera accoppiata.
-Il motore a combustione interna ebbe però un’evoluzione tecnica maggiore e l’introduzione del motorino di avviamento rese questo sistema il più adatto alle esigenze dell’epoca: con l’avvento della Grande Guerra e la necessità di compiere spostamenti più lunghi la durata limitata delle batterie iniziò a risultare un problema rilevante. Lo sviluppo di motori elettrici riprenderà nel secondo dopoguerra.
-Presso il Museo dell’Auto di Torino sono presenti numerosi esemplari di vetture elettriche del passato e alcuni prototipi di particolari “veicoli del futuro” alimentati da pannelli fotovoltaici o ad idrogeno.
+<p>Tra fine ‘800 e inizio ‘900 non era ancora ben definito quale sarebbe stato il modello di motore più usato nel futuro e pertanto si assistette inizialmente ad uno sviluppo parallelo di automobili elettriche ed automobili a benzina. Le auto elettriche non sono infatti un’idea recente, ma una realtà la cui storia inizia negli anni ‘30 dell’Ottocento: il motore elettrico sembrava inizialmente essere il modello più adatto sia per quanto riguarda l’affidabilità, sia perché più silenzioso. Negli anni finali dell’’800 i modelli a batteria vennero sia usati per il trasporto pubblico, sia venduti a privati e avevano una migliore resa rispetto ai motori a scoppio; inoltre già nei primi anni del ‘900 una ditta torinese, la STAE, iniziò a produrre i primi veicoli ibridi, in cui i due motori venivano utilizzati in maniera accoppiata.</p>
+<p>Il motore a combustione interna ebbe però un’evoluzione tecnica maggiore e l’introduzione del motorino di avviamento rese questo sistema il più adatto alle esigenze dell’epoca: con l’avvento della Grande Guerra e la necessità di compiere spostamenti più lunghi la durata limitata delle batterie iniziò a risultare un problema rilevante. Lo sviluppo di motori elettrici riprenderà nel secondo dopoguerra.</p>
+<p>Presso il Museo dell’Auto di Torino sono presenti numerosi esemplari di vetture elettriche del passato e alcuni prototipi di particolari “veicoli del futuro” alimentati da pannelli fotovoltaici o ad idrogeno.</p>
 
 </div>
 
@@ -636,8 +670,8 @@ La storia però non è fatta di se: l’impegno che la società può prendersi o
 <p>Spesso tendiamo a ricercare nel passato delle personalità solitarie che si stagliano sulla conoscenza comune e incarnano il progresso. Così vorremmo che l’innovazione fosse il risultato di facili equazioni, che associano a un’invenzione un unico inventore. La realtà è come sempre più complessa di queste semplificazioni. Il caso appena citato per esempio, ci ricorda come chi ha una disponibilità economica, una certa visibilità e l’annessa possibilità di competere in campo industriale, parte con estremo vantaggio al fine di passare alla storia. 
 Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di molteplici contributi, a partire dalle scoperte scientifiche che aprono nuovi campi di applicazione, ed è normale, soprattutto in un secolo come il XIX, che persone in contesti anche molto lontani arrivino agli stessi risultati nello stesso periodo.</p>
 
-<a href="https://it.wikipedia.org/wiki/Brevetto">https://it.wikipedia.org/wiki/Brevetto</a><br>
-<a href="https://www.treccani.it/vocabolario/brevetto/">https://www.treccani.it/vocabolario/brevetto/</a><br>
+<a href="https://it.wikipedia.org/wiki/Brevetto" target="_blank">https://it.wikipedia.org/wiki/Brevetto</a><br>
+<a href="https://www.treccani.it/vocabolario/brevetto/" target="_blank">https://www.treccani.it/vocabolario/brevetto/</a><br>
 <b>Il signore della luce-Vittoria Haziel</b><br>
 </div>
 
