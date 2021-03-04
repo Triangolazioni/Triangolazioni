@@ -385,22 +385,32 @@ https://www.youtube.com/watch?v=wFsBa5t03bM
 </div>
 
 <div class="page" id="inventori ferraris">
-GALILEO FERRARIS
-IL MOTORE ELETTRICO
+<h3>GALILEO FERRARIS</h3>
+<h5>IL MOTORE ELETTRICO</h5>
 
-<button class="link" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris
-L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</button>
+<button class="link left" onclick="jumpTo('inventori appro ferraris')">
+<h6>Galileo Ferraris</h6>
+<img src="icone inventori/ferraris giallo.png">
+<p>L'ingegnere torinese Galileo Ferraris nel 1885 riuscì a mostrare che due bobine fisse percorse da corrente alternata generano un campo magnetico rotante. La scoperta venne comunicata ufficialmente solo nel 1888.</p></button>
 
-<button class="link" onclick="jumpTo('inventori appro museo')">Il Regio Museo Industriale
+<button class="link right" onclick="jumpTo('inventori appro museo')">
+<h6>Il Regio Museo Industriale</h6>
+<img src="icone inventori/museo giallo.png">
 Il Regio Museo Industriale nacque con lo scopo di promuovere lo sviluppo industriale. Qui nel 1889 Galileo Ferraris fondò una scuola di elettrotecnica dove insegnò fino alla morte.</button>
 
-<button class="link" onclick="jumpTo('inventori appro tesla')">Nikola Tesla
+<button class="link left" onclick="jumpTo('inventori appro tesla')">
+<h6>Nikola Tesla</h6>
+<img src="icone inventori/tesla giallo.png">
 Tra i numerosi brevetti dell'inventore americano risulta anche quello del campo magnetico rotante, la cui paternità venne in seguito riconosciuta a Galileo Ferraris. Egli in la produzione di motori elettrici su scala industriale.</button>
 
-<button class="link" onclick="jumpTo('inventori appro magnetico')">Il campo magnetico rotante
+<button class="link right" onclick="jumpTo('inventori appro magnetico')">
+<h6>Il campo magnetico rotante</h6>
+<img src="icone inventori/motore elettrico.png">
 Due bobine perpendicolari tra loro percorse da correnti sfasate generano un campo magnetico rotante: grazie a questa scoperta si diffuse rapidamente l'utilizzo del motore  a induzione.</button>
 
-<button class="link" onclick="jumpTo('inventori appro auto')">Le automobili elettriche
+<button class="link left" onclick="jumpTo('inventori appro auto')">
+  <img src="icone inventori/ferraris giallo.png">
+<h6>Le automobili elettriche</h6>
 Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.</button>
 </div>
 
@@ -921,17 +931,17 @@ Il signore della luce-Vittoria Haziel <br>
 
   function back_function(){
     p = pages.get(current_page.id)
-    jumpTo(p.back)
+    if(p.back !== false){jumpTo(p.back)}
   }
 
   function left_function(){
     p = pages.get(current_page.id)
-    jumpTo(p.left)
+    if(p.left !== false){jumpTo(p.left)}
   }
 
   function right_function(){
     p = pages.get(current_page.id)
-    jumpTo(p.right)
+    if(p.right !== false){jumpTo(p.right)}
   }
 
 </script>
