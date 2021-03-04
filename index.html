@@ -63,12 +63,15 @@ html, body {
 #windowbg {
   z-index: 2;
   position: absolute;
-  display: none;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;  
   background-color: rgba(255, 255, 255, 0);     
+}
+
+#windowbg:not(.shown){
+  display: none;
 }
 
 #windowbg.shown {
@@ -210,8 +213,8 @@ iframe {
 
 .left img {
   float: right;
-  max-width: 10rem;
-  max-height: 10rem;
+  max-width: 9rem;
+  max-height: 9rem;
 }
 
 .right {
@@ -220,8 +223,8 @@ iframe {
 
 .right img {
   float: left;
-  max-width: 10rem;
-  max-height: 10rem;
+  max-width: 9rem;
+  max-height: 9rem;
 }
 
 img.inizio {
@@ -263,7 +266,7 @@ figcaption {
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
 <div class="video-container">
-<iframe width="729" height="410" src="https://www.youtube.com/embed/hBR0Kq9boIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="player_illuminazione"></div>
 </div>
 Di notte la città si accende: i lampioni illuminano le strade e l'attività urbana non si ferma con il calare del sole. 
 Non è sempre stato così. Dal gas all'energia elettrica, la storia dell'illuminazione pubblica è lunga e composta da diverse fasi, date dal susseguirsi di innovazioni tecnologiche. L'opera di personalità importanti come Galileo Ferraris e l'ingegno di inventori come Alessandro Cruto hanno contribuito a questa impresa, che ha rivoluzionato la nostra quotidianità.
@@ -284,7 +287,7 @@ Cruto
 
 <h1>TRA SCIENZA E INDUSTRIA</h1>
 <div class="video-container">
-<iframe width="729" height="410" src="https://www.youtube.com/embed/as6C289ogP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="player_inventori"></div>
 </div>
 <p>Il XIX secolo fu un’epoca di grandi invenzioni, caratterizzata da un rapido sviluppo dell’industria. Anche il Piemonte vide nascere grandi inventori, le quali scoperte però spesso non vennero sfruttate in campo industriale, oppure vennero superate dai competitori stranieri. Questa sembra essere la storia comune di tre uomini di scienza piemontesi, Ascanio Sobrero, Galileo Ferraris e Alessandro Cruto, ognuno con il proprio “avversario” straniero.</p>
 
@@ -457,7 +460,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 </div>
 
 <div class="page" id="inventori ferraris">
-<h3>GALILEO FERRARIS</h3>
+<h4>GALILEO FERRARIS</h4>
 <h5>IL MOTORE ELETTRICO</h5>
 
 <button class="link left" onclick="jumpTo('inventori appro ferraris')">
@@ -553,7 +556,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 </div>
 
 <div class="page" id="inventori cruto">
-<h3>ALESSANDRO CRUTO</h3>
+<h4>ALESSANDRO CRUTO</h4>
 <h5>L'INVENZIONE LUMINOSA</h5>
 
 <button class="link left" onclick="jumpTo('inventori appro cruto')">
@@ -674,7 +677,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </div>
 
 <div class="page" id="inventori altri">
-<h3>ALTRI APPROFONDIMENTI</h3>
+<h4>ALTRI APPROFONDIMENTI</h4>
 
 <button class="link left" onclick="jumpTo('inventori appro industria')">
 <h6>L'industria piemontese</h6>
@@ -717,7 +720,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 <h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
 
 <div class="video-container">
-<iframe width="729" height="410" src="https://www.youtube.com/embed/VkE_EJAtTtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="player_industria"></div>
 </div>
 
 
@@ -924,13 +927,27 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
   //l'ordine è importante: vengono disegnati in quell'ordine
   let triangoli = [illuminazione, inventori, industria]
   
+  let tag = document.createElement('script')
+  tag.src = "https://www.youtube.com/iframe_api"
+  let firstScriptTag = document.getElementsByTagName('script')[0]
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+  let player_illuminazione
+  function onYouTubeIframeAPIReady() {
+    player_illuminazione = new YT.Player('player_illuminazione', {
+      videoId: 'hBR0Kq9boIU',
+    });
+  }
+
+
+
   //per fermare un video youtube in un dato elemento
-  var stopVideo = function (element) {
+  var stopVideo = function(element) {
+
     var iframe = element.querySelector("iframe")
     var video = element.querySelector("video")
     if (iframe !== null) {
       var iframeSrc = iframe.src
-      iframe.src = iframeSrc
+      //iframe.src = iframeSrc
     }
     if (video !== null) {
       video.pause()
