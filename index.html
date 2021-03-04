@@ -75,7 +75,7 @@ html, body {
   display: inline;
 
   animation-name: fadeIn;
-  animation-duration: 0s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -991,6 +991,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
     let vertices = [t.vertices[0].xy, t.vertices[1].xy, t.vertices[2].xy]
     t.polygon = L.polygon(vertices, {color: t.map_color_unselected}).addTo(map)
     t.polygon.on("click", function(){clicked_triangle(t)})
+    for(let v of t.vertices){ v.marker.on("click", function(){clicked_triangle(t)}) }
 
     t.center_xy = [
       (t.vertices[0].xy[0]+t.vertices[1].xy[0]+t.vertices[2].xy[0])/3,
