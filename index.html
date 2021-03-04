@@ -13,10 +13,18 @@
 
 h1 {font-size: 2.5rem;}
 h2 {font-size: 2.25rem;}
-h3 {font-size: 2rem;}
-h4 {font-size: 1.75rem;}
-h5 {font-size: 1.5rem;}
-h6 {font-size: 1.25rem;}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.75rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.25rem;
+}
 p {font-size: 1rem;}
 
 @media (max-width: 480px) {html {font-size: 15px;}}
@@ -64,7 +72,7 @@ html, body {
   display: inline;
 
   animation-name: fadeIn;
-  animation-duration: 2s;
+  animation-duration: 0s;
   animation-fill-mode: forwards;
 }
 
@@ -85,6 +93,7 @@ html, body {
   background-color: rgba(255, 255, 255, 1);
   overflow-y: scroll;
   border-radius: 2%;
+  padding: .5rem;
 }
 
 .page {
@@ -128,13 +137,28 @@ button.icon img {
 }
 
 button.link {
-  border: 0.2rem solid red;
   font-family: PoppinsMedium;
   font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
 }
 
-h1 {
-  text-align:center
+h1, h2, h3, h4, h5 {
+  text-align:center;
+}
+
+h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.inventori h1, h2, h3, h4, h5, h6{
+  color: rgba(238, 201, 43, 1);
+}
+
+.inventori button.link {
+  border: 0.2rem solid rgba(238, 201, 43, .8);
 }
 
 .video-container {
@@ -158,6 +182,19 @@ iframe {
   max-height:100%;
 }
 
+.left {
+  text-align: left;
+}
+
+.left img {
+  float: right;
+  height: 12rem;
+}
+
+.left div {
+  display: flex;
+}
+
 </style>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -176,6 +213,8 @@ iframe {
 <button class="icon" id="back_button" onclick="back_function()"><img id="back_img"></button>
 <button class="icon" id="x_button" onclick="x_function()"><img id="x_img"></button>
 
+<span class="illuminazione">
+
 <div class="page" id="main illuminazione">
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
@@ -193,6 +232,9 @@ Cruto
 
 </div>
 
+</span>
+
+<span class="inventori">
 
 <div class="page" id="main inventori">
 
@@ -210,11 +252,18 @@ Cruto
 </div>
 
 <div class="page" id="inventori sobrero">
-ASCANIO SOBRERO
-UNA SCOPERTA ESPLOSIVA
+<h3>ASCANIO SOBRERO</h3>
+<h5>UNA SCOPERTA ESPLOSIVA</h5>
 
-<button class="link" onclick="jumpTo('inventori appro sobrero')">Ascanio Sobrero
-Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</button>
+<button class="link left" onclick="jumpTo('inventori appro sobrero')">
+<h6>Ascanio Sobrero</h6>
+<div>
+
+<p>Nel 1847 Ascanio Sobrero sintetizzò la nitroglicerina a Torino, nell'ex laboratorio chimico in Via Po 18, riprendendo gli esperimenti per la sintesi di nitrocellulosa svolti dal chimico tedesco Christian Friedrich Schönbein.</p>
+
+<img src="icone inventori/sobrero.png">
+</div>
+</button>
 
 <button class="link" onclick="jumpTo('inventori appro nitro')">Cos'è la nitroglicerina?
 La nitroglicerina, o trinitrina, è il triestere nitrico della glicerina. A temperatura ambiente è un liquido oleoso di colore giallo pallido. La formula bruta è C₃H₅N₃O₉. I legami tra le molecole sono deboli: si tratta infatti di un composto molto instabile e dunque pericoloso, infatti può esplodere anche per piccoli urti.</button>
@@ -505,7 +554,13 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 Il signore della luce-Vittoria Haziel <br>
 </div>
 
+</span>
+
+<span class="industria">
+
 <div class="page" id="main industria">
+
+</span>
 
 <span class="bookmark" id="intro industria"></span>
 <h1>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h1>
