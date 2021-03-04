@@ -201,6 +201,11 @@ iframe {
   height: 10rem;
 }
 
+img.inizio {
+  float:left;
+  height: 10rem;
+}
+
 </style>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -586,16 +591,17 @@ La storia però non è fatta di se: l’impegno che la società può prendersi o
 </div>
 
 <div class="page" id="inventori appro industria">
+<img class="inizio" src="icone inventori/fabbrica gialla.png">
 <h2>L’INDUSTRIA PIEMONTESE</h2>
-
 <p>Nel 1864 la capitale d’Italia si sposta da Torino a Firenze. Tutte le attività legate alla politica e alla diplomazia vengono trasferite, e questo cambiamento, sebbene preannunciato, affligge un duro colpo al capoluogo piemontese, dove si verificano disordini popolari e malcontento. La crisi sembra inevitabile, ma non manca la volontà di arginare il problema. Nel 1865 l’allora sindaco Emanuele Luserna di Rorà lancia un <b><i>Appello diretto agli industriali esteri e nazionali</i></b>; la popolazione torinese non si abbatte e la città promuove iniziative e opere pubbliche. La crisi preannunciata non si rivela in realtà drammatica e il contesto industriale si risolleva. L’esposizione generale italiana tenutasi a Torino nel 1884 rappresenta a pieno questa ripresa.</p>
 </div>
 <div class="page" id="inventori appro brevetti">
+<img class="inizio" src="icone inventori/brevetti.png">
 <h2>INVENZIONI E BREVETTI</h2>
-<h3>Cos’è un brevetto?</h3>
+<h5>Cos’è un brevetto?</h5>
 <p>Un brevetto è un attestato ufficiale (rilasciato da un apposito ufficio) che conferisce un diritto esclusivo di disporre di un’invenzione. Il brevetto impedisce a chi non ne è titolare di sfruttare un’invenzione senza autorizzazione,  protegge quindi la proprietà intellettuale ma anche la possibilità di guadagnare sulle invenzioni. </p>
 
-<h3>XIX secolo</h3>
+<h5>XIX secolo</h5>
 <p>Nell’Ottocento si assiste a un periodo di grande fermento per quanto riguarda le nuove invenzioni. L’avanzare della conoscenza scientifica provoca uno sviluppo tecnologico che coinvolge molti scienziati da diverse parti del mondo, che spesso studiano gli stessi fenomeni nello stesso periodo. Questo provoca non poche controversie e spesso, per nuove scoperte e invenzioni, non si riesce a risalire ad un unico inventore. Non sempre poi il comportamento di chi si contende un brevetto può essere definito cristallino: emblematica è la vicenda dell’invenzione del telefono, che coinvolge l’italiano Antonio Meucci, emigrato a New York, e lo statunitense Alexander Graham Bell. Meucci brevetta la sua invenzione, ma non può sfruttarla per motivi economici, così si appoggia a un certo signor Grant, direttore di una grande compagnia telegrafica, consegnando tutto il suo materiale. Ma dopo mesi di attesa, l’italiano chiede la restituzione del materiale, che non avviene. Meucci non ha i soldi per rinnovare il brevetto e poco dopo, nel 1876, Bell presenta il suo brevetto e con l’appoggio di potenti investitori, crea una fiorente compagnia telefonica. Nel 1885 è accusato di frode: viene fuori che Bell aveva un accordo con il signor Grant, alla cui compagnia telegrafica versava il 20% dei guadagni. Il telefono di Bell era effettivamente una copia di quello i Meucci, e anche se non ne abbiamo le prove certe, possiamo immaginare come siano andate le cose.</p>
 
 <h3>Individuare l’inventore</h3>
@@ -604,7 +610,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
 <a href="https://it.wikipedia.org/wiki/Brevetto">https://it.wikipedia.org/wiki/Brevetto</a><br>
 <a href="https://www.treccani.it/vocabolario/brevetto/">https://www.treccani.it/vocabolario/brevetto/</a><br>
-Il signore della luce-Vittoria Haziel <br>
+<b>Il signore della luce-Vittoria Haziel</b><br>
 </div>
 
 </span>
@@ -959,6 +965,12 @@ Il signore della luce-Vittoria Haziel <br>
     p = pages.get(current_page.id)
     if(p.right !== false){jumpTo(p.right)}
   }
+
+  let url = window.location.href
+  let parameter = url.split("?").slice(-1)
+  if(parameter == "illuminazione"){clicked_triangle(illuminazione)}
+  if(parameter == "inventori"){clicked_triangle(inventori)}
+  if(parameter == "industria"){clicked_triangle(industria)}
 
 </script>
 
