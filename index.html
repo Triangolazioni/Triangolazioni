@@ -192,9 +192,17 @@ iframe {
   border: 0;
 }
 
-.fumetto img {
+#img_fumetto {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
+}
+
+.fumetto {
+  text-align: center;
+}
+
+.fumetto button, #img_prima, #img_dopo{
+  width: 2rem;
 }
 
 .left {
@@ -569,12 +577,19 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </div>
 
 <div class="page" id="inventori appro cruto">
-ALESSANDRO CRUTO
-Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il diamante in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico. 
-Piossasco si trova a 20 chilometri da Torino. Non sono pochi da fare a piedi, ma Cruto compie spesso questo tragitto per ascoltare lezioni e conferenze nel capoluogo. 
-Nel maggio 1879 Galileo Ferraris è a Torino per un ciclo di conferenze sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa. 
-Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La lampadina ad incandescenza ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le lamine di carbonio che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua industria ad Alpignano e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.
-<div class="fumetto"><img src="fumetto/fumetto1.jpg"></div>
+<img class="inizio" src="icone inventori/cruto giallo.png">
+<h4>ALESSANDRO CRUTO</h4>
+<p>Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il <b>diamante</b> in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico.</p>
+<p>Piossasco si trova a 20 chilometri da Torino. Non sono pochi da fare a piedi, ma Cruto compie spesso questo tragitto per ascoltare lezioni e conferenze nel capoluogo.</p>
+<p>Nel maggio 1879 <a class="texty" onclick="jumpTo('inventori appro ferraris')">Galileo Ferraris</a> è a Torino per un <b>ciclo di conferenze</b> sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa.</p>
+<p>Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La <a class="texty" onclick="jumpTo('inventori appro lampadina')">lampadina ad incandescenza</a> ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le <b>lamine di carbonio</b> che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua <a class="texty" onclick="jumpTo('inventori appro fabbrica')">industria ad Alpignano</a> e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.</p>
+<div class="fumetto">
+  <button onclick="img_prima_function()"><img id="img_prima"></button>
+  <button onclick="img_dopo_function()"><img id="img_dopo" src="immagine_dopo.png"></button>
+  <img id="img_fumetto" src="fumetto/fumetto1.jpg">
+</div>
+
+
 </div>
 <div class="page" id="inventori appro lampadina">
 UN’INVENZIONE LUMINOSA
@@ -1026,6 +1041,27 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
   function right_function(){
     p = pages.get(current_page.id)
     if(p.right !== false){jumpTo(p.right)}
+  }
+
+  let pagina_fumetto = 1
+  function img_prima_function(){
+    if(pagina_fumetto!==1){
+      pagina_fumetto = pagina_fumetto - 1
+      update_fumetto()
+    }
+  }
+
+  function img_dopo_function(){
+    if(pagina_fumetto!==12){
+      pagina_fumetto = pagina_fumetto + 1
+      update_fumetto()
+    }
+  }
+
+  function update_fumetto(){
+    document.getElementById("img_fumetto").src = "fumetto/fumetto"+pagina_fumetto+".jpg"
+    document.getElementById("img_prima").src = (pagina_fumetto===1) ? "" : "immagine_prima.png"
+    document.getElementById("img_dopo").src = (pagina_fumetto===12) ? "" : "immagine_dopo.png"
   }
 
   //per aprire direttamente il triangolo inventori in fondo all'url si mette ?inventori
