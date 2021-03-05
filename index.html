@@ -157,12 +157,15 @@ h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-span.inventori h1,
-span.inventori h2,
-span.inventori h3,
-span.inventori h4,
-span.inventori h5,
-span.inventori h6{
+.inventori h1,
+.inventori h2,
+.inventori h3,
+.inventori h4,
+.inventori h5,
+.inventori h6{
+  -webkit-text-fill-color: rgb(238, 201, 43);
+  -webkit-opacity: 1;
+  opacity: 1;
   color: rgb(238, 201, 43);
 }
 
@@ -1627,10 +1630,6 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
       current_page.classList.remove("shown")
       stopVideo(current_page)
     }
-    current_page = document.getElementById(divId)
-
-    current_page.classList.add("shown")
-    document.getElementById(divId).scrollIntoView()
 
     //cambia icone
     let p = pages.get(current_page.id)
@@ -1639,6 +1638,10 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     document.getElementById("left_img").src = (p.left == false) ? "" : t.left_img
     document.getElementById("right_img").src = (p.right == false) ? "" : t.right_img
     document.getElementById("back_img").src = (p.back == false) ? "" : t.back_img
+
+    current_page = document.getElementById(divId)
+    current_page.classList.add("shown")
+    document.getElementById(divId).scrollIntoView()
   }
 
   //per salvare la posizione precendente al click
