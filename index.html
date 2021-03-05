@@ -71,7 +71,7 @@ html, body {
   display: inline;
 
   animation-name: fadeIn;
-  animation-duration: 3s;
+  animation-duration: 0s;
   animation-fill-mode: forwards;
 }
 
@@ -192,7 +192,7 @@ iframe {
   border: 0;
 }
 
-#img_fumetto {
+img.img_fumetto {
   max-width: 100%;
   max-height: 100%;
 }
@@ -201,7 +201,7 @@ iframe {
   text-align: center;
 }
 
-.fumetto button, #img_prima, #img_dopo{
+.fumetto button, .img_prima, .img_dopo{
   width: 2rem;
 }
 
@@ -269,6 +269,25 @@ figcaption {
   max-height:45%;
 }
 
+.illuminazione h1,
+.illuminazione h2,
+.illuminazione h3,
+.illuminazione h4,
+.illuminazione h5,
+.illuminazione h6{
+  color: rgb(63, 181, 235);
+}
+
+.illuminazione button.link,
+.illuminazione figcaption {
+  border: 0.2rem solid rgb(246, 252, 255);
+  background-color: rgb(246, 252, 255);
+}
+
+.illuminazione a {
+  color: rgb(21, 84, 114);
+}
+
 </style>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -295,8 +314,342 @@ figcaption {
 <div class="video-container">
 <iframe width="729" height="410" src="https://www.youtube.com/embed/hBR0Kq9boIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<h4>NON FINITO: CLICCARE UN ALTRO TRIANGOLO</h4>
+<p>Di notte la città si accende: i lampioni illuminano le strade e l'attività urbana non si ferma con il calare del sole.</p> 
+<p>Non è sempre stato così. Dal gas all'energia elettrica, la storia dell'illuminazione pubblica è lunga e composta da diverse fasi, date dal susseguirsi di innovazioni tecnologiche. L'opera di personalità importanti come Galileo Ferraris e l'ingegno di inventori come Alessandro Cruto hanno contribuito a questa impresa, che ha rivoluzionato la nostra quotidianità.</p>
+<button class="link left" onclick="jumpTo('ill_luce')">
+<h6>Torino illuminata</h6>
+<img src="icone illuminazione/lampione blu.png">
+<p>Dalle lanterne alla luce a gas fino all'illuminazione elettrica: ecco perchè Torino fu definita la <i>Ville Lumière</i> italiana.</p>
+</button>
 
+<button class="link right" onclick="jumpTo('ill_ferraris')">
+<h6>Galileo Ferraris</h6>
+<img src="icone illuminazione/ferraris blu.png">
+<p>L'ingegnere torinese Galileo Ferraris individuò immediante le potenzialità dell'illuminazione elettrica, ritenendo che avrebbe presto sostituito l'illuminazione a gas.  </p>
+</button>
+
+<button class="link left" onclick="jumpTo('ill_cruto')">
+<h6>Alessandro Cruto</h6>
+<img src="icone illuminazione/cruto blu.png">
+<p>Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
+Brevettò la sua lampadina ad incandescenza nel 1884.</p>
+</button>
+</div>
+
+<div class="page" id="ill_luce">
+<h3>TORINO ILLUMINATA</h3>
+<h5>LA VILLE LUMIÈRE ITALIANA</h5>
+
+<button class="link left" onclick="jumpTo('ill_ap_torce')">
+<h6>La prima illuminazione</h6>
+<img src="icone illuminazione/lanterna blu.png">
+<p>Nel 1675 il centro di Torino viene illuminato per la prima volta con lanterne: fino ad allora al calare della notte la città era completamente immersa nel buio.</p>
+
+</button>
+
+<button class="link right" onclick="jumpTo('ill_ap_gas')">
+<h6>L'avvento del gas</h6>
+<img src="icone illuminazione/lampione blu.png">
+<p>Nel XIX secolo si diffuse il gas illuminante: distillato dal carbone veniva immagazzinato nei gasometri, raggiungeva poi i lampioni dove era necessaria una scintilla affinché potesse illuminare le strade della città.</p></button>
+
+<button class="link left" onclick="jumpTo('ill_ap_gasom')">
+<h6>Il gasometro</h6>
+<img src="icone illuminazione/gas.png">
+<p>Assieme all'illuminazione a gas si svilupparono i gasometri, enormi "polmoni" contenenti gas oggi ridotti in rovina, relitti di un'epoca passata</p></button>
+
+<button class="link right" onclick="jumpTo('ill_ap_elettr')">
+<h6>L'illuminazione elettrica </h6>
+<img src="icone illuminazione/lampadina blu.png">
+<p>Nel 1884 fu inaugurato il primo sistema di illuminazione elettrica che sfruttava lampade ad arco. In seguito lo sviluppo delle lampadine a filamento rese più efficiente questo sistema, che sostituì l'illuminazione a gas. </p>
+</button>
+
+<button class="link left" onclick="jumpTo('ill_ap_festa')">
+  <h6>Le luci della festa </h6>
+  <img src="icone illuminazione/luci artistiche .png">
+  <p>Le illuminazioni spettacolari rappresentavano un evento di particolare rilevanza quando la città diventava completamente buia al calare della notte. L'usanza di celebrare le feste con luminarie particolari è rimasta immutata negli anni: nel periodo natalizio ogni anno Torino si illumina con le "Luci d'Artista".</p>
+</button>
+</div> 
+<div class="page" id="ill_ap_torce">
+<img class="inizio" src="icone illuminazione/lanterna blu.png">
+<h4>La prima illuminazione</h4>
+<p>Il 1675 si può considerare come l’anno di nascita dell’illuminazione pubblica della città di Torino, in tale anno infatti Madama Reale Giovanni Battista ordinò che venissero accese delle lanterne a sego agli angoli delle strade in modo che fosse possibile percorrerle con una maggiore sicurezza: fino ad allora per uscire di notte era necessario procurarsi una candela, una torcia o una lampada ad olio e anche in tal caso percorrere le strade immerse nell’oscurità poteva essere piuttosto pericoloso.</p>
+<p>Il sistema primitivo introdotto nel 1675 venne notevolmente migliorato a partire dal 1782, quando venne progettato un sistema di lanterne ad olio che pose Torino all’avanguardia nell’illuminazione pubblica europea con un sistema che poteva competere con quello delle maggiori città europee.</p>
+</div>
+<div class="page" id="ill_ap_gas">
+<img class="inizio" src="icone illuminazione/lampione blu.png">
+<h4>L'avvento del gas </h4>
+<p>A Torino il primo luogo ad utilizzare la luce a gas è il caffè del sig. Gianotti in piazza San Carlo, nel 1822 (oggi Caffè San Carlo), ma questa tipo di illuminazione prende veramente piede solo a partire dal 1846, anno in cui <i>“fra l’entusiasmo della popolazione, furono illuminate le contrade Dora Grossa e Nuova”</i>  e, poco dopo, anche le vie Po e Santa Teresa, piazza Castello, piazza San Carlo e piazza Vittorio. Ciò è reso possibile dalla nascita della <i>Società anonima per l'illuminazione della Città di Torino col mezzo del Gaz idrogeno carbonato</i>, il primissimo germoglio di ciò che diventerà dopo molti anni l’Italgas. Presto nascono altri stabilimenti, altre compagnie che si fanno concorrenza a vicenda o collaborano: a Torino sono sorti <a class="texty" onclick="jumpTo('ill_ap_gasom')">gasometri</a> in Porta Nuova, Borgo Dora e Vanchiglia.</p>
+<figure>
+  <img src="immagini illuminazione/2021-03-05-0003.jpg">
+  <figcaption>Stabilimento di Borgo Dora</figcaption>
+</figure>
+<p>Il funzionamento dei lampioni è simile a quello delle moderne cucine a gas: da delle boccucce fuoriesce il gas proveniente dalla base, e basta che un lampionaio dia una scintilla per sprigionare una fiammella continua.</p>
+<figure>
+  <img src="immagini illuminazione/ex lampioni gas.png">
+  <figcaption>Ex lampione a gas di Torino</figcaption>
+</figure>
+<p>La luce non era di grande intensità e a volte si poteva avvertire un leggero odore di gas intorno a questi lampioni. In termini di efficienza e luminosità un passo avanti lo si fece dopo la scoperta della <b>reticella Auer</b> nel 1882. All’epoca si stavano facendo i primi esperimenti di illuminazione elettrica, ma dovranno passare almeno 30 anni perché essa sostituisca quasi del tutto la luce a gas.</p>
+<p>Un aspetto forse poco gradevole delle tipiche reticelle Auer in torio dell’epoca è la loro radioattività.</p>
+<figure>
+  <img src="immagini illuminazione/Glowing_gas_mantle.jpg">
+</figure>
+</div>
+<div class="page" id="ill_ap_gasom">
+<img class="inizio" src="icone illuminazione/gas.png">
+<h4>Il gasometro</h4>
+<p>Nel XIX secolo si comincia a usare in modo massiccio il gas nelle città, ad esempio per l’illuminazione o nelle cucine. Il consumo non è omogeneo nell’arco della giornata: a che scopo illuminare una strada a mezzogiorno? Similmente, anche la produzione non è omogenea. Il gas non proviene da paesi esotici lontani come succede con il gas metano di oggi, bensì è prodotto attraverso la distillazione del carbone grazie ad un processo detto <b>gassificazione</b>. Gli operai riversano il carbone nelle camere di distillazione, a temperature elevatissime, ottenendo poi come scarto il coke.</p>
+<p><a href="https://www.youtube.com/watch?v=_wf04ElrliY" target="_blank">Video sull’officina del gas di Vanchiglia.</a></p>
+Gli stabilimenti hanno bisogno di manodopera giorno e notte, ma è ovvio che in certi orari verrà prodotto più gas: dove stipare tutto il materiale, tenendo conto che la quantità sarà variabile nel tempo?
+<figure>
+  <img src="immagini illuminazione/640px-L-Gasometer.png">
+  <figcaption>Struttura di un gasometro</figcaption>
+</figure>
+<p>La soluzione ottocentesca sono i gasometri, enormi cilindri (parliamo di diametri di 60 metri e altezze sui 50/100 metri) in cui contenere il gas prodotto. Il “soffitto” di queste camere non è ad altezza fissa, bensì si alza e si abbassa a seconda della quantità di materiale contenuto, in modo simile ad un polmone. Gli esemplari più sofisticati accompagnano l’innalzamento/l’abbassamento con una rotazione producendo un movimento ad elica, in modo da aumentarne la stabilità.</p>
+<p>Come fa la struttura a essere “dinamica” e allo stesso tempo a non permettere fuoriuscite di gas, che sarebbero poco economiche e pericolose? Il fondo dei gasometri è riempito di acqua: questo stabilizza ulteriormente la struttura e soprattutto impedisce perdite perché il gas è più leggero dell’acqua e perciò rimane intrappolato tra la vasca e le pareti del gasometro.</p>
+<p><div class="video-container">
+<iframe width="729" height="410" src="https://www.youtube.com/embed/SopJr0yHt-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></p>
+<p>Oggigiorno i gasometri non sono altro che archeologia industriale: se non sono stati demoliti, tutto ciò che ne rimane è il telaio esterno lungo cui le pareti scorrevano, come nel caso dell’officina del gas a Vanchiglia, dove sono ancora presenti i resti di due gasometri.</p>
+<figure>
+  <img src="immagini illuminazione/gasometri~s600x600.jpg">
+  <figcaption>Gasometri a Vanchiglia</figcaption>
+</figure>
+</div>
+<div class="page" id="ill_ap_elettr">
+<img class="inizio" src="icone illuminazione/lampadina blu.png">
+<h4>L'illuminazione elettrica </h4>
+<p>La progenitrice della lampadina è la <b>lampada ad arco</b>, inventata dall’inglese Humphry Davy all’inizio dell’Ottocento, perfezionata poi dal francese Jean-Bernard-Leon Foucault. Si tratta di un dispositivo formato da due elettrodi di carbonio avvicinati, collegati a una potente batteria, rinchiusi in un’ampolla di vetro in cui viene creato il vuoto (per rallentare la combustione dei carboni, altrimenti rapidissima). La luce prodotta è bianca e potente, ma la lampada ad arco è costosa, richiede molta manutenzione e consuma una notevole quantità di energia, caratteristica che la rende adatta all’illuminazione di grandi ambienti e all’illuminazione pubblica nel corso dell’Ottocento.</p> 
+<p>Alcuni degli svantaggi della lampada ad arco sono risolti dalla <b>candela elettrica</b>, formata da due bastoncini di carbone separati da uno strato isolante di solfato di carbonio, ma la durata della sua luce non supera le due ore.</p>
+
+<p>Le ricerche degli scienziati da diverse parti del mondo continuano, al fine di perfezionare il sistema di luce elettrica. Nasce così la <a class="texty" onclick="jumpTo('ill_ap_lampadina')">lampadina ad incandescenza</a>, che si basa appunto sul processo di incandescenza: un filamento attraversato da corrente viene portato ad alte temperature ed emette luce, all'interno di un bulbo di vetro in cui, analogamente alla lampada ad arco, viene creato il vuoto per mezzo di una pompa.</p>
+La <b>ricerca del filamento</b> è il problema che interessa molti scienziati nella seconda metà dell'Ottocento, tra cui <a class="texty" onclick="jumpTo('ill_ap_edison')">Thomas Edison</a> che propone diversi materiali tra cui le fibre di bambù, e l’italiano <a class="texty" onclick="jumpTo('ill_ap_cruto')">Alessandro Cruto</a>, che realizza la sua lampadina con filamento di carbonio puro sintetico.</p>
+<p>Si cerca un materiale resistente, che massimizzi la durata del funzionamento della lampadina.
+Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David Coolidge.</p> 
+<p>Una volta stabilito il filamento, nel corso del Novecento si pensa ad un altro modo per incrementare l’efficienza luminosa: la durata viene aumentata anche con l’utilizzo di un gas alogeno inserito nel bulbo. Questo particolare tipo di lampada a incandescenza è detta <b>lampada alogena</b>.</p>
+<p>La <b>pompa a vuoto</b> è un’altra questione cruciale: inizialmente le pompe utilizzate per realizzare il vuoto all’interno del bulbo di vetro erano poco efficienti. Hermann Sprengel realizza la pompa a vuoto, capace di rimuovere tutte le tracce d’aria dal bulbo, ma richiede un procedimento lungo e macchinoso (serve una pompa per ogni lampada). Arturo Malignani, inventore friulano, brevetta nel 1894 la sua pompa che ,avendo un'applicazione veloce ed efficiente, permette la produzione in serie dei dispositivi.</p>
+<p>Il <b>rendimento basso</b> (gran parte dell’energia viene dissipata in calore) è invece un problema che non può essere facilmente risolto: è necessario un cambiamento di tecnologia applicata alla realizzazione della lampadina.</p>
+<br>
+<p>Nel 1926 viene brevettata la <b>lampadina a fluorescenza</b>, che nel corso del ‘900 ha gradualmente sostituito quella a incandescenza. Le lampadine fluorescenti sono formate da un tubo, internamente rivestito da un materiale fluorescente,   riempito da un gas nobile e da una piccola quantità di mercurio. Il gas stimolato dalla corrente emette radiazioni nell’ultravioletto (non visibili) che attivano la sostanza fluorescente, che emette luce. All’interno della base della lampadina è presente un meccanismo che deve limitare la corrente per far funzionare il sistema. Questo processo necessita di tempo e dunque le lampade a fluorescenza impiegano molti secondi per raggiungere il massimo della luminosità. Questo tipo di tecnologia permette un considerevole risparmio di energia, ma la presenza di mercurio nelle lampadine ne rende problematico lo smaltimento.</p>
+<figure>
+  <img src="immagini illuminazione/1024px-Energiesparlampe_01a.jpg"></fig>
+  <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=5559269"  target="_blank">By Kuebi = Armin Kübelbeck; Edit by Waugsberg (less cropped) - Own work, CC BY-SA 3.0</a></figcaption>
+</figure>
+<p>Attualmente, anche le lampadine a fluorescenza sono state abbandonate, in favore di una diversa tecnologia: il LED. Questo tipo di sistema, che si basa sull’emissione di fotoni da parte di materiali semiconduttori quando attraversati da corrente, è conosciuto già dagli anni sessanta. Inizialmente però si conosceva solamente il modo di produrre luce rossa o verde, solo in tempi più recenti (all’inizio degli anni ‘90), viene prodotta anche la luce blu. Con la combinazione di questi colori si può produrre luce bianca per ottenere le lampadine a LED, che rappresentano un sistema di illuminazione a basso consumo energetico. Isamu Akasaki, Hiroshi Amano e Shuji Nakamura hanno vinto nel 2014 il premio Nobel per la fisica, grazie alla loro invenzione dei LED a luce blu.</p>
+<figure>
+  <img src="immagini illuminazione/800px-RBG-LED.jpg"></fig>
+  <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=864610"  target="_blank">By PiccoloNamek - English wikipedia, CC BY-SA 3.0</a></figcaption>
+</figure>
+<div class="video-container">
+<iframe width="729" height="410" src="https://www.youtube.com/watch?v=nQoot7HZL_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<div class="page" id="ill_ap_festa">
+<img class="inizio" src="icone illuminazione/luci artistiche .png">
+<h4>Le luci della festa </h4>
+<p>Quando la città di notte era scarsamente illuminata si era soliti festeggiare eventi importanti con particolari illuminazioni delle strade della città: le “mostruose illuminazioni”, come venivano chiamate in età barocca, erano un elemento imprescindibile in caso di matrimoni importanti e celebrazioni politiche.</p>
+<p>Nel 1722 in occasione delle nozze di Carlo Emanuele III e Anna Cristina di Sulzbach venne realizzato da Filippo Juvarra un sistema di lumi che attraversava le principali strade e piazze di Torino creando un effetto spettacolare; nel 1842 in occasione delle nozze tra Vittorio Emanuele e Maria Adelaide d’Austria la città venne completamente illuminata.</p>
+<p><a href="https://www.museotorino.it/resources/pdf/books/122/files/assets/common/downloads/publication.pdf" target="_blank">Immagini (da pagina 49)</a></p>
+<p>Negli anni tra il 1853 e il 1864 si tenevano a Torino nella seconda domenica di maggio le celebrazioni per ricordare la concessione dello Statuto Albertino. Il programma della manifestazione rimase pressoché invariato negli anni, tuttavia si assistette ad un notevole cambiamento nell’uso delle luminarie per decorare la città: se inizialmente si limitavano all’illuminazione di alcuni importanti edifici, come la Chiesa della Gran Madre o il Palazzo Civico, esse divennero via via più elaborate e nel 1860 fu realizzato in via Dora Grossa, oggi via Garibaldi, un tunnel di circa un chilometro costituito da archi luminosi.</p>
+<figure>
+  <img src="immagini illuminazione/Schermata 2021-02-27 alle 23.16.59.png">
+</figure>
+<p>A metà del ‘900 operò a Torino l’ingegnere Guido Chiarelli: il suo contributo fu di centrale importanza nell’ambito dell’illuminazione pubblica, che grazie al suo intervento vide affiancarsi alla sua utilità pratica anche risvolti artistici. Di particolare rilevanza furono due sue progettazioni di illuminazioni del 1961: le fontane e il giardino roccioso del Parco del Valentino in occasione dell’esposizione universale e la guglia della Mole Antonelliana per celebrarne la ricostruzione in seguito al suo crollo del 1953.</p>
+<figure>
+  <img src="immagini illuminazione/Expo_1961.gif">
+  <img src="immagini illuminazione/Progetto_G._Chiarelli.JPG">
+</figure>
+<p>In tempi più moderni non si è persa l’abitudine di celebrare festività e ricorrenze importanti arricchendo la città con luci spettacolari: ogni anno a partire dal 1998 a Torino durante il periodo natalizio si accendono le “Luci d’Artista”, una mostra d’arte contemporanea costituita da opere luminose realizzate da artisti italiani e stranieri.</p>
+</div>
+
+<div class="page" id="ill_ferraris">
+<h4>GALILEO FERRARIS</h4>
+<h6 style="text-align:center">PROMOTORE DELL'ILLUMINAZIONE PUBBLICA</h6>
+
+<button class="link left" onclick="jumpTo('ill_ap_ferraris')">
+<h6>Galileo Ferraris</h6>
+<img src="icone illuminazione/ferraris blu.png">
+<p>L'ingegnere torinese Galileo Ferraris individuò immediante le potenzialità dell'illuminazione elettrica, ritenendo che avrebbe presto sostituito l'illuminazione a gas.</p></button>
+
+<button class="link right" onclick="jumpTo('ill_ap_museo')">
+<h6>Il Regio Museo Industriale</h6>
+<img src="icone illuminazione/museo blu.png">
+<p>Il Regio Museo Industriale nacque con lo scopo di promuovere lo sviluppo industriale. Qui nel 1879 Galileo Ferraris tenne un ciclo di conferenze riguardanti l'illuminazione elettrica a cui partecipò il  giovane inventore Cruto: da esse nacque l'idea per la lampadina.</p></button>
+
+<button class="link left" onclick="jumpTo('ill_ap_cons')">
+<h6>Consigliere comunale</h6>
+<img src="icone illuminazione/lampione 2.png">
+<p>Galileo Ferraris ricoprì il ruolo di consigliere comunale e in quanto tale si fece promotore dell'illuminazione pubblica della città di Torino.</p></button>
+
+<button class="link right" onclick="jumpTo('ill_ap_mostra')">
+<h6>La mostra sull'elettricità</h6>
+<img src="icone illuminazione/lampadina blu.png">
+<p>Galileo Ferraris fu incaricato di supervisionare il padiglione dedicato all'elettricità durante l'esposizione industriale del 1884: il padiglione venne illuminato interamente utilizzando l''elettricità e qui furono esposte le nuove lampadine a filamento di Edison e Cruto. </p>
+</button>
+</div>
+
+<div class="page" id="ill_ap_ferraris">
+<img class="inizio" src="icone illuminazione/ferraris blu.png">
+<h4>GALILEO FERRARIS</h4>
+
+<p>Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine.</p>
+<p>A partire dal 1877 divenne assistente di fisica tecnica presso il <a class="texty" onclick="jumpTo('ill_ap_museo')">Regio Museo Industriale</a> di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.</p>
+
+<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('ill_ap_magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('ill_ap_tesla')">Nikola Tesla</a> riguardo alla paternità. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
+
+<p>Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.</p>
+<p>Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:<br>
+<i>“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.</i></p>
+
+</div>
+<div class="page" id="ill_ap_museo">
+<img class="inizio" src="icone illuminazione/museo blu.png">
+<h4>REGIO MUSEO INDUSTRIALE</h4>
+
+<p>Il Regio Museo industriale Italiano venne istituito da un decreto nel 1862 con l’obiettivo <i>“di promuovere l’istruzione industriale e il progresso delle industrie e del commercio”</i> sul modello delle scuole di istruzione tecnica superiore che si stavano sviluppando a Londra e Parigi. Esso aveva sede dove oggi sorge Piazzale Valdo Fusi, ma rimase distrutto durante un bombardamento aereo nel 1943.</p>
+<p>Questo fu un luogo di grande rilevanza nello sviluppo della società torinese: esso era non solo un’esposizione permanente dei nuovi progressi industriali, ma anche un luogo in cui si tenevano corsi di insegnamento con lo scopo di ampliare le conoscenze tecniche dei giovani ingegneri.</p>
+<p>Qui nel 1879 <a class="texty" onclick="jumpTo('ill_ap_ferraris')">Galileo Ferraris</a> presentò un ciclo di conferenze riguardanti l’illuminazione elettrica, che egli riteneva avrebbe presto sostituito quella a gas: tra gli uditori vi era anche il giovane <a class="texty" onclick="jumpTo('ill_ap_cruto')">Alessandro Cruto</a>, che ebbe in questo modo l’idea di partenza per la realizzazione della sua lampada a filamento.</p>
+<p>Nel 1887 l’ingegnere piemontese tenne un corso di elettrotecnica che prevedeva, oltre alle tradizionali lezioni, alcune esercitazioni pratiche e nell’anno successivo venne istituito all’interno dei locali del Regio Museo Industriale un vero e proprio Laboratorio di Elettrotecnica, che attirò studenti da tutta Italia; alcuni strumenti e apparecchiature provenienti da tale laboratorio sono oggi conservati presso l’Istituto elettrotecnico nazionale Galileo Ferraris.</p>
+<p>La fama del Museo divenne tale da rendere necessario, nel 1897, un progetto di ampliamento dei locali che dotarono l’edificio di nuove aule per le lezioni e per il disegno e apposite aree per i laboratori.</p>
+<p>L’esposizione generale italiana del 1898 vide la partecipazione diretta del Museo che presentò una propria mostra contenente disegni e progetti degli allievi.</p>
+<p>Nel 1906, dalla fusione di questo istituto con la Scuola di Applicazione per gli ingegneri nacque il Politecnico di Torino.</p>
+<p><a href="https://www.museotorino.it/view/s/12fab9b75ccd4f8596cdf2a44f27b6ab" target="_blank">Immagini Museo Torino</a></p>
+
+</div>
+<div class="page" id="ill_ap_cons">
+<img class="inizio" src="icone illuminazione/lampione 2.png">
+<h4>CONSIGLIERE COMUNALE</h4>
+<p>A partire dal 1887 Galileo Ferraris fu membro del Consiglio Comunale e della Giunta del comune di Torino: i suoi interventi si concentrarono soprattutto nel tentativo di rendere Torino una città all’avanguardia, in cui i cittadini potessero godere dei benefici portati dallo sviluppo di nuove tecnologie: sua fu ad esempio l’idea di introdurre i tram elettrificati che sfruttavano la sua scoperta del <a class="texty" onclick="jumpTo('inv_ap_magnetico')">motore elettrico a corrente alternata</a>. Di centrale importanza furono i suoi interventi riguardanti l’illuminazione pubblica che permisero il potenziamento di questa e la sua estensione ovunque esistessero scuole serali. Inoltre egli sostenne da subito come il futuro dell’illuminazione fosse da ricercare nell’elettricità: <i>“La luce elettrica subentrerà sulle pubbliche strade a quella del gas. […] I nostri figli la vedranno applicata e quando vi saranno abituati non tollereranno più la luce del gas. Essi avranno un bisogno di più, che noi non abbiamo ancora, ma questa è la legge naturale del progresso”.</i></p>
+</div>
+<div class="page" id="ill_ap_mostra">
+<img class="inizio" src="icone illuminazione/esposizione gen blu.png">
+<h4>L’ESPOSIZIONE INDUSTRIALE</h4>
+
+<p>A partire dal 1881 si sviluppò l’idea di ospitare a Torino un’esposizione universale sul modello di quelle che si andavano sviluppando in quegli anni: a partire dalla Great Exhibition tenutasi  a Londra nel 1851 le più importanti città europee iniziarono a organizzare grandi mostre con lo scopo di mostrare i progressi della società e aprire il dialogo sulle ultime innovazioni.</p>
+<p>Nel 1884 si tenne presso il Parco del Valentino l’Esposizione industriale e artistica italiana: in questa occasione vennero realizzati padiglioni appositi per ospitare le mostre, tra essi il Borgo medievale ancora oggi visitabile. L’esposizione si estendeva per un’area molto vasta e comprendeva otto sezioni: Belle Arti, Produzioni scientifiche e letterarie, Didattica, Previdenza e assistenza pubblica, Industrie estrattive e chimiche, Industrie manifatturiere, Economia rurale. Parteciparono più di 14.000 espositori e circa tre milioni di visitatori italiani e stranieri riempirono le strade di Torino.</p>
+<p>All’interno dell’Esposizione vi era un padiglione dedicato all’elettricità, la cui supervisione fu assegnata a <a class="texty" onclick="jumpTo('ill_ap_ferraris')">Galileo Ferraris</a>: al suo interno l’illuminazione era completamente affidata all’elettricità, in parte utilizzando lampade ad arco, in parte utilizzando le nuove <a class="texty" onclick="jumpTo('ill_ap_lampadina')">lampadine a filamento</a> sviluppate da <a class="texty" onclick="jumpTo('ill_ap_cruto')">Alessandro Cruto</a> e <a class="texty" onclick="jumpTo('ill_ap_edison')">Thomas Edison</a> in quegli anni, che avrebbero segnato il futuro dell’illuminazione.</p>
+
+<figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
+</div>
+
+<div class="page" id="ill_cruto">
+<h4>ALESSANDRO CRUTO</h4>
+<h5>LA LAMPADINA AD INCANDESCENZA</h5>
+
+<button class="link left" onclick="jumpTo('ill_ap_cruto')">
+<h6>Alessandro Cruto</h6>
+<img src="icone illuminazione/cruto blu.png">
+<p>Alessandro Cruto, "muratore scienziato", nato a Piossasco nel 1847, studiò e operò da autodidatta. 
+Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
+
+<button class="link right" onclick="jumpTo('ill_ap_lampadina')">
+<h6>Un'invenzione luminosa</h6>
+<img src="icone illuminazione/lampadina blu.png">
+<p>La lampada ad incandescenza è formata da un bulbo di vetro attraversato da un filamento carbonizzato. Molti scienziati lavoravano per trovare il materiale migliore con cui realizzare il filamento.</p></button>
+
+<button class="link left" onclick="jumpTo('ill_ap_expo')">
+<h6>L'esposizione industriale</h6>
+<img src="icone illuminazione/esposizione gen blu.png">
+<p>Nel 1884, all'Esposizione generale italiana tenutasi al parco del Valentino di Torino, Cruto presentò la sua lampadina realizzata con filamento in carbonio, ricevendo ottime recensioni.</p></button>
+
+<button class="link right" onclick="jumpTo('ill_ap_fabbrica')">
+<h6>La fabbrica di Alpignano</h6>
+<img src="icone illuminazione/fabbrica blu.png">
+<p>La lampadina di Cruto convinse alcuni investitori, e il piccolo laboratorio di Piossasco non bastava più all'inventore, che aprì la sua industria ad Alpignano. Oggi la fabbrica è un museo.</p></button>
+
+<button class="link left" onclick="jumpTo('ill_ap_edison')">
+<h6>Thomas Edison</h6>
+<img src="icone illuminazione/edison blu.png">
+<p>L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.</p></button>
+</div>
+
+<div class="page" id="ill_ap_cruto">
+<img class="inizio" src="icone illuminazione/cruto blu.png">
+<h4>ALESSANDRO CRUTO</h4>
+<p>Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il <b>diamante</b> in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico.</p>
+<p>Piossasco si trova a 20 chilometri da Torino. Non sono pochi da fare a piedi, ma Cruto compie spesso questo tragitto per ascoltare lezioni e conferenze nel capoluogo.</p>
+<p>Nel maggio 1879 <a class="texty" onclick="jumpTo('ill_ap_ferraris')">Galileo Ferraris</a> è a Torino per un <b>ciclo di conferenze</b> sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa.</p>
+<p>Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La <a class="texty" onclick="jumpTo('ill_ap_lampadina')">lampadina ad incandescenza</a> ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le <b>lamine di carbonio</b> che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua <a class="texty" onclick="jumpTo('ill_ap_fabbrica')">industria ad Alpignano</a> e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.</p>
+<div class="fumetto">
+  <button onclick="img_prima_function(0)"><img id="img_prima0" class="img_prima"></button>
+  <button onclick="img_dopo_function(0)"><img id="img_dopo0" class="img_dopo" src="immagine_dopo_blu.png"></button>
+  <img id="img_fumetto0" class="img_fumetto" src="fumetto/fumetto1.jpg">
+</div>
+
+</div>
+<div class="page" id="ill_ap_lampadina">
+<img class="inizio" src="icone illuminazione/lampadina blu.png">
+<h4>UN’INVENZIONE LUMINOSA</h4>
+
+<figure>
+  <img src="immagini inventori/800px-Incandescent_light_bulb.svg.png">
+  <figcaption> 
+    <ol>
+      <li>Bulbo di vetro</li>
+        <li>Gas inerte o vuoto</li>
+        <li>Filamento</li>
+        <li>Filo di andata</li>
+        <li>Filo di ritorno</li>
+        <li>Supporto del filamento</li>
+        <li>Supporto della lampada</li>
+        <li>Contatto con la base</li>
+        <li>Base a vite</li>
+        <li>Isolante</li>
+        <li>Contatto sulla base</li>
+    </ol>
+  </figcaption>
+</figure>
+
+<p>La storia della lampadina è lunga e Edison e Cruto non sono gli unici ad aver contribuito a questa invenzione.</p>
+<p>La lampadina ad incandescenza è formata da un bulbo di vetro, al cui interno c’è un filamento che, attraversato dalla corrente, emette luce. Già nella prima metà dell’Ottocento molti scienziati compivano esperimenti per trovare il filamento più adatto per la lampadina. Vengono usati per esempio il carbone, che però non ha lunga durata, e metalli come il platino, che durano di più ma hanno lo svantaggio di produrre una luce rossastra e poco potente.</p>
+<p>Nel 1878 Joseph Swan, inventore inglese, si distingue per la sua lampadina con filamento di filo di cotone trattato con acido solforico. Solamente un anno dopo lo statunitense Edison brevetta la sua lampadina, e tra i due scoppiano le battaglie legali, che terminano con un accordo commerciale e la costituzione della società elettrica “Edison&Swan”. La fama di Edison ha però oscurato la memoria dell’inglese, nonostante il primato temporale di quest’ultimo. Le ricerche di Edison però non si fermano; la luce della sua lampadina viene definita da una rivista scientifica come la luce di un “caldo tramonto di un autunno italiano”. Edison prova con i materiali più disparati, come tele di sacco, celluloide, trucioli di cedro. Si procura anche fibre esotiche: prova con la fibra di un bambù gigante dell’isola di Ceylon (Sri Lanka).</p>
+
+<figure><img src="immagini inventori/lossy-page1-220px-Lampadina_Museo_Scienza_e_Tecnologia_Milano.tif.jpg"></figure>
+
+<p>Sarà però Cruto a realizzare, nel marzo 1880, una lampadina definita dalla Gazzetta Piemontese (ottobre 1882) di luce “costante, limpida, molto meno costosa delle altre luci elettriche”.</p>
+<p>La lampadina Cruto ha un filamento di carbonio puro sintetico, realizzato dal piossaschese in laboratorio, che permette di produrre una luce bianca e potente.</p>
+
+<p><a href="https://www.youtube.com/watch?v=nQoot7HZL_o" target="_blank">Funzionamento delle lampadine moderne</a></p>
+
+</div>
+<div class="page" id="ill_ap_expo">
+<img class="inizio" src="icone illuminazione/esposizione gen blu.png">
+<h4>L’ESPOSIZIONE INDUSTRIALE</h4>
+
+<p>A partire dal 1881 si sviluppò l’idea di ospitare a Torino un’esposizione universale sul modello di quelle che si andavano sviluppando in quegli anni: a partire dalla Great Exhibition tenutasi  a Londra nel 1851 le più importanti città europee iniziarono a organizzare grandi mostre con lo scopo di mostrare i progressi della società e aprire il dialogo sulle ultime innovazioni.</p>
+<p>Nel 1884 si tenne presso il Parco del Valentino l’Esposizione industriale e artistica italiana: in questa occasione vennero realizzati padiglioni appositi per ospitare le mostre, tra essi il Borgo medievale ancora oggi visitabile. L’esposizione si estendeva per un’area molto vasta e comprendeva otto sezioni: Belle Arti, Produzioni scientifiche e letterarie, Didattica, Previdenza e assistenza pubblica, Industrie estrattive e chimiche, Industrie manifatturiere, Economia rurale. Parteciparono più di 14.000 espositori e circa tre milioni di visitatori italiani e stranieri riempirono le strade di Torino.</p>
+<p>All’interno dell’Esposizione vi era un padiglione dedicato all’elettricità, la cui supervisione fu assegnata a <a class="texty" onclick="jumpTo('ill_ap_ferraris')">Galileo Ferraris</a>: al suo interno l’illuminazione era completamente affidata all’elettricità, in parte utilizzando lampade ad arco, in parte utilizzando le nuove <a class="texty" onclick="jumpTo('ill_ap_lampadina')">lampadine a filamento</a> sviluppate da <a class="texty" onclick="jumpTo('ill_ap_cruto')">Alessandro Cruto</a> e <a class="texty" onclick="jumpTo('ill_ap_edison')">Thomas Edison</a> in quegli anni, che avrebbero segnato il futuro dell’illuminazione.</p>
+
+<figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
+
+</div>
+<div class="page" id="ill_ap_fabbrica">
+<img class="inizio" src="icone illuminazione/fabbrica blu.png">
+<h4>LA FABBRICA DI ALPIGNANO</h4>
+<br>
+<h6>L’esperienza industriale</h6>
+<p>Nel 1880 Alessandro Cruto ha realizzato la sua lampadina ad incandescenza. A questo punto, deve trovare degli investitori interessati alla sua invenzione. Nel 1882 alcuni “capitalisti” (così li definisce Cruto) investono su di lui e fondano una società.</p>
+<p>La lampadina Cruto è di ottima qualità e ha un prezzo economico: la società americana Westinghouse acquista i diritti della lampadina italiana, preferendola a quella del connazionale Edison!</p>
+<p>Riconosciuto il valore dell’invenzione, è ormai l’ora dell’industrializzazione: la prima rudimentale fabbrica si trova a Piossasco ed è ancora un ibrido con il vecchio laboratorio. Presto gli spazi risultano insufficienti e la fabbrica si sposta ad Alpignano, cittadina a meno di 20 chilometri da Piossasco. </p>
+<p>Alessandro Cruto è un uomo intelligente è attento, tiene molto alle sue lampadine, frutto di tanta fatica, e vorrebbe seguire da vicino la produzione. Il piossaschese è però anche un uomo sensibile e poco abituato ad avere a che fare con i capitalisti. I suoi soci vogliono arricchirsi e creano un clima di tensione e discordia, al punto che Cruto decide alla fine di allontanarsi da Alpignano. D’altronde l’industria è per Cruto un bel traguardo, ma il suo interesse rimane la ricerca. Nell’ultima parte della sua vita continua i suoi studi e si diletta in invenzioni come un “sistema di fontane luminose”. Egli stesso scriverà: <i>“Ma vi dirò che meglio essere industriale desidero continuare i miei studi. Fui industriale e non desidero ritornarvi. Non mi trovo fatto per tale cosa”.</i></p>
+<figure><img src="immagini inventori/lossy-page1-220px-Stabilimento_di_Alpignano_Museo_Scienza_e_Tecnologia_Milano.tif.jpg"></figure>
+<h6>La sede di Alpignano</h6>
+<p>Dal 1886 la società italiana di Elettricità Sistema Cruto ha la sua fabbrica di lampadine ad Alpignano, in via Matteotti 2. Questa sede continua a essere legata alle lampade a lungo: nel 1927 viene rilevata dalla PHILIPS. Dal 2004 è un museo dedicato all’inventore piossaschese e alla sua lampadina.</p>
+<p><a href="http://www.ecomuseocruto.it/museo/" target="_blank">Sito web del museo</a></p>
+  
+</div>
+<div class="page" id="ill_ap_edison">
+<img class="inizio" src="icone illuminazione/edison blu.png">
+<h4>THOMAS EDISON</h4>
+<p>Thomas Edison e Alessandro Cruto nascono nello stesso anno, il 1847. I due inventori sono però figli di due mondi molto distanti.</p>
+<p>Cruto è un uomo modesto e schivo, Edison una personalità ingombrante, un uomo ricco e scaltro. Ciò che certamente li accomuna è la totale dedizione al lavoro, l’instancabilità nello sperimentare nuove soluzioni, la passione nello studio. D’altronde, come diceva Edison, <i>“il genio è per l’1% ispirazione. per il 99% traspirazione, ovvero sudore”.</i></p>
+<p>Edison, nel momento in cui comincia a lavorare alla sua lampadina, è già famoso per altre invenzioni (per esempio il fonografo), ed ha molti capitalisti disposti ad investire sul suo lavoro. Un gruppo di società gli ha assicurato una rendita annua e creato due laboratori per i suoi esperimenti (prima a Newark, poi a Menlo Park, presso New Jersey). Inoltre a lavorare agli esperimenti di Edison ci sono 300 uomini specializzati.</p>
+<p>Ben diversa è la situazione di Cruto, nato a Piossasco, cittadina alle porte di Torino. Alessandro Cruto è figlio di un capomastro, non può permettersi gli studi così deve lavorare con il padre e studiare da autodidatta. Il contesto in cui vive non è incoraggiante: costruisce un rudimentale laboratorio presso la sua abitazione, sogna di diventare un inventore, e i suoi concittadini lo chiamano “il matto”. Non ha nessuno che investe su di lui, può contare solo su pochi prestiti di amici e sui suoi risparmi. I suoi esperimenti poi, inizialmente sono rivolti al tentativo di produrre del diamante artificiale, solo ad un certo punto scopre che le lamine di carbonio puro che è riuscito ad ottenere possono essere ottimali per il filamento della lampadina.</p>
+<p>Il lavoro di Edison è invece fin dall’inizio caratterizzato da metodo e senso pratico, secondo una mentalità fortemente imprenditoriale. L’inventore statunitense è pioniere di un’imprenditoria a “ciclo completo”, dalla ricerca fino alla commercializzazione del prodotto. Per esempio, prima ancora di brevettare la lampadina, si preoccupa dell’effettiva possibilità di distribuire la corrente elettrica per la città, affinché il prodotto sia realmente commercializzabile.</p> 
+<p>Al contrario, quando l’invenzione di Cruto attira l’attenzione degli investitori, questi ultimi vogliono speculare sul nuovo prodotto, e cercano di esautorare l'inventore dalla dirigenza dell’industria.</p>
+<p>Edison quindi dispone sia di mezzi che di metodo potentissimi. Il suo successo è preannunciato, probabilmente data anche la fama che l’americano già vantava.</p>
+<p>Cruto parte in grande svantaggio, ma alla fine riesce a raggiungere importanti traguardi, sebbene modesti di fronte ai capitali gestiti dalla società americana.</p>
+<p>Ciò che lascia più amarezza è il fatto che l’inventore italiano sia così poco noto, anche nella sua stessa patria. Probabilmente il fatto che Cruto non abbia avuto la possibilità di studiare ha negato all’inventore di ottenere visibilità a livello accademico e anche questo potrebbe aver contribuito a oscurarne la memoria.</p>
+<p>La storia però non è fatta di se: l’impegno che la società può prendersi ora è quello di ricordare le menti brillanti del passato, per assicurare il massimo sostegno a quelle del presente.</p>
 </div>
 
 </span>
@@ -517,7 +870,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <p>Galileo Ferraris nacque a Livorno Piemonte, oggi Livorno Ferraris, il 30 ottobre 1847. Rimasto orfano di madre iniziò a istruirsi presso la casa di uno zio medico; all’età di 22 si laureò in ingegneria civile con una tesi riguardante la trasmissione a distanza di energia cinetica: questo è il tema centrale della sua ricerca scientifica, fondata sullo studio della distribuzione dell’energia nelle case e nelle officine.</p>
 <p>A partire dal 1877 divenne assistente di fisica tecnica presso il <a class="texty" onclick="jumpTo('inv_ap_museo')">Regio Museo Industriale</a> di Torino, dove nel 1889 fondò una scuola di elettrotecnica in cui insegnò fino alla sua morte, avvenuta nel 1897. Tale istituto era particolarmente innovativo poiché era tra le prime scuole al mondo specializzate nell’insegnamento dell’elettrotecnica con corsi specialistici, frequentata anche da funzionari delle amministrazioni pubbliche che giungevano a Torino per apprendere  l’utilizzo delle nuove tecnologie.</p>
 
-<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('inv_ap_magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('inv_ap_tesla')">Nikola Tesla riguardo alla paternità</a>. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
+<p>Nel 1885 scoprì il <a class="texty" onclick="jumpTo('inv_ap_magnetico')">campo magnetico rotante</a> e negli anni successivi progettò diversi modelli di motore elettrico che sfruttavano questa idea, tuttavia la comunicazione ufficiale della sua scoperta avvenne solo nel 1888, aprendo una contesa con l’americano <a class="texty" onclick="jumpTo('inv_ap_tesla')">Nikola Tesla</a> riguardo alla paternità. A questo proposito Galileo Ferraris scrisse ad un amico: <i>“Senza che io me ne sia occupato ho visto a Francoforte che tutti attribuiscono a me la prima idea, il che mi basta. Gli altri facciano denari, a me basta quel che mi spetta: il nome”</i> e in altre occasioni sottolineò di essere <i>“un professore, non un industriale”</i>, mettendo l’accento sul suo ruolo di centrale importanza nell’istruzione di giovani ingegneri e nella diffusione dell’utilizzo dell’energia elettrica nelle città.</p>
 
 <p>Dal 1887 fu consigliere e assessore municipale della città di Torino, impegnandosi in prima persona nello sviluppo della città facendosi promotore dell’illuminazione pubblica e dell’elettrificazione dei tram.</p>
 <p>Ricorda Edmondo De Amicis nel suo racconto “La carrozza” un divertente aneddoto riguardante l’ingegnere, pronto a mescolarsi con la gente per comprenderne le preoccupazioni legate alle innovazioni tecnologiche introdotte grazie al suo intervento:<br>
@@ -614,9 +967,9 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p>Nel maggio 1879 <a class="texty" onclick="jumpTo('inv_ap_ferraris')">Galileo Ferraris</a> è a Torino per un <b>ciclo di conferenze</b> sulla lampadina elettrica. In questo periodo Ferraris è ancora scettico sul futuro di questa nuova tecnologia. Edison ha brevettato la sua lampadina, ma ha una luce fioca ed è costosa.</p>
 <p>Cruto arriva un po’ in ritardo alla conferenza del 24 maggio, ma ciò che riesce ad apprendere è sufficiente. La <a class="texty" onclick="jumpTo('inv_ap_lampadina')">lampadina ad incandescenza</a> ha al suo interno un filamento attraversato dalla corrente, ma ancora non è stato trovato il materiale ottimale per realizzarlo: Cruto si accorge di avere la soluzione in tasca. Le <b>lamine di carbonio</b> che ha realizzato con lo scopo di produrre il diamante, possono infatti essere impiegate per realizzare la sua lampadina, che vede luce il 4 marzo 1880. E questa volta si tratta di una luce bianca, potente e duratura, decisamente migliore di quella del brevetto di Edison. L’inventore apre la sua <a class="texty" onclick="jumpTo('inv_ap_fabbrica')">industria ad Alpignano</a> e raggiunge alcuni importanti traguardi riassunti nel fumetto realizzato da Pierino Rolandone nel 1997, in occasione del 150° anniversario della nascita di Alessandro Cruto.</p>
 <div class="fumetto">
-  <button onclick="img_prima_function()"><img id="img_prima"></button>
-  <button onclick="img_dopo_function()"><img id="img_dopo" src="immagine_dopo.png"></button>
-  <img id="img_fumetto" src="fumetto/fumetto1.jpg">
+  <button onclick="img_prima_function(1)"><img id="img_prima1" class="img_prima"></button>
+  <button onclick="img_dopo_function(1)"><img id="img_dopo1" class="img_dopo" src="immagine_dopo.png"></button>
+  <img id="img_fumetto1" class="img_fumetto" src="fumetto/fumetto1.jpg">
 </div>
 
 </div>
@@ -1576,51 +1929,68 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   }
 
   let pages = new Map()
-  pages.set("main_illuminazione", {back:false,            left:false,               right:false              , triangle:illuminazione})
-  pages.set("main_inventori",     {back:false,            left:false,               right:false              , triangle:inventori    })
-  pages.set("main_industria",     {back:false,            left:false,               right:false              , triangle:industria    })
-  pages.set("inv_sobrero",        {back:"main_inventori", left:false,               right:"inv_ferraris"     , triangle:inventori    })
-  pages.set("inv_ferraris",       {back:"main_inventori", left:"inv_sobrero",       right:"inv_cruto"        , triangle:inventori    })
-  pages.set("inv_cruto",          {back:"main_inventori", left:"inv_ferraris",      right:"inv_altri"        , triangle:inventori    })
-  pages.set("inv_altri",          {back:"main_inventori", left:"inv_cruto",         right:false              , triangle:inventori    })
-  pages.set("inv_ap_sobrero",     {back:"inv_sobrero",    left:false,               right:"inv_ap_nitro"     , triangle:inventori    })
-  pages.set("inv_ap_nitro",       {back:"inv_sobrero",    left:"inv_ap_sobrero",    right:"inv_ap_nobel"     , triangle:inventori    })
-  pages.set("inv_ap_nobel",       {back:"inv_sobrero",    left:"inv_ap_nitro",      right:"inv_ap_medicina"  , triangle:inventori    })
-  pages.set("inv_ap_medicina",    {back:"inv_sobrero",    left:"inv_ap_nobel",      right:"inv_ap_ferraris"  , triangle:inventori    })
-  pages.set("inv_ap_ferraris",    {back:"inv_ferraris",   left:"inv_ap_medicina",   right:"inv_ap_museo"     , triangle:inventori    })
-  pages.set("inv_ap_museo",       {back:"inv_ferraris",   left:"inv_ap_ferraris",   right:"inv_ap_tesla"     , triangle:inventori    })
-  pages.set("inv_ap_tesla",       {back:"inv_ferraris",   left:"inv_ap_museo",      right:"inv_ap_magnetico" , triangle:inventori    })
-  pages.set("inv_ap_magnetico",   {back:"inv_ferraris",   left:"inv_ap_tesla",      right:"inv_ap_auto"      , triangle:inventori    })
-  pages.set("inv_ap_auto",        {back:"inv_ferraris",   left:"inv_ap_magnetico",  right:"inv_ap_cruto"     , triangle:inventori    })
-  pages.set("inv_ap_cruto",       {back:"inv_cruto",      left:"inv_ap_auto",       right:"inv_ap_lampadina" , triangle:inventori    })
-  pages.set("inv_ap_lampadina",   {back:"inv_cruto",      left:"inv_ap_cruto",      right:"inv_ap_expo"      , triangle:inventori    })
-  pages.set("inv_ap_expo",        {back:"inv_cruto",      left:"inv_ap_lampadina",  right:"inv_ap_fabbrica"  , triangle:inventori    })
-  pages.set("inv_ap_fabbrica",    {back:"inv_cruto",      left:"inv_ap_expo",       right:"inv_ap_edison"    , triangle:inventori    })
-  pages.set("inv_ap_edison",      {back:"inv_cruto",      left:"inv_ap_fabbrica",   right:"inv_ap_industria" , triangle:inventori    })
-  pages.set("inv_ap_industria",   {back:"inv_altri",      left:"inv_ap_edison",     right:"inv_ap_brevetti"  , triangle:inventori    })
-  pages.set("inv_ap_brevetti",    {back:"inv_altri",      left:"inv_ap_industria",  right:false              , triangle:inventori    })
-  pages.set("ind_fiat",           {back:"main_industria", left:false,               right:"ind_olivetti"     , triangle:industria    })
-  pages.set("ind_olivetti",       {back:"main_industria", left:"ind_fiat",          right:"ind_leumann"      , triangle:industria    })
-  pages.set("ind_leumann",        {back:"main_industria", left:"ind_olivetti",      right:false              , triangle:industria    })
-  pages.set("ind_ap_agnelli",     {back:"ind_fiat",       left:false,               right:"ind_ap_f_storia"  , triangle:industria    })
-  pages.set("ind_ap_f_storia",    {back:"ind_fiat",       left:"ind_ap_agnelli",    right:"ind_ap_dipendenti", triangle:industria    })
-  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"     , triangle:industria    })
-  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"    , triangle:industria    })
-  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"  , triangle:industria    })
-  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"  , triangle:industria    })
-  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"   , triangle:industria    })
-  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"      , triangle:industria    })
-  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone" , triangle:industria    })
-  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"  , triangle:industria    })
-  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"     , triangle:industria    })
-  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"     , triangle:industria    })
-  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"  , triangle:industria    })
-  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false              , triangle:industria    })
-  pages.set("ind_ap_test",        {back:"ind_ap_artom",   left:false,               right:false              , triangle:industria    })
-  pages.set("ind_ap_l_test",      {back:"ind_ap_l_dip",   left:false,               right:false              , triangle:industria    })
-  pages.set("ind_ap_scuola",      {back:"ind_ap_l_urb",   left:false,               right:"ind_ap_stazio"    , triangle:industria    })
-  pages.set("ind_ap_stazio",      {back:"ind_ap_l_urb",   left:"ind_ap_scuola",     right:"ind_ap_altri"     , triangle:industria    })
-  pages.set("ind_ap_altri",       {back:"ind_ap_l_urb",   left:"ind_ap_stazio",     right:false              , triangle:industria    })
+  pages.set("main_illuminazione", {back:false,                  left:false,               right:false              , triangle:illuminazione})
+  pages.set("main_inventori",     {back:false,                  left:false,               right:false              , triangle:inventori    })
+  pages.set("main_industria",     {back:false,                  left:false,               right:false              , triangle:industria    })
+  pages.set("inv_sobrero",        {back:"main_inventori",       left:false,               right:"inv_ferraris"     , triangle:inventori    })
+  pages.set("inv_ferraris",       {back:"main_inventori",       left:"inv_sobrero",       right:"inv_cruto"        , triangle:inventori    })
+  pages.set("inv_cruto",          {back:"main_inventori",       left:"inv_ferraris",      right:"inv_altri"        , triangle:inventori    })
+  pages.set("inv_altri",          {back:"main_inventori",       left:"inv_cruto",         right:false              , triangle:inventori    })
+  pages.set("inv_ap_sobrero",     {back:"inv_sobrero",          left:false,               right:"inv_ap_nitro"     , triangle:inventori    })
+  pages.set("inv_ap_nitro",       {back:"inv_sobrero",          left:"inv_ap_sobrero",    right:"inv_ap_nobel"     , triangle:inventori    })
+  pages.set("inv_ap_nobel",       {back:"inv_sobrero",          left:"inv_ap_nitro",      right:"inv_ap_medicina"  , triangle:inventori    })
+  pages.set("inv_ap_medicina",    {back:"inv_sobrero",          left:"inv_ap_nobel",      right:"inv_ap_ferraris"  , triangle:inventori    })
+  pages.set("inv_ap_ferraris",    {back:"inv_ferraris",         left:"inv_ap_medicina",   right:"inv_ap_museo"     , triangle:inventori    })
+  pages.set("inv_ap_museo",       {back:"inv_ferraris",         left:"inv_ap_ferraris",   right:"inv_ap_tesla"     , triangle:inventori    })
+  pages.set("inv_ap_tesla",       {back:"inv_ferraris",         left:"inv_ap_museo",      right:"inv_ap_magnetico" , triangle:inventori    })
+  pages.set("inv_ap_magnetico",   {back:"inv_ferraris",         left:"inv_ap_tesla",      right:"inv_ap_auto"      , triangle:inventori    })
+  pages.set("inv_ap_auto",        {back:"inv_ferraris",         left:"inv_ap_magnetico",  right:"inv_ap_cruto"     , triangle:inventori    })
+  pages.set("inv_ap_cruto",       {back:"inv_cruto",            left:"inv_ap_auto",       right:"inv_ap_lampadina" , triangle:inventori    })
+  pages.set("inv_ap_lampadina",   {back:"inv_cruto",            left:"inv_ap_cruto",      right:"inv_ap_expo"      , triangle:inventori    })
+  pages.set("inv_ap_expo",        {back:"inv_cruto",            left:"inv_ap_lampadina",  right:"inv_ap_fabbrica"  , triangle:inventori    })
+  pages.set("inv_ap_fabbrica",    {back:"inv_cruto",            left:"inv_ap_expo",       right:"inv_ap_edison"    , triangle:inventori    })
+  pages.set("inv_ap_edison",      {back:"inv_cruto",            left:"inv_ap_fabbrica",   right:"inv_ap_industria" , triangle:inventori    })
+  pages.set("inv_ap_industria",   {back:"inv_altri",            left:"inv_ap_edison",     right:"inv_ap_brevetti"  , triangle:inventori    })
+  pages.set("inv_ap_brevetti",    {back:"inv_altri",            left:"inv_ap_industria",  right:false              , triangle:inventori    })
+  pages.set("ind_fiat",           {back:"main_industria",       left:false,               right:"ind_olivetti"     , triangle:industria    })
+  pages.set("ind_olivetti",       {back:"main_industria",       left:"ind_fiat",          right:"ind_leumann"      , triangle:industria    })
+  pages.set("ind_leumann",        {back:"main_industria",       left:"ind_olivetti",      right:false              , triangle:industria    })
+  pages.set("ind_ap_agnelli",     {back:"ind_fiat",             left:false,               right:"ind_ap_f_storia"  , triangle:industria    })
+  pages.set("ind_ap_f_storia",    {back:"ind_fiat",             left:"ind_ap_agnelli",    right:"ind_ap_dipendenti", triangle:industria    })
+  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",             left:"ind_ap_f_storia",   right:"ind_ap_artom"     , triangle:industria    })
+  pages.set("ind_ap_artom",       {back:"ind_fiat",             left:"ind_ap_dipendenti", right:"ind_ap_futuro"    , triangle:industria    })
+  pages.set("ind_ap_futuro",      {back:"ind_fiat",             left:"ind_ap_artom",      right:"ind_ap_olivetti"  , triangle:industria    })
+  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",         left:"ind_ap_futuro",     right:"ind_ap_o_storia"  , triangle:industria    })
+  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",         left:"ind_ap_olivetti",   right:"ind_ap_o_archi"   , triangle:industria    })
+  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",         left:"ind_ap_o_storia",   right:"ind_ap_o_22"      , triangle:industria    })
+  pages.set("ind_ap_o_22",        {back:"ind_olivetti",         left:"ind_ap_o_archi",    right:"ind_ap_napoleone" , triangle:industria    })
+  pages.set("ind_ap_napoleone",   {back:"ind_leumann",          left:"ind_ap_o_22",       right:"ind_ap_l_storia"  , triangle:industria    })
+  pages.set("ind_ap_l_storia",    {back:"ind_leumann",          left:"ind_ap_napoleone",  right:"ind_ap_l_dip"     , triangle:industria    })
+  pages.set("ind_ap_l_dip",       {back:"ind_leumann",          left:"ind_ap_l_storia",   right:"ind_ap_l_urb"     , triangle:industria    })
+  pages.set("ind_ap_l_urb",       {back:"ind_leumann",          left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"  , triangle:industria    })
+  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",          left:"ind_ap_l_urb",      right:false              , triangle:industria    })
+  pages.set("ind_ap_test",        {back:"ind_ap_artom",         left:false,               right:false              , triangle:industria    })
+  pages.set("ind_ap_l_test",      {back:"ind_ap_l_dip",         left:false,               right:false              , triangle:industria    })
+  pages.set("ind_ap_scuola",      {back:"ind_ap_l_urb",         left:false,               right:"ind_ap_stazio"    , triangle:industria    })
+  pages.set("ind_ap_stazio",      {back:"ind_ap_l_urb",         left:"ind_ap_scuola",     right:"ind_ap_altri"     , triangle:industria    })
+  pages.set("ind_ap_altri",       {back:"ind_ap_l_urb",         left:"ind_ap_stazio",     right:false              , triangle:industria    })
+  pages.set("ill_luce",           {back:"main_illuminazione",   left:false,               right:"ill_ferraris"     , triangle:illuminazione})
+  pages.set("ill_ferraris",       {back:"main_illuminazione",   left:"ill_luce",          right:"ill_cruto"        , triangle:illuminazione})
+  pages.set("ill_cruto",          {back:"main_illuminazione",   left:"ill_ferraris",      right:false              , triangle:illuminazione})
+  pages.set("ill_ap_torce",       {back:"ill_luce",             left:false,               right:"ill_ap_gas"       , triangle:illuminazione})
+  pages.set("ill_ap_gas",         {back:"ill_luce",             left:"ill_ap_torce",      right:"ill_ap_gasom"     , triangle:illuminazione})
+  pages.set("ill_ap_gasom",       {back:"ill_luce",             left:"ill_ap_gas",        right:"ill_ap_elettr"    , triangle:illuminazione})
+  pages.set("ill_ap_elettr",      {back:"ill_luce",             left:"ill_ap_gasom",      right:"ill_ap_festa"     , triangle:illuminazione})
+  pages.set("ill_ap_festa",       {back:"ill_luce",             left:"ill_ap_elettr",     right:"ill_ap_ferraris"  , triangle:illuminazione})
+  pages.set("ill_ap_ferraris",    {back:"ill_ferraris",         left:"ill_ap_festa",      right:"ill_ap_museo"     , triangle:illuminazione})
+  pages.set("ill_ap_museo",       {back:"ill_ferraris",         left:"ill_ap_ferraris",   right:"ill_ap_cons"      , triangle:illuminazione})
+  pages.set("ill_ap_cons",        {back:"ill_ferraris",         left:"ill_ap_museo",      right:"ill_ap_mostra"    , triangle:illuminazione})
+  pages.set("ill_ap_mostra",      {back:"ill_ferraris",         left:"ill_ap_cons",       right:"ill_ap_cruto"     , triangle:illuminazione})
+  pages.set("ill_ap_cruto",       {back:"ill_cruto",            left:"ill_ap_mostra",     right:"ill_ap_lampadina" , triangle:illuminazione})
+  pages.set("ill_ap_lampadina",   {back:"ill_cruto",            left:"ill_ap_cruto",      right:"ill_ap_expo"      , triangle:illuminazione})
+  pages.set("ill_ap_expo",        {back:"ill_cruto",            left:"ill_ap_lampadina",  right:"ill_ap_fabbrica"  , triangle:illuminazione})
+  pages.set("ill_ap_fabbrica",    {back:"ill_cruto",            left:"ill_ap_expo",       right:"ill_ap_edison"    , triangle:illuminazione})
+  pages.set("ill_ap_edison",      {back:"ill_cruto",            left:"ill_ap_fabbrica",   right:false              , triangle:illuminazione})
   let current_page = false
   function jumpTo(divId){
     if(current_page !== false){
@@ -1720,25 +2090,31 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     if(p.right !== false){jumpTo(p.right)}
   }
 
-  let pagina_fumetto = 1
-  function img_prima_function(){
-    if(pagina_fumetto!==1){
-      pagina_fumetto = pagina_fumetto - 1
-      update_fumetto()
+  let pagina_fumetto = [1, 1]
+  function img_prima_function(n){
+    if(pagina_fumetto[n]!==1){
+      pagina_fumetto[n] = pagina_fumetto[n] - 1
+      update_fumetto(n)
     }
   }
 
-  function img_dopo_function(){
-    if(pagina_fumetto!==12){
-      pagina_fumetto = pagina_fumetto + 1
-      update_fumetto()
+  function img_dopo_function(n){
+    if(pagina_fumetto[n]!==12){
+      pagina_fumetto[n] = pagina_fumetto[n] + 1
+      update_fumetto(n)
     }
   }
 
-  function update_fumetto(){
-    document.getElementById("img_fumetto").src = "fumetto/fumetto"+pagina_fumetto+".jpg"
-    document.getElementById("img_prima").src = (pagina_fumetto===1) ? "" : "immagine_prima.png"
-    document.getElementById("img_dopo").src = (pagina_fumetto===12) ? "" : "immagine_dopo.png"
+  function update_fumetto(n){
+    document.getElementById("img_fumetto"+n).src = "fumetto/fumetto"+pagina_fumetto[n]+".jpg"
+    if(n==0){
+      document.getElementById("img_prima"+n).src = (pagina_fumetto[n]===1) ? "" : "immagine_prima_blu.png"
+      document.getElementById("img_dopo"+n).src = (pagina_fumetto[n]===12) ? "" : "immagine_dopo_blu.png"
+    }
+    if(n==1){
+      document.getElementById("img_prima"+n).src = (pagina_fumetto[n]===1) ? "" : "immagine_prima.png"
+      document.getElementById("img_dopo"+n).src = (pagina_fumetto[n]===12) ? "" : "immagine_dopo.png"
+    }
   }
 
   //per aprire direttamente il triangolo inventori in fondo all'url si mette ?inventori
