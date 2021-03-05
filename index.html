@@ -1281,47 +1281,47 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
   }
 
   let pages = new Map()
-  pages.set("main_illuminazione", {back:false,            left:false,               right:false                })
-  pages.set("main_inventori",     {back:false,            left:false,               right:false                })
-  pages.set("main_industria",     {back:false,            left:false,               right:false                })
-  pages.set("inv_sobrero",        {back:"main_inventori", left:false,               right:"inv_ferraris"       })
-  pages.set("inv_ferraris",       {back:"main_inventori", left:"inv_sobrero",       right:"inv_cruto"          })
-  pages.set("inv_cruto",          {back:"main_inventori", left:"inv_ferraris",      right:"inv_altri"          })
-  pages.set("inv_altri",          {back:"main_inventori", left:"inv_cruto",         right:false                })
-  pages.set("inv_ap_sobrero",     {back:"inv_sobrero",    left:false,               right:"inv_ap_nitro"       })
-  pages.set("inv_ap_nitro",       {back:"inv_sobrero",    left:"inv_ap_sobrero",    right:"inv_ap_nobel"       })
-  pages.set("inv_ap_nobel",       {back:"inv_sobrero",    left:"inv_ap_nitro",      right:"inv_ap_medicina"    })
-  pages.set("inv_ap_medicina",    {back:"inv_sobrero",    left:"inv_ap_nobel",      right:"inv_ap_ferraris"    })
-  pages.set("inv_ap_ferraris",    {back:"inv_ferraris",   left:"inv_ap_medicina",   right:"inv_ap_museo"       })
-  pages.set("inv_ap_museo",       {back:"inv_ferraris",   left:"inv_ap_ferraris",   right:"inv_ap_tesla"       })
-  pages.set("inv_ap_tesla",       {back:"inv_ferraris",   left:"inv_ap_museo",      right:"inv_ap_magnetico"   })
-  pages.set("inv_ap_magnetico",   {back:"inv_ferraris",   left:"inv_ap_tesla",      right:"inv_ap_auto"        })
-  pages.set("inv_ap_auto",        {back:"inv_ferraris",   left:"inv_ap_magnetico",  right:"inv_ap_cruto"       })
-  pages.set("inv_ap_cruto",       {back:"inv_cruto",      left:"inv_ap_auto",       right:"inv_ap_lampadina"   })
-  pages.set("inv_ap_lampadina",   {back:"inv_cruto",      left:"inv_ap_cruto",      right:"inv_ap_expo"        })
-  pages.set("inv_ap_expo",        {back:"inv_cruto",      left:"inv_ap_lampadina",  right:"inv_ap_fabbrica"    })
-  pages.set("inv_ap_fabbrica",    {back:"inv_cruto",      left:"inv_ap_expo",       right:"inv_ap_edison"      })
-  pages.set("inv_ap_edison",      {back:"inv_cruto",      left:"inv_ap_fabbrica",   right:"inv_ap_industria"   })
-  pages.set("inv_ap_industria",   {back:"inv_altri",      left:"inv_ap_edison",     right:"inv_ap_brevetti"    })
-  pages.set("inv_ap_brevetti",    {back:"inv_altri",      left:"inv_ap_industria",  right:false                })
-  pages.set("ind_fiat",           {back:"main_industria", left:false,               right:"ind_olivetti"       })
-  pages.set("ind_olivetti",       {back:"main_industria", left:"ind_fiat",          right:"ind_leumann"        })
-  pages.set("ind_leumann",        {back:"main_industria", left:"ind_olivetti",      right:false                })
-  pages.set("ind_ap_agnelli",     {back:"ind_fiat",       left:false,               right:"ind_ap_f_storia"    })
-  pages.set("ind_ap_f_storia",    {back:"ind_fiat",       left:"ind_ap_agnelli",    right:"ind_ap_dipendenti"  })
-  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"       })
-  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"      })
-  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"    })
-  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"    })
-  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"     })
-  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"        })
-  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone"   })
-  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"    })
-  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"       })
-  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"       })
-  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"    })
-  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false                })
-  pages.set("ind_ap_test",        {back:"ind_ap_artom",   left:false,               right:false                })
+  pages.set("main_illuminazione", {back:false,            left:false,               right:false              , triangle:illuminazione})
+  pages.set("main_inventori",     {back:false,            left:false,               right:false              , triangle:inventori    })
+  pages.set("main_industria",     {back:false,            left:false,               right:false              , triangle:industria    })
+  pages.set("inv_sobrero",        {back:"main_inventori", left:false,               right:"inv_ferraris"     , triangle:inventori})
+  pages.set("inv_ferraris",       {back:"main_inventori", left:"inv_sobrero",       right:"inv_cruto"        , triangle:inventori})
+  pages.set("inv_cruto",          {back:"main_inventori", left:"inv_ferraris",      right:"inv_altri"        , triangle:inventori})
+  pages.set("inv_altri",          {back:"main_inventori", left:"inv_cruto",         right:false              , triangle:inventori})
+  pages.set("inv_ap_sobrero",     {back:"inv_sobrero",    left:false,               right:"inv_ap_nitro"     , triangle:inventori})
+  pages.set("inv_ap_nitro",       {back:"inv_sobrero",    left:"inv_ap_sobrero",    right:"inv_ap_nobel"     , triangle:inventori})
+  pages.set("inv_ap_nobel",       {back:"inv_sobrero",    left:"inv_ap_nitro",      right:"inv_ap_medicina"  , triangle:inventori})
+  pages.set("inv_ap_medicina",    {back:"inv_sobrero",    left:"inv_ap_nobel",      right:"inv_ap_ferraris"  , triangle:inventori})
+  pages.set("inv_ap_ferraris",    {back:"inv_ferraris",   left:"inv_ap_medicina",   right:"inv_ap_museo"     , triangle:inventori})
+  pages.set("inv_ap_museo",       {back:"inv_ferraris",   left:"inv_ap_ferraris",   right:"inv_ap_tesla"     , triangle:inventori})
+  pages.set("inv_ap_tesla",       {back:"inv_ferraris",   left:"inv_ap_museo",      right:"inv_ap_magnetico" , triangle:inventori})
+  pages.set("inv_ap_magnetico",   {back:"inv_ferraris",   left:"inv_ap_tesla",      right:"inv_ap_auto"      , triangle:inventori})
+  pages.set("inv_ap_auto",        {back:"inv_ferraris",   left:"inv_ap_magnetico",  right:"inv_ap_cruto"     , triangle:inventori})
+  pages.set("inv_ap_cruto",       {back:"inv_cruto",      left:"inv_ap_auto",       right:"inv_ap_lampadina" , triangle:inventori})
+  pages.set("inv_ap_lampadina",   {back:"inv_cruto",      left:"inv_ap_cruto",      right:"inv_ap_expo"      , triangle:inventori})
+  pages.set("inv_ap_expo",        {back:"inv_cruto",      left:"inv_ap_lampadina",  right:"inv_ap_fabbrica"  , triangle:inventori})
+  pages.set("inv_ap_fabbrica",    {back:"inv_cruto",      left:"inv_ap_expo",       right:"inv_ap_edison"    , triangle:inventori})
+  pages.set("inv_ap_edison",      {back:"inv_cruto",      left:"inv_ap_fabbrica",   right:"inv_ap_industria" , triangle:inventori})
+  pages.set("inv_ap_industria",   {back:"inv_altri",      left:"inv_ap_edison",     right:"inv_ap_brevetti"  , triangle:inventori})
+  pages.set("inv_ap_brevetti",    {back:"inv_altri",      left:"inv_ap_industria",  right:false              , triangle:inventori})
+  pages.set("ind_fiat",           {back:"main_industria", left:false,               right:"ind_olivetti"     , triangle:industria})
+  pages.set("ind_olivetti",       {back:"main_industria", left:"ind_fiat",          right:"ind_leumann"      , triangle:industria})
+  pages.set("ind_leumann",        {back:"main_industria", left:"ind_olivetti",      right:false              , triangle:industria})
+  pages.set("ind_ap_agnelli",     {back:"ind_fiat",       left:false,               right:"ind_ap_f_storia"  , triangle:industria})
+  pages.set("ind_ap_f_storia",    {back:"ind_fiat",       left:"ind_ap_agnelli",    right:"ind_ap_dipendenti", triangle:industria})
+  pages.set("ind_ap_dipendenti",  {back:"ind_fiat",       left:"ind_ap_f_storia",   right:"ind_ap_artom"     , triangle:industria})
+  pages.set("ind_ap_artom",       {back:"ind_fiat",       left:"ind_ap_dipendenti", right:"ind_ap_futuro"    , triangle:industria})
+  pages.set("ind_ap_futuro",      {back:"ind_fiat",       left:"ind_ap_artom",      right:"ind_ap_olivetti"  , triangle:industria})
+  pages.set("ind_ap_olivetti",    {back:"ind_olivetti",   left:"ind_ap_futuro",     right:"ind_ap_o_storia"  , triangle:industria})
+  pages.set("ind_ap_o_storia",    {back:"ind_olivetti",   left:"ind_ap_olivetti",   right:"ind_ap_o_archi"   , triangle:industria})
+  pages.set("ind_ap_o_archi",     {back:"ind_olivetti",   left:"ind_ap_o_storia",   right:"ind_ap_o_22"      , triangle:industria})
+  pages.set("ind_ap_o_22",        {back:"ind_olivetti",   left:"ind_ap_o_archi",    right:"ind_ap_napoleone" , triangle:industria})
+  pages.set("ind_ap_napoleone",   {back:"ind_leumann",    left:"ind_ap_o_22",       right:"ind_ap_l_storia"  , triangle:industria})
+  pages.set("ind_ap_l_storia",    {back:"ind_leumann",    left:"ind_ap_napoleone",  right:"ind_ap_l_dip"     , triangle:industria})
+  pages.set("ind_ap_l_dip",       {back:"ind_leumann",    left:"ind_ap_l_storia",   right:"ind_ap_l_urb"     , triangle:industria})
+  pages.set("ind_ap_l_urb",       {back:"ind_leumann",    left:"ind_ap_l_dip",      right:"ind_ap_l_futuro"  , triangle:industria})
+  pages.set("ind_ap_l_futuro",    {back:"ind_leumann",    left:"ind_ap_l_urb",      right:false              , triangle:industria})
+  pages.set("ind_ap_test",        {back:"ind_ap_artom",   left:false,               right:false              , triangle:industria})
   let current_page = false
   function jumpTo(divId){
     if(current_page !== false){
@@ -1336,10 +1336,11 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
 
     //cambia icone
     let p = pages.get(current_page.id)
-    document.getElementById("x_img").src = sel_t.x_img
-    document.getElementById("left_img").src = (p.left == false) ? "" : sel_t.left_img
-    document.getElementById("right_img").src = (p.right == false) ? "" : sel_t.right_img
-    document.getElementById("back_img").src = (p.back == false) ? "" : sel_t.back_img
+    let t = p.triangle
+    document.getElementById("x_img").src = t.x_img
+    document.getElementById("left_img").src = (p.left == false) ? "" : t.left_img
+    document.getElementById("right_img").src = (p.right == false) ? "" : t.right_img
+    document.getElementById("back_img").src = (p.back == false) ? "" : t.back_img
   }
 
   //per salvare la posizione precendente al click
@@ -1359,9 +1360,7 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
     ]
   }
 
-  let sel_t = false
-  function clicked_triangle(clicked_t){
-    sel_t = clicked_t
+  function clicked_triangle(sel_t){
     //cambia colore triangoli
     for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
     sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
@@ -1405,7 +1404,6 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
     document.getElementById("windowbg").classList.remove("shown")
     current_page.classList.remove("shown")
     current_page = false
-    sel_t = false
   }
 
   function back_function(){
