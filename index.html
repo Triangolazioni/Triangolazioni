@@ -1992,8 +1992,8 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
   //inizializzo robe dei triangoli
   for(let t of triangoli){
-    let vertices = [t.vertices[0].xy, t.vertices[1].xy, t.vertices[2].xy]
-    t.polygon = L.polygon(vertices, {color: t.map_color_unselected}).addTo(map)
+    let vertices = [t.vertices[0].xy, t.vertices[1].xy, t.vertices[2].xy, t.vertices[0].xy]
+    t.polygon = L.polyline(vertices, {color: t.map_color_unselected}).addTo(map)
     t.polygon.on("click", function(){clicked_triangle(t)})
     for(let v of t.vertices){ v.marker.on("click", function(){clicked_triangle(t)}) }
 
@@ -2006,7 +2006,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   function clicked_triangle(sel_t){
     //cambia colore triangoli
     for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
-    sel_t.polygon.setStyle({color: sel_t.map_color_selected, fillOpacity:0.6})
+    sel_t.polygon.setStyle({color: sel_t.map_color_selected})
 
     //cambia vertici
     for(let n of nodes){n.marker.setOpacity(0)}
@@ -2029,7 +2029,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   function x_function(){
     //triangoli tornano normali
     for(let t of triangoli){
-      t.polygon.setStyle({color: t.map_color_unselected, fillOpacity:0.2})
+      t.polygon.setStyle({color: t.map_color_unselected})
     }
 
     //icone tornano normali
