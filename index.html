@@ -44,6 +44,10 @@ html, body {
   position: relative;
 }
 
+.showy:not(.shown) {
+  display: none;
+}
+
 #map {
   z-index: 1;
   position: absolute;
@@ -71,7 +75,7 @@ html, body {
   display: inline;
 
   animation-name: fadeIn;
-  animation-duration: 3s;
+  animation-duration: 0s;
   animation-fill-mode: forwards;
 }
 
@@ -79,6 +83,17 @@ html, body {
   0% {opacity: 0;}
   50% {opacity: 0.001;}
   100% {opacity: 1;}
+}
+
+#pre_window {
+  position: absolute;
+  top: 3rem;
+  right: 5%;
+  left: 5%;
+  height: auto;
+  background-color: rgba(255, 255, 255);
+  border-radius: 2%;
+  padding: .5rem;
 }
 
 #window {
@@ -291,6 +306,23 @@ figcaption {
   color: rgb(21, 84, 114);
 }
 
+#intro_intro, #dopo_intro {
+  text-align: center;
+}
+
+#premi_qua {
+  background-color: transparent;
+  width: 100%;
+  bottom: 0%;
+  height: 70%;
+  position: fixed;
+}
+
+#pre_window .link {
+  border: 0.2rem solid rgb(238, 238, 238);
+  background-color: rgb(238, 238, 238);
+}
+
 </style>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -305,7 +337,30 @@ figcaption {
 <div id="map"></div>
 
 <div id="windowbg">
-<div id="window">
+<div id="pre_window" class="showy shown">
+
+<div id="intro_intro" class="showy shown">
+<button class="link" onclick="cose_function()"><h6>Che cos'è "Triangolazioni"?</h6></button><br>
+oppure...
+<h6>Premi sulla mappa per iniziare il percorso</h6>
+</div>
+
+<div id="spiegazione_intro" class="showy">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet sem eget dui porta, non feugiat tellus elementum. Cras a sapien sed metus euismod vulputate. Morbi eros elit, rutrum quis mauris non, viverra ornare sem. Aenean imperdiet risus et lectus imperdiet rutrum quis in tortor. Phasellus in orci a enim congue viverra. Morbi ut massa rhoncus, convallis sem ut, iaculis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent sagittis tempor pharetra. Etiam vel vestibulum turpis. Sed sollicitudin eget mi eget venenatis. Donec fringilla condimentum bibendum. Sed lobortis dapibus turpis, eu laoreet justo placerat et. Curabitur ut lacinia metus. Aliquam erat volutpat. </p>
+
+  <h6>Premi sulla mappa per iniziare il percorso</h6>
+</div>
+
+<div id="dopo_intro" class="showy">
+Premi sulla mappa per confermare
+</div>
+
+</div>
+
+<button id="premi_qua" class="showy shown" onclick="premi_qua_function()">
+</button>
+
+<div id="window" class="showy">
 <button class="icon" id="back_button" onclick="back_function()"><img id="back_img"></button>
 <button class="icon" id="x_button" onclick="x_function()"><img id="x_img"></button>
 
@@ -444,8 +499,8 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
   <figcaption><a href="https://commons.wikimedia.org/w/index.php?curid=864610"  target="_blank">By PiccoloNamek - English wikipedia, CC BY-SA 3.0</a></figcaption>
 </figure>
 <p><div class="video-container">
-<iframe width="729" height="410" src="https://www.youtube.com/embed/nQoot7HZL_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-</div>
+<iframe width="729" height="410" src="https://www.youtube.com/embed/nQoot7HZL_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></p>
+
 </div>
 <div class="page" id="ill_ap_festa">
 <img class="inizio" src="icone illuminazione/luci artistiche .png">
@@ -1864,6 +1919,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     left_img:"left_blue.png",
     right_img:"right_blue.png",
     back_img:"back_blue.png",
+    center_xy:[45.07457,7.690]
   }
 
   let inventori = {
@@ -1871,11 +1927,12 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     vertices:[sobrero, ferraris, cruto],
     map_color_unselected:"#ffea00",
     map_color_selected:"#ffd500",
-    zoom:13,
+    zoom:14,
     x_img:"x_yellow.png",
     left_img:"left_yellow.png",
     right_img:"right_yellow.png",
     back_img:"back_yellow.png",
+    center_xy:[45.0640,7.6853]
   }
 
   let industria = {
@@ -1888,6 +1945,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     left_img:"left_red.png",
     right_img:"right_red.png",
     back_img:"back_red.png",
+    center_xy:[45.4,7.7030]
   }
 
   //l'ordine è importante: vengono disegnati in quell'ordine
@@ -1993,14 +2051,9 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   //inizializzo robe dei triangoli
   for(let t of triangoli){
     let vertices = [t.vertices[0].xy, t.vertices[1].xy, t.vertices[2].xy, t.vertices[0].xy]
-    t.polygon = L.polyline(vertices, {color: t.map_color_unselected}).addTo(map)
+    t.polygon = L.polyline(vertices, {color: t.map_color_unselected, weight:6}).addTo(map)
     t.polygon.on("click", function(){clicked_triangle(t)})
     for(let v of t.vertices){ v.marker.on("click", function(){clicked_triangle(t)}) }
-
-    t.center_xy = [
-      (t.vertices[0].xy[0]+t.vertices[1].xy[0]+t.vertices[2].xy[0])/3,
-      (t.vertices[0].xy[1]+t.vertices[1].xy[1]+t.vertices[2].xy[1])/3
-    ]
   }
 
   function clicked_triangle(sel_t){
@@ -2023,6 +2076,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
     //apri la pagina giusta
     document.getElementById("windowbg").classList.add("shown");
+    document.getElementById("pre_window").classList.add("shown");
     jumpTo("main_"+ sel_t.name)
   }
 
@@ -2045,6 +2099,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
     stopVideo(current_page)
     document.getElementById("windowbg").classList.remove("shown")
+    document.getElementById("window").classList.remove("shown")
     current_page.classList.remove("shown")
     current_page = false
   }
@@ -2097,6 +2152,22 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   if(parameter == "illuminazione"){clicked_triangle(illuminazione)}
   if(parameter == "inventori"){clicked_triangle(inventori)}
   if(parameter == "industria"){clicked_triangle(industria)}
+
+  let prima_volta = true
+  function premi_qua_function(){
+    if(prima_volta===true){
+      prima_volta = false
+      document.getElementById("intro_intro").classList.remove("shown")
+      document.getElementById("dopo_intro").classList.add("shown")
+    }
+    document.getElementById("pre_window").classList.remove("shown")
+    document.getElementById("window").classList.add("shown")
+  }
+
+  function cose_function(){
+    document.getElementById("intro_intro").classList.remove("shown")
+    document.getElementById("spiegazione_intro").classList.add("shown")
+  }
 
 </script>
 
