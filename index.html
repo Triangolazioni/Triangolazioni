@@ -310,8 +310,9 @@ figcaption {
   text-align: center;
 }
 
-#premi_qua {
+#premi_intro, #premi_mappa, #torna_intro {
   background-color: transparent;
+  left:0%;
   width: 100%;
   bottom: 0%;
   height: 70%;
@@ -339,26 +340,34 @@ figcaption {
 <div id="windowbg">
 <div id="pre_window" class="showy shown">
 
+<span id="intro" class="showy shown">
 <div id="intro_intro" class="showy shown">
 <button class="link" onclick="cose_function()"><h6>Che cos'è "Triangolazioni"?</h6></button><br>
 oppure...
 <h6>Premi sulla mappa per iniziare il percorso</h6>
+<button id="premi_intro" class="showy shown" onclick="premi_intro_function()">
+</button>
 </div>
 
 <div id="spiegazione_intro" class="showy">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet sem eget dui porta, non feugiat tellus elementum. Cras a sapien sed metus euismod vulputate. Morbi eros elit, rutrum quis mauris non, viverra ornare sem. Aenean imperdiet risus et lectus imperdiet rutrum quis in tortor. Phasellus in orci a enim congue viverra. Morbi ut massa rhoncus, convallis sem ut, iaculis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent sagittis tempor pharetra. Etiam vel vestibulum turpis. Sed sollicitudin eget mi eget venenatis. Donec fringilla condimentum bibendum. Sed lobortis dapibus turpis, eu laoreet justo placerat et. Curabitur ut lacinia metus. Aliquam erat volutpat. </p>
 
-  <h6>Premi per iniziare il percorso</h6>
+  <h6>Premi per tornare alla mappa</h6>
+  <button id="torna_intro" class="showy shown" onclick="torna_intro_function()">
+  </button>
 </div>
+
+</span>
+
 
 <div id="dopo_intro" class="showy">
+<button class="link" onclick="torna_function()"><h6>Torna alla mappa</h6></button><br>
 Premi sulla mappa per confermare
-</div>
-
-</div>
-
-<button id="premi_qua" class="showy shown" onclick="premi_qua_function()">
+<button id="premi_mappa" class="showy shown" onclick="premi_mappa_function()">
 </button>
+</div>
+
+</div>
 
 <div id="window" class="showy">
 <button class="icon" id="back_button" onclick="back_function()"><img id="back_img"></button>
@@ -2154,20 +2163,34 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   if(parameter == "industria"){clicked_triangle(industria)}
 
   let prima_volta = true
-  function premi_qua_function(){
+  function premi_intro_function(){
     if(prima_volta===true){
       prima_volta = false
-      document.getElementById("intro_intro").classList.remove("shown")
+      document.getElementById("intro").classList.remove("shown")
       document.getElementById("dopo_intro").classList.add("shown")
     }
     document.getElementById("pre_window").classList.remove("shown")
     document.getElementById("window").classList.add("shown")
-    document.getElementById("spiegazione_intro").classList.remove("shown")
   }
 
   function cose_function(){
     document.getElementById("intro_intro").classList.remove("shown")
     document.getElementById("spiegazione_intro").classList.add("shown")
+
+  }
+
+  function torna_function(){
+    x_function()
+  }
+
+  function premi_mappa_function(){
+    premi_intro_function()
+  }
+
+  function torna_intro_function(){
+    document.getElementById("intro").classList.remove("shown")
+    document.getElementById("dopo_intro").classList.add("shown")
+    x_function()
   }
 
 </script>
