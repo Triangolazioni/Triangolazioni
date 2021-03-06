@@ -73,13 +73,24 @@ html, body {
   100% {opacity: 1;}
 }
 
-#pre_window {
+#intro {
   position: absolute;
   top: 3rem;
   right: 5%;
   left: 5%;
   height: auto;
   background-color: rgba(255, 255, 255);
+  border-radius: 2%;
+  padding: .5rem;
+}
+
+#dopo_intro {
+  position: absolute;
+  top: 3rem;
+  right: 5%;
+  left: 5%;
+  height: auto;
+  background-color: transparent;
   border-radius: 2%;
   padding: .5rem;
 }
@@ -290,7 +301,7 @@ figcaption {
   text-align: center;
 }
 
-#premi_intro, #premi_mappa, #torna_intro {
+#premi_intro, #torna_mappa, #torna_intro {
   background-color: transparent;
   left:0%;
   width: 100%;
@@ -299,7 +310,7 @@ figcaption {
   position: fixed;
 }
 
-#pre_window .link {
+#intro .link {
   border: 0.2rem solid rgb(238, 238, 238);
   background-color: rgb(238, 238, 238);
 }
@@ -318,13 +329,12 @@ figcaption {
 <div id="map"></div>
 
 <div id="windowbg" class="showy">
-<div id="pre_window" class="showy shown">
 
-<span id="intro" class="showy shown">
+<div id="intro" class="showy shown">
 <div id="intro_intro" class="showy shown">
 <button class="link" onclick="cose_function()"><h6>Che cos'è "Triangolazioni"?</h6></button><br>
 oppure...
-<h6>Premi sulla mappa per iniziare il percorso</h6>
+<h6>Premi sul triangolo per iniziare il percorso</h6>
 <button id="premi_intro" class="showy shown" onclick="premi_intro_function()">
 </button>
 </div>
@@ -340,16 +350,16 @@ oppure...
   </button>
 </div>
 
-</span>
-
-
-<div id="dopo_intro" class="showy">
-<button class="link" onclick="torna_function()"><h6>Torna alla mappa</h6></button><br>
-Premi sulla mappa per confermare
-<button id="premi_mappa" class="showy shown" onclick="premi_mappa_function()">
-</button>
 </div>
 
+<div id="dopo_intro" class="showy">
+<button class="link" onclick="inizia_function()">
+<h6 id="inizia_titolo"></h6>
+<h5>INIZIA</h5>
+</button>
+<br>
+<button id="torna_mappa" class="showy shown" onclick="torna_mappa_function()">
+</button>
 </div>
 
 <div id="window" class="showy">
@@ -1903,6 +1913,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   //il name non deve avere spazi, e coincide con l'id della relativa sezione
   let illuminazione = {
     name:"illuminazione",
+    official_name:"ILLUMINAZIONE PUBBLICA",
     vertices:[gasometro, ferraris, cruto],
     map_color_unselected:"#98c1d9",
     map_color_selected:"#457b9d",
@@ -1911,11 +1922,13 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     left_img:"left_blue.png",
     right_img:"right_blue.png",
     back_img:"back_blue.png",
-    center_xy:[45.07457,7.690]
+    center_xy:[45.07457,7.690],
+    background:"rgb(246, 252, 255)"
   }
 
   let inventori = {
     name:"inventori",
+    official_name:"TRA SCIENZA E INDUSTRIA",
     vertices:[sobrero, ferraris, cruto],
     map_color_unselected:"#ffea00",
     map_color_selected:"#ffd500",
@@ -1924,11 +1937,13 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     left_img:"left_yellow.png",
     right_img:"right_yellow.png",
     back_img:"back_yellow.png",
-    center_xy:[45.0640,7.6853]
+    center_xy:[45.0640,7.6853],
+    background:"rgb(255, 255, 235)"
   }
 
   let industria = {
     name:"industria",
+    official_name:"L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE",
     vertices:[fiat, olivetti, leumann],
     map_color_unselected:"#eaac8b",
     map_color_selected:"#e5383b",
@@ -1937,7 +1952,8 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     left_img:"left_red.png",
     right_img:"right_red.png",
     back_img:"back_red.png",
-    center_xy:[45.4,7.7030]
+    center_xy:[45.4,7.7030],
+    background:"rgb(253, 244, 243)"
   }
 
   //l'ordine è importante: vengono disegnati in quell'ordine
@@ -2047,7 +2063,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     t.polygon.on("click", function(){clicked_triangle(t)})
     for(let v of t.vertices){ v.marker.on("click", function(){clicked_triangle(t)}) }
   }
-
+  let prima_volta = true
   function clicked_triangle(sel_t){
     //cambia colore triangoli
     for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
@@ -2067,8 +2083,19 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     map.attributionControl.remove()
 
     //apri la pagina giusta
-    document.getElementById("windowbg").classList.add("shown");
-    document.getElementById("pre_window").classList.add("shown");
+    document.getElementById("windowbg").classList.add("shown")
+    if(prima_volta===true){
+      document.getElementById("intro").classList.add("shown")
+      prima_volta = false
+    }
+    else{
+      document.getElementById("dopo_intro").classList.add("shown")
+      document.getElementById("inizia_titolo").innerHTML = sel_t.official_name
+      document.getElementById("dopo_intro").style.backgroundColor = sel_t.background
+    }
+    
+    
+    
     jumpTo("main_"+ sel_t.name)
   }
 
@@ -2145,14 +2172,9 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   if(parameter == "inventori"){clicked_triangle(inventori)}
   if(parameter == "industria"){clicked_triangle(industria)}
 
-  let prima_volta = true
+  
   function premi_intro_function(){
-    if(prima_volta===true){
-      prima_volta = false
-      document.getElementById("intro").classList.remove("shown")
-      document.getElementById("dopo_intro").classList.add("shown")
-    }
-    document.getElementById("pre_window").classList.remove("shown")
+    document.getElementById("intro").classList.remove("shown")
     document.getElementById("window").classList.add("shown")
   }
 
@@ -2162,12 +2184,12 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
   }
 
-  function torna_function(){
-    x_function()
+  function inizia_function(){
+    premi_intro_function()
   }
 
-  function premi_mappa_function(){
-    premi_intro_function()
+  function torna_mappa_function(){
+    x_function()
   }
 
   function torna_intro_function(){
