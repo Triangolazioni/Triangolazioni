@@ -1727,7 +1727,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 </div>
 
 <script>
-  let map = L.map("map", {renderer: L.canvas({ tolerance: 5})}).setView([45.0692, 7.6826], 13)
+  let map = L.map("map", {renderer: L.canvas({ tolerance: 5 })}).setView([45.0692, 7.6826], 13)
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2lhY29tby1tYWxldHRvIiwiYSI6ImNrbGN3dTljNzBjemIycHA3ZnB1MHhmcDMifQ.uTBNVA8j81yiDB0_NHj3GA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -1740,30 +1740,41 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
   let gasometro_icon = new L.icon({
     iconUrl: 'gasIcon.png',
+    shadowUrl: 'gasShadow.png',
     iconSize: [30, 30],
     iconAnchor: [15, 30],
     popupAnchor: [15, 0],
+    shadowSize: [60, 15],
+    shadowAnchor: [15, 15],
   });
 
   let ferraris_icon = new L.icon({
     iconUrl: 'museoIcon.png',
+    shadowUrl: 'museoShadow.png',
     iconSize: [50, 20],
     iconAnchor: [50, 20],
     popupAnchor: [25, 0],
+    shadowSize: [80, 20],
+    shadowAnchor: [50, 18],
   });
 
   let ferraris_BW = new L.icon({
     iconUrl: 'museoBW.png',
+    shadowUrl: 'museoShadow.png',
     iconSize: [50, 20],
     iconAnchor: [50, 20],
     popupAnchor: [25, 0],
+    shadowSize: [80, 20],
+    shadowAnchor: [50, 18],
   });
 
   let cruto_icon = new L.icon({
     iconUrl: 'luceIcon.png',
+    shadowUrl: 'luceShadow.png',
     iconSize: [22, 30],
     iconAnchor: [11, 30],
     popupAnchor: [11, 0],
+    shadowSize: [50, 30],
   });
 
   let cruto_BW = new L.icon({
