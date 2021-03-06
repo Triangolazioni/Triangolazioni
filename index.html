@@ -138,6 +138,11 @@ button.icon img {
   right: 5%;
   bottom: 0rem;
 }
+#spiegazione {
+  z-index: 2;
+  right: 0%;
+  top: 0rem;
+}
 
 button.link {
   font-family: PoppinsMedium;
@@ -328,6 +333,10 @@ figcaption {
 
 <div id="map"></div>
 
+<button id="spiegazione" class="icon showy shown" onclick="spiegazione_function()">
+  <img src="spiegazione.png">
+</button>
+
 <div id="windowbg" class="showy">
 
 <div id="intro" class="showy shown">
@@ -361,6 +370,8 @@ oppure...
 <button id="torna_mappa" class="showy shown" onclick="torna_mappa_function()">
 </button>
 </div>
+
+
 
 <div id="window" class="showy">
 <button class="icon" id="back_button" onclick="back_function()"><img id="back_img"></button>
@@ -2064,7 +2075,9 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     for(let v of t.vertices){ v.marker.on("click", function(){clicked_triangle(t)}) }
   }
   let prima_volta = true
-  function clicked_triangle(sel_t){
+  let sel_t = false
+  function clicked_triangle(clicked_t){
+    sel_t = clicked_t
     //cambia colore triangoli
     for(let t of triangoli){t.polygon.setStyle({color: "transparent"})}
     sel_t.polygon.setStyle({color: sel_t.map_color_selected})
@@ -2081,6 +2094,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     //rimuove bottoni zoom e attribution(antiestetici)
     map.zoomControl.remove()
     map.attributionControl.remove()
+    document.getElementById("spiegazione").classList.remove("shown")
 
     //apri la pagina giusta
     document.getElementById("windowbg").classList.add("shown")
@@ -2093,10 +2107,6 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
       document.getElementById("inizia_titolo").innerHTML = sel_t.official_name
       document.getElementById("dopo_intro").style.backgroundColor = sel_t.background
     }
-    
-    
-    
-    jumpTo("main_"+ sel_t.name)
   }
 
   function x_function(){
@@ -2115,12 +2125,17 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
     map.setView(saved_xy, saved_zoom);
     map.zoomControl.addTo(map)
     map.attributionControl.addTo(map)
+    document.getElementById("spiegazione").classList.add("shown")
 
-    stopVideo(current_page)
+    
     document.getElementById("windowbg").classList.remove("shown")
     document.getElementById("window").classList.remove("shown")
-    current_page.classList.remove("shown")
-    current_page = false
+
+    if(current_page){
+      stopVideo(current_page)
+      current_page.classList.remove("shown")
+      current_page = false
+    }
   }
 
   function back_function(){
@@ -2176,12 +2191,12 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   function premi_intro_function(){
     document.getElementById("intro").classList.remove("shown")
     document.getElementById("window").classList.add("shown")
+    jumpTo("main_"+ sel_t.name)
   }
 
   function cose_function(){
     document.getElementById("intro_intro").classList.remove("shown")
     document.getElementById("spiegazione_intro").classList.add("shown")
-
   }
 
   function inizia_function(){
@@ -2194,8 +2209,15 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 
   function torna_intro_function(){
     document.getElementById("intro").classList.remove("shown")
-    document.getElementById("dopo_intro").classList.add("shown")
     x_function()
+  }
+
+  function spiegazione_function(){
+    document.getElementById("windowbg").classList.add("shown")
+    document.getElementById("intro").classList.add("shown")
+    document.getElementById("intro_intro").classList.remove("shown")
+    document.getElementById("spiegazione_intro").classList.add("shown")
+    document.getElementById("dopo_intro").classList.remove("shown")
   }
 
 </script>
