@@ -67,18 +67,6 @@ html, body {
   background-color: rgba(255, 255, 255, 0);     
 }
 
-#windowbg:not(.shown){
-  display: none;
-}
-
-#windowbg.shown {
-  display: inline;
-
-  animation-name: fadeIn;
-  animation-duration: 0s;
-  animation-fill-mode: forwards;
-}
-
 @keyframes fadeIn {
   0% {opacity: 0;}
   50% {opacity: 0.001;}
@@ -106,14 +94,6 @@ html, body {
   overflow-y: scroll;
   border-radius: 2%;
   padding: .5rem;
-}
-
-.page {
-  display: none;
-}
-
-.page.shown {
-  display: inline;
 }
 
 button {
@@ -337,7 +317,7 @@ figcaption {
 
 <div id="map"></div>
 
-<div id="windowbg">
+<div id="windowbg" class="showy">
 <div id="pre_window" class="showy shown">
 
 <span id="intro" class="showy shown">
@@ -350,7 +330,10 @@ oppure...
 </div>
 
 <div id="spiegazione_intro" class="showy">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet sem eget dui porta, non feugiat tellus elementum. Cras a sapien sed metus euismod vulputate. Morbi eros elit, rutrum quis mauris non, viverra ornare sem. Aenean imperdiet risus et lectus imperdiet rutrum quis in tortor. Phasellus in orci a enim congue viverra. Morbi ut massa rhoncus, convallis sem ut, iaculis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent sagittis tempor pharetra. Etiam vel vestibulum turpis. Sed sollicitudin eget mi eget venenatis. Donec fringilla condimentum bibendum. Sed lobortis dapibus turpis, eu laoreet justo placerat et. Curabitur ut lacinia metus. Aliquam erat volutpat. </p>
+<p><i>Triangolazioni</i> è un progetto del Laboratorio di Public Engagement dell'Università di Torino.</p>
+<p>Abbiamo voluto ricostruire una rete di interconnessioni fra storie – antiche e recenti – di scienziati, intellettuali, scoperte, progressi, rivoluzioni. </p>
+<p>Se oggi la produzione scientifica e culturale appare estremamente specialistica e frammentata, uno dei compiti della divulgazione deve essere quello di contribuire a ritrovare connessioni che superino i confini disciplinari e le distanze cronologiche. </p>
+<p>Queste connessioni sono indispensabili per comprendere il significato di ogni nuova idea, per orientarsi nella rete delle conoscenze umane e per esercitare il pensiero critico.</p>
 
   <h6>Premi per tornare alla mappa</h6>
   <button id="torna_intro" class="showy shown" onclick="torna_intro_function()">
@@ -375,7 +358,7 @@ Premi sulla mappa per confermare
 
 <span class="illuminazione">
 
-<div class="page" id="main_illuminazione">
+<div class="page showy" id="main_illuminazione">
 
 <h1>ILLUMINAZIONE PUBBLICA</h1>
 <div class="video-container">
@@ -403,7 +386,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 </button>
 </div>
 
-<div class="page" id="ill_luce">
+<div class="page showy" id="ill_luce">
 <h3>TORINO ILLUMINATA</h3>
 <h5>LA VILLE LUMIÈRE ITALIANA</h5>
 
@@ -437,13 +420,13 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 </button>
 </div>
 
-<div class="page" id="ill_ap_torce">
+<div class="page showy" id="ill_ap_torce">
 <img class="inizio" src="icone illuminazione/lanterna blu.png">
 <h4>La prima illuminazione</h4>
 <p>Il 1675 si può considerare come l’anno di nascita dell’illuminazione pubblica della città di Torino, in tale anno infatti Madama Reale Giovanni Battista ordinò che venissero accese delle lanterne a sego agli angoli delle strade in modo che fosse possibile percorrerle con una maggiore sicurezza: fino ad allora per uscire di notte era necessario procurarsi una candela, una torcia o una lampada ad olio e anche in tal caso percorrere le strade immerse nell’oscurità poteva essere piuttosto pericoloso.</p>
 <p>Il sistema primitivo introdotto nel 1675 venne notevolmente migliorato a partire dal 1782, quando venne progettato un sistema di lanterne ad olio che pose Torino all’avanguardia nell’illuminazione pubblica europea con un sistema che poteva competere con quello delle maggiori città europee.</p>
 </div>
-<div class="page" id="ill_ap_gas">
+<div class="page showy" id="ill_ap_gas">
 <img class="inizio" src="icone illuminazione/lampione blu.png">
 <h4>L'avvento del gas </h4>
 <p>A Torino il primo luogo ad utilizzare la luce a gas è il caffè del sig. Gianotti in piazza San Carlo, nel 1822 (oggi Caffè San Carlo), ma questa tipo di illuminazione prende veramente piede solo a partire dal 1846, anno in cui <i>“fra l’entusiasmo della popolazione, furono illuminate le contrade Dora Grossa e Nuova”</i>  e, poco dopo, anche le vie Po e Santa Teresa, piazza Castello, piazza San Carlo e piazza Vittorio. Ciò è reso possibile dalla nascita della <i>Società anonima per l'illuminazione della Città di Torino col mezzo del Gaz idrogeno carbonato</i>, il primissimo germoglio di ciò che diventerà dopo molti anni l’Italgas. Presto nascono altri stabilimenti, altre compagnie che si fanno concorrenza a vicenda o collaborano: a Torino sono sorti <a class="texty" onclick="jumpTo('ill_ap_gasom')">gasometri</a> in Porta Nuova, Borgo Dora e Vanchiglia.</p>
@@ -462,7 +445,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
   <img src="immagini illuminazione/Glowing_gas_mantle.jpg">
 </figure>
 </div>
-<div class="page" id="ill_ap_gasom">
+<div class="page showy" id="ill_ap_gasom">
 <img class="inizio" src="icone illuminazione/gas.png">
 <h4>Il gasometro</h4>
 <p>Nel XIX secolo si comincia a usare in modo massiccio il gas nelle città, ad esempio per l’illuminazione o nelle cucine. Il consumo non è omogeneo nell’arco della giornata: a che scopo illuminare una strada a mezzogiorno? Similmente, anche la produzione non è omogenea. Il gas non proviene da paesi esotici lontani come succede con il gas metano di oggi, bensì è prodotto attraverso la distillazione del carbone grazie ad un processo detto <b>gassificazione</b>. Gli operai riversano il carbone nelle camere di distillazione, a temperature elevatissime, ottenendo poi come scarto il coke.</p>
@@ -483,7 +466,7 @@ Gli stabilimenti hanno bisogno di manodopera giorno e notte, ma è ovvio che in 
   <figcaption>Gasometri a Vanchiglia</figcaption>
 </figure>
 </div>
-<div class="page" id="ill_ap_elettr">
+<div class="page showy" id="ill_ap_elettr">
 <img class="inizio" src="icone illuminazione/lampadina blu.png">
 <h4>L'illuminazione elettrica </h4>
 <p>La progenitrice della lampadina è la <b>lampada ad arco</b>, inventata dall’inglese Humphry Davy all’inizio dell’Ottocento, perfezionata poi dal francese Jean-Bernard-Leon Foucault. Si tratta di un dispositivo formato da due elettrodi di carbonio avvicinati, collegati a una potente batteria, rinchiusi in un’ampolla di vetro in cui viene creato il vuoto (per rallentare la combustione dei carboni, altrimenti rapidissima). La luce prodotta è bianca e potente, ma la lampada ad arco è costosa, richiede molta manutenzione e consuma una notevole quantità di energia, caratteristica che la rende adatta all’illuminazione di grandi ambienti e all’illuminazione pubblica nel corso dell’Ottocento.</p> 
@@ -511,7 +494,7 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 <iframe width="729" height="410" src="https://www.youtube.com/embed/nQoot7HZL_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></p>
 
 </div>
-<div class="page" id="ill_ap_festa">
+<div class="page showy" id="ill_ap_festa">
 <img class="inizio" src="icone illuminazione/luci artistiche .png">
 <h4>Le luci della festa </h4>
 <p>Quando la città di notte era scarsamente illuminata si era soliti festeggiare eventi importanti con particolari illuminazioni delle strade della città: le “mostruose illuminazioni”, come venivano chiamate in età barocca, erano un elemento imprescindibile in caso di matrimoni importanti e celebrazioni politiche.</p>
@@ -529,7 +512,7 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 <p>In tempi più moderni non si è persa l’abitudine di celebrare festività e ricorrenze importanti arricchendo la città con luci spettacolari: ogni anno a partire dal 1998 a Torino durante il periodo natalizio si accendono le “Luci d’Artista”, una mostra d’arte contemporanea costituita da opere luminose realizzate da artisti italiani e stranieri.</p>
 </div>
 
-<div class="page" id="ill_ferraris">
+<div class="page showy" id="ill_ferraris">
 <h4>GALILEO FERRARIS</h4>
 <h6 style="text-align:center">PROMOTORE DELL'ILLUMINAZIONE PUBBLICA</h6>
 
@@ -555,7 +538,7 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 </button>
 </div>
 
-<div class="page" id="ill_ap_ferraris">
+<div class="page showy" id="ill_ap_ferraris">
 <img class="inizio" src="icone illuminazione/ferraris blu.png">
 <h4>GALILEO FERRARIS</h4>
 
@@ -569,7 +552,7 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 <i>“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.</i></p>
 
 </div>
-<div class="page" id="ill_ap_museo">
+<div class="page showy" id="ill_ap_museo">
 <img class="inizio" src="icone illuminazione/museo blu.png">
 <h4>REGIO MUSEO INDUSTRIALE</h4>
 
@@ -583,12 +566,12 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 <p><a href="https://www.museotorino.it/view/s/12fab9b75ccd4f8596cdf2a44f27b6ab" target="_blank">Immagini Museo Torino</a></p>
 
 </div>
-<div class="page" id="ill_ap_cons">
+<div class="page showy" id="ill_ap_cons">
 <img class="inizio" src="icone illuminazione/lampione 2.png">
 <h4>CONSIGLIERE COMUNALE</h4>
 <p>A partire dal 1887 Galileo Ferraris fu membro del Consiglio Comunale e della Giunta del comune di Torino: i suoi interventi si concentrarono soprattutto nel tentativo di rendere Torino una città all’avanguardia, in cui i cittadini potessero godere dei benefici portati dallo sviluppo di nuove tecnologie: sua fu ad esempio l’idea di introdurre i tram elettrificati che sfruttavano la sua scoperta del <a class="texty" onclick="jumpTo('inv_ap_magnetico')">motore elettrico a corrente alternata</a>. Di centrale importanza furono i suoi interventi riguardanti l’illuminazione pubblica che permisero il potenziamento di questa e la sua estensione ovunque esistessero scuole serali. Inoltre egli sostenne da subito come il futuro dell’illuminazione fosse da ricercare nell’elettricità: <i>“La luce elettrica subentrerà sulle pubbliche strade a quella del gas. […] I nostri figli la vedranno applicata e quando vi saranno abituati non tollereranno più la luce del gas. Essi avranno un bisogno di più, che noi non abbiamo ancora, ma questa è la legge naturale del progresso”.</i></p>
 </div>
-<div class="page" id="ill_ap_mostra">
+<div class="page showy" id="ill_ap_mostra">
 <img class="inizio" src="icone illuminazione/esposizione gen blu.png">
 <h4>L’ESPOSIZIONE INDUSTRIALE</h4>
 
@@ -599,7 +582,7 @@ Dal 1903 viene usato il tungsteno, introdotto dallo statunitense William David C
 <figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
 </div>
 
-<div class="page" id="ill_cruto">
+<div class="page showy" id="ill_cruto">
 <h4>ALESSANDRO CRUTO</h4>
 <h5>LA LAMPADINA AD INCANDESCENZA</h5>
 
@@ -630,7 +613,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p>L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.</p></button>
 </div>
 
-<div class="page" id="ill_ap_cruto">
+<div class="page showy" id="ill_ap_cruto">
 <img class="inizio" src="icone illuminazione/cruto blu.png">
 <h4>ALESSANDRO CRUTO</h4>
 <p>Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il <b>diamante</b> in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico.</p>
@@ -644,7 +627,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </div>
 
 </div>
-<div class="page" id="ill_ap_lampadina">
+<div class="page showy" id="ill_ap_lampadina">
 <img class="inizio" src="icone illuminazione/lampadina blu.png">
 <h4>UN’INVENZIONE LUMINOSA</h4>
 
@@ -666,7 +649,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="https://www.youtube.com/watch?v=nQoot7HZL_o" target="_blank">Funzionamento delle lampadine moderne</a></p>
 
 </div>
-<div class="page" id="ill_ap_expo">
+<div class="page showy" id="ill_ap_expo">
 <img class="inizio" src="icone illuminazione/esposizione gen blu.png">
 <h4>L’ESPOSIZIONE INDUSTRIALE</h4>
 
@@ -677,7 +660,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
 
 </div>
-<div class="page" id="ill_ap_fabbrica">
+<div class="page showy" id="ill_ap_fabbrica">
 <img class="inizio" src="icone illuminazione/fabbrica blu.png">
 <h4>LA FABBRICA DI ALPIGNANO</h4>
 <br>
@@ -692,7 +675,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="http://www.ecomuseocruto.it/museo/" target="_blank">Sito web del museo</a></p>
   
 </div>
-<div class="page" id="ill_ap_edison">
+<div class="page showy" id="ill_ap_edison">
 <img class="inizio" src="icone illuminazione/edison blu.png">
 <h4>THOMAS EDISON</h4>
 <p>Thomas Edison e Alessandro Cruto nascono nello stesso anno, il 1847. I due inventori sono però figli di due mondi molto distanti.</p>
@@ -711,7 +694,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 
 <span class="inventori">
 
-<div class="page" id="main_inventori">
+<div class="page showy" id="main_inventori">
 
 <h1>TRA SCIENZA E INDUSTRIA</h1>
 <div class="video-container">
@@ -744,7 +727,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 
 </div>
 
-<div class="page" id="inv_sobrero">
+<div class="page showy" id="inv_sobrero">
 <h3>ASCANIO SOBRERO</h3>
 <h5>UNA SCOPERTA ESPLOSIVA</h5>
 
@@ -773,7 +756,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 
 </div>
 
-<div class="page" id="inv_ap_sobrero">
+<div class="page showy" id="inv_ap_sobrero">
 <img class="inizio" src="icone inventori/sobrero.png">
 <h4>ASCANIO SOBRERO</h4>
 <p>Il 12 ottobre 1812 nasce a Casale Monferrato Ascanio Sobrero, destinato a diventare uno dei più importanti chimici italiani della sua epoca, soprattutto per i risvolti applicativi delle sue scoperte.</p>
@@ -799,7 +782,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p>
 
 <p>Tredici anni dopo, nel 1860, Sobrero riprende gli studi sulla nitroglicerina, ne descrive i metodi pratici di preparazione e le proprietà fondamentali e pubblica una Nota su una rivista scientifica. Nel 1863 <a class="texty" onclick="jumpTo('inv_ap_nobel')">Alfred Nobel</a> comincia a preparare industrialmente la nitroglicerina e a commercializzarla come esplosivo. Nobel è reticente riguardo la precisa origine della sua idea di utilizzare la nitroglicerina come esplosivo, ma è probabilmente la nota di Sobrero del 1860, ripubblicata nel 1862 , che illumina il chimico svedese. Il nome di Sobrero non viene dimenticato, e lo stesso Nobel riconosce i meriti dell’italiano, ma spesso girano notizie contraddittorie che attribuiscono allo svedese la scoperta della nitroglicerina. Il successo industriale di Nobel finisce spesso per oscurare il ruolo di Sobrero, che tanto ha contribuito al progresso della chimica applicata. Nobel trascorre molto tempo in Italia e apre un dinamitificio ad Avigliana, ma i due scienziati dai destini intrecciati non si incontreranno mai.</p>
 </div>
-<div class="page" id="inv_ap_nitro">
+<div class="page showy" id="inv_ap_nitro">
 <img class="inizio" src="icone inventori/nitroglicerina.png">
 <h4>COS’E’ LA NITROGLICERINA</h4>
 <p>Ascanio Sobrero sintetizza per primo la nitroglicerina a Torino nel 1847. In quel periodo molti chimici in giro per l’Europa si stavano occupando di esperimenti legati ai composti nitrici, in particolare Sobrero riprende inizialmente gli esperimenti del 1845 del chimico Christian Schönbein di Basilea per la sintesi di nitrocellulosa.</p>
@@ -830,7 +813,7 @@ https://www.youtube.com/watch?v=1IfsvVgwopQ-->
 <p><a href="https://www.youtube.com/watch?v=1IfsvVgwopQ" target="_blank">Video sulla dinamite</a></p>
 
 </div>
-<div class="page" id="inv_ap_nobel">
+<div class="page showy" id="inv_ap_nobel">
 <img class="inizio" src="icone inventori/nobel giallo.png">
 <h4>ALFRED NOBEL</h4>
 <p>Alfred Nobel nasce nel 1833 a Stoccolma e si trasferisce nel 1842 con la famiglia a San Pietroburgo, dove già si trovava il padre che lavorava nell’industria di armamenti e si occupava di esplosivi. La passione per gli esplosivi viene tramandata al figlio Alfred, che studia privatamente ed eccelle particolarmente in chimica. Quindi, quando Nobel legge della nitroglicerina, è già alla ricerca di nuovi esplosivi. Al tempo, l’industria di armamenti era più o meno ferma alla polvere da sparo. I Nobel provano ad implementare gli effetti della polvere aggiungendo della <b>nitroglicerina</b> e brevettano l’idea nel 1863. Ma già nel 1861 Nobel va in giro per l’Europa a cercare finanziamenti: nel 1864 viene istituita la società Nobel e aperta la prima fabbrica di nitroglicerina a Vinterviken, presso Stoccolma. Il composto, scoperto da Sobrero, viene allora chiamato “l’olio esplosivo di Nobel”: così il nome dello svedese comincia a essere associato alla scoperta.</p>
@@ -866,7 +849,7 @@ L’imprenditore svedese è quindi legato all’Italia, luogo che sceglie anche 
 </figure>
 
 </div>
-<div class="page" id="inv_ap_medicina">
+<div class="page showy" id="inv_ap_medicina">
 <img class="inizio" src="icone inventori/Senza titolo.png">
 <h4>USO IN MEDICINA</h4>
 <p>Come può la nitroglicerina, usata come esplosivo, essere anche un <b>medicinale</b>?</p>
@@ -887,7 +870,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 
 </div>
 
-<div class="page" id="inv_ferraris">
+<div class="page showy" id="inv_ferraris">
 <h4>GALILEO FERRARIS</h4>
 <h5>IL MOTORE ELETTRICO</h5>
 
@@ -918,7 +901,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <p>Le prime automobili elettriche nacquero tra fine '800 e inizio '900: inizialmente lo sviluppo del motore a scoppio e quello elettrico avvenne in parallelo e solo in seguito venne preferito il primo modello.</p></button>
 </div>
 
-<div class="page" id="inv_ap_ferraris">
+<div class="page showy" id="inv_ap_ferraris">
 <img class="inizio" src="icone inventori/ferraris giallo.png">
 <h4>GALILEO FERRARIS</h4>
 
@@ -932,7 +915,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <i>“Ma anche la bella compagnia in quei giorni dava ragion di ridere alle sue spalle. Trovo notato fra gli appunti: - Galileo Ferraris - . È il ricordo d’una corsa fatta con lui per un tratto del Viale Margherita. I giornali avevano pubblicato in quel giorno le proposte fatte dalla Società al Municipio per l’istituzione dei tranvai elettrici. E spesso, tra i passeggeri, s’udivano su quell’argomento delle uscite amenissime. Sarebbero forse state più guardinghe le due eleganti bottegaie o modiste o quidsimile, che si divertirono per cinque minuti, se avessero saputo che quel bel signore bruno e pallido, dal sorriso dolcissimo e dagli occhi socchiusi, il quale stava leggermente chino per raccogliere, senza farsi scorgere, i loro discorsi, era un elettricista di fama mondiale. La più giovane, con un cappellino incoronato di magnolie, giurava che sui nuovi tranvai elettrici non avrebbe mai messo piede, e domandata dall’altra del perché, rispondeva vivamente: - Ma come? E s’a se scianca ‘l fil?”.</i></p>
 
 </div>
-<div class="page" id="inv_ap_museo">
+<div class="page showy" id="inv_ap_museo">
 <img class="inizio" src="icone inventori/museo giallo.png">
 <h4>REGIO MUSEO INDUSTRIALE</h4>
 
@@ -946,7 +929,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <p><a href="https://www.museotorino.it/view/s/12fab9b75ccd4f8596cdf2a44f27b6ab" target="_blank">Immagini Museo Torino</a></p>
 
 </div>
-<div class="page" id="inv_ap_tesla">
+<div class="page showy" id="inv_ap_tesla">
 <img class="inizio" src="icone inventori/tesla giallo.png">
 <h4>NIKOLA TESLA</h4>
 
@@ -963,7 +946,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 </figure>
 
 </div>
-<div class="page" id="inv_ap_magnetico">
+<div class="page showy" id="inv_ap_magnetico">
 <img class="inizio" src="icone inventori/motore elettrico.png">
 <h4>IL CAMPO MAGNETICO ROTANTE</h4>
 
@@ -973,7 +956,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 <p><a href="https://www.youtube.com/watch?v=7IMh2D0LE_Q&feature=emb_title" target="_blank">Video del funzionamento</a></p>
 
 </div>
-<div class="page" id="inv_ap_auto">
+<div class="page showy" id="inv_ap_auto">
 <img class="inizio" src="icone inventori/automobile gialla.png">
 <h4>LE AUTOMOBILI ELETTRICHE</h4>
 
@@ -983,7 +966,7 @@ La nitroglicerina viene solitamente usata sottoforma di tavolette sub-linguinali
 
 </div>
 
-<div class="page" id="inv_cruto">
+<div class="page showy" id="inv_cruto">
 <h4>ALESSANDRO CRUTO</h4>
 <h5>L'INVENZIONE LUMINOSA</h5>
 
@@ -1014,7 +997,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p>L'invenzione della lampadina è stata frutto di diversi contributi, eppure Thomas Edison è spesso l'unico personaggio associato alla lampadina, forte probabilmente del contesto in cui operò.</p></button>
 </div>
 
-<div class="page" id="inv_ap_cruto">
+<div class="page showy" id="inv_ap_cruto">
 <img class="inizio" src="icone inventori/cruto giallo.png">
 <h4>ALESSANDRO CRUTO</h4>
 <p>Alessandro Cruto nasce nel 1847 a Piossasco, presso Torino. Cruto è il figlio di un capomastro, che non può permettersi di farlo studiare, così anche Alessandro deve lavorare. La sua passione per la scienza però è fortissima, e il giovane studia da solo di notte e nei momenti di riposo.  A cena con la famiglia, una sera Alessandro scopre da un cugino che il diamante è carbone cristallizzato: quest’idea diventa un pensiero fisso, e il giovane inventore decide che vuole produrre il <b>diamante</b> in laboratorio. Racimola i soldi necessari per aprire un laboratorio presso la sua abitazione, rinuncia alla pipa, chiede prestiti alla famiglia e a qualche amico.</p>
@@ -1028,7 +1011,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </div>
 
 </div>
-<div class="page" id="inv_ap_lampadina">
+<div class="page showy" id="inv_ap_lampadina">
 <img class="inizio" src="icone inventori/lampadina gialla.png">
 <h4>UN’INVENZIONE LUMINOSA</h4>
 
@@ -1050,7 +1033,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="https://www.youtube.com/watch?v=nQoot7HZL_o" target="_blank">Funzionamento delle lampadine moderne</a></p>
 
 </div>
-<div class="page" id="inv_ap_expo">
+<div class="page showy" id="inv_ap_expo">
 <img class="inizio" src="icone inventori/esposizione generale gialla.png">
 <h4>L’ESPOSIZIONE INDUSTRIALE</h4>
 
@@ -1061,7 +1044,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <figure><img src="immagini inventori/Schermata 2021-02-22 alle 11.05.23.png"></figure>
 
 </div>
-<div class="page" id="inv_ap_fabbrica">
+<div class="page showy" id="inv_ap_fabbrica">
 <img class="inizio" src="icone inventori/fabbrica gialla.png">
 <h4>LA FABBRICA DI ALPIGNANO</h4>
 <br>
@@ -1076,7 +1059,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p><a href="http://www.ecomuseocruto.it/museo/" target="_blank">Sito web del museo</a></p>
   
 </div>
-<div class="page" id="inv_ap_edison">
+<div class="page showy" id="inv_ap_edison">
 <img class="inizio" src="icone inventori/edison giallo.png">
 <h4>THOMAS EDISON</h4>
 <p>Thomas Edison e Alessandro Cruto nascono nello stesso anno, il 1847. I due inventori sono però figli di due mondi molto distanti.</p>
@@ -1091,7 +1074,7 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 <p>La storia però non è fatta di se: l’impegno che la società può prendersi ora è quello di ricordare le menti brillanti del passato, per assicurare il massimo sostegno a quelle del presente.</p>
 </div>
 
-<div class="page" id="inv_altri">
+<div class="page showy" id="inv_altri">
 <h4>ALTRI APPROFONDIMENTI</h4>
 
 <button class="link left" onclick="jumpTo('inv_ap_industria')">
@@ -1106,12 +1089,12 @@ Brevettò la sua lampadina ad incandescenza nel 1884.</p></button>
 </button>
 </div>
 
-<div class="page" id="inv_ap_industria">
+<div class="page showy" id="inv_ap_industria">
 <img class="inizio" src="icone inventori/fabbrica gialla.png">
 <h4>L’INDUSTRIA PIEMONTESE</h4>
 <p>Nel 1864 la capitale d’Italia si sposta da Torino a Firenze. Tutte le attività legate alla politica e alla diplomazia vengono trasferite, e questo cambiamento, sebbene preannunciato, affligge un duro colpo al capoluogo piemontese, dove si verificano disordini popolari e malcontento. La crisi sembra inevitabile, ma non manca la volontà di arginare il problema. Nel 1865 l’allora sindaco Emanuele Luserna di Rorà lancia un <b><i>Appello diretto agli industriali esteri e nazionali</i></b>; la popolazione torinese non si abbatte e la città promuove iniziative e opere pubbliche. La crisi preannunciata non si rivela in realtà drammatica e il contesto industriale si risolleva. L’esposizione generale italiana tenutasi a Torino nel 1884 rappresenta a pieno questa ripresa.</p>
 </div>
-<div class="page" id="inv_ap_brevetti">
+<div class="page showy" id="inv_ap_brevetti">
 <img class="inizio" src="icone inventori/brevetti.png">
 <h4>INVENZIONI E BREVETTI</h4>
 <h6>Cos’è un brevetto?</h6>
@@ -1129,7 +1112,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
 <span class="industria">
 
-<div class="page" id="main_industria">
+<div class="page showy" id="main_industria">
 
 <h3>L'IMPATTO DELL'INDUSTRIA NELL'URBANIZZAZIONE</h3>
 
@@ -1156,7 +1139,7 @@ Inoltre bisogna riconoscere che un'invenzione è fisiologicamente il derivato di
 
 </div>
 
-<div class="page" id="ind_fiat">
+<div class="page showy" id="ind_fiat">
 <h3>MIRAFIORI SUD</h3>
 <h5>LA FIAT</h5>
 
@@ -1192,7 +1175,7 @@ L'intraprendenza e il coraggio di quest'uomo e in seguito dei suoi discendenti p
 </button>
 </div>
 
-<div class="page" id="ind_ap_agnelli">
+<div class="page showy" id="ind_ap_agnelli">
 <img class="inizio" src="icone industria/Agnelli.png">
 <h4>LA FAMIGLIA AGNELLI</h4>
 
@@ -1242,7 +1225,7 @@ Nel 1942 si unisce al Reggimento Cavalleggeri di Lodi, partecipa alla Campagna d
 <p>Durante il periodo universitario ha maturato esperienze di lavoro in numerose società mediante diversi tirocini, poi nel 1997 viene scelto dal nonno Gianni Agnelli come suo successore, dunque a 21 anni entra nel Consiglio d’Amministrazione della Fiat e dell’Accomandita Giovanni Agnelli B.V.<br>
 Inoltre, dal 2010 è presidente di Fiat Group e in seguito di GEDI Gruppo Editoriale, oltre che membro del Consiglio di Amministrazione di The Economist e PrtnerRe. È, inoltre, membro attivo di diverse organizzazioni senza scopo di lucro e di gruppi di esperti impegnati nel dibattito geopolitico globale, e trustee del Museum of Modern Art (MoMA). Nel marzo 2020, in seguito alla pandemia di COVID-19, l'amministratore delegato di FCA Mike Manley ha comunicato la decisione da parte di John Elkann e del CDA di rinunciare allo stipendio per tutto l’anno 2020. Il 10 dicembre 2020 assume ad interim la carica di amministratore delegato di Ferrari.</p>
 </div>
-<div class="page" id="ind_ap_f_storia">
+<div class="page showy" id="ind_ap_f_storia">
 <img class="inizio" src="icone industria/fabbrica.png">
 <h4>LA STORIA DELLA FIAT</h4>
 <p>Le origini della FIAT (Fabbrica Italiana Automobili Torino) risalgono al 1899 quando un gruppo i uomini d’affari torinesi, capeggiati da Giovanni Agnelli, si proposero come scopo la realizzazione di un prototipo di automobile. Tali investitori seppero approfittare del fermento creativo e del clima sociale favorevole che caratterizzava in quegli anni Torino, città che si presentava come laboratorio di innovazioni, soprattutto nel campo delle industrie. Le vetture FIAT seppero imporsi subito sia sul mercato italiano, sia su quello internazionale, qualificandosi come prodotti di lusso destinati ad un’élite di consumatori.</p>
@@ -1277,7 +1260,7 @@ Nel 1939 viene inaugurato lo stabilimento Mirafiori a Torino, con l’entrata in
 <p>L’apice della crescita e dello sviluppo si raggiunse negli anni Cinquanta con il boom economico nel contesto del miracolo economico italiano, a cui segue un periodo di forti tensioni sociali da cui però la FIAT esce quasi illesa e per alcuni aspetti anche vincitrice, riuscendo quindi a sopravvivere alle crisi economiche per mantenersi in attivo ancora oggi, nonostante il declino sia inevitabile anche per questa azienda che dopo il boom economico si trovò costretta a ridurre il numero dei lavoratori e a chiudere alcuni stabilimenti.<br>
 Oggi la FIAT può contare su numerose sedi estere e su uno sviluppo nel mercato internazionale con cui riesce a concorrere sul mercato.</p>
 </div>
-<div class="page" id="ind_ap_dipendenti">
+<div class="page showy" id="ind_ap_dipendenti">
 <img class="inizio" src="icone industria/operai2.png">
 <h4>I DIPENDENTI DELLA FIAT</h4>
 <span style="color:blue"> 
@@ -1286,7 +1269,7 @@ Oggi la FIAT può contare su numerose sedi estere e su uno sviluppo nel mercato 
 <p>Rapporto tra la popolazione della città e il numero di dipendenti Fiat e analisi dei luoghi in cui i dipendenti si trasferivano: studio della distribuzione delle diverse classi sociali all’interno della città di Torino (gli operai in periferia, i dipendenti degli uffici in zone più centrali, ma comunque non nel centro città dove restano le élite nei palazzi antichi).]</p>
 </span>
 </div>
-<div class="page" id="ind_ap_artom">
+<div class="page showy" id="ind_ap_artom">
 <img class="inizio" src="icone industria/città.png">
 <h4>L'IMPATTO URBANISTICO</h4>
 <p>Tra il 1949 e il 1971 a Mirafiori vengono realizzati 78 edifici per un totale di 1681 alloggi, che rappresentano il 75% del totale delle residenze realizzate nella città negli stessi anni con un incremento delle costruzioni a partire dal 1954 con il varo dei Piani Case Fiat.</p>
@@ -1310,7 +1293,7 @@ Negli anni Settanta, via Artom assume presto una connotazione negativa, poiché 
 Di quest’epoca, così importante per la storia di Torino, sono state raccolte nel corso degli anni numerose testimonianze che documentano la vita a Mirafiori negli anni Sessanta.</p>
 <p><a class="texty" onclick="jumpTo('ind_ap_test')">Raccolta delle testimonianze</a></p>
 </div>
-<div class="page" id="ind_ap_test">
+<div class="page showy" id="ind_ap_test">
 <h4>TESTIMONIANZE DIRETTE</h4>
 <div class="video-container"><iframe width="729" height="410" src="https://www.youtube.com/embed/TxScDF464Nc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <p>“C’erano campi di grano dove si viaggiava in bicicletta, poi questi campi hanno lasciato lo spazio alle case”.<br>
@@ -1322,13 +1305,13 @@ Il primo palazzo venne buttato giù nel 2000 accompagnato da svariati commenti d
 Sicuramente la Fiat è stata fondamentale nello sviluppo di questo quartiere perché in poco tempo ha dato benessere alle famiglie e ha portato innovazioni in una zona che prima era puramente agricola.<br>
 Nonostante sia un quartiere “anziano”, ci abitano ancora alcuni giovani che hanno scelto di continuare a vivere nelle zone dei loro nonni e genitori, che si erano trasferiti per lavorare in Fiat.</p>
 </div>
-<div class="page" id="ind_ap_futuro">
+<div class="page showy" id="ind_ap_futuro">
 <img class="inizio" src="icone industria/futuro.png">
 <h4>UNO SGUARDO AL FUTURO</h4>
 <p style="color:blue">[Si possono analizzare i piani di riqualificazione e miglioramento attuati negli ultimi anni e quelli in vista per il futuro.]</p>
 </div>
 
-<div class="page" id="ind_olivetti">
+<div class="page showy" id="ind_olivetti">
 <h3>IVREA</h3>
 <h5>L'OLIVETTI</h5>
 
@@ -1361,7 +1344,7 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
 
 </div>
  
-<div class="page" id="ind_ap_olivetti">
+<div class="page showy" id="ind_ap_olivetti">
 <img class="inizio" src="icone industria/olivetti.png">
 <h4>LA FAMIGLIA OLIVETTI</h4>
 <h6>Camillo Olivetti</h6>
@@ -1396,7 +1379,7 @@ La Lettera 22, è esposta nella collezione permanente di design al MoMA (Museum 
 <p>Quell'anno, in segno di lutto, la città di Ivrea annullò le festività dello storico Carnevale, decisione che raramente nella storia era stata presa.</p>
 <p>Al momento del suo decesso, l'azienda, fondata dal padre e da lui per lungo tempo diretta, vantava una presenza su tutti i maggiori mercati internazionali, con circa 36.000 dipendenti, di cui oltre la metà all'estero.</p>
 </div>
-<div class="page" id="ind_ap_o_storia">
+<div class="page showy" id="ind_ap_o_storia">
 <img class="inizio" src="icone industria/Dipendenti_olivetti.png">
 <h4>L'AZIENDA E I DIPENDENTI</h4>
 <p>Nel corso del Novecento i miglioramenti dell’economia e della qualità della vita sono largamente dipesi dall’acquisizione passiva o attiva di competenze scientifiche e tecnologiche. Un'importante impronta nella storia italiana fu quella scalfita dalla società «Olivetti» fondata da Camillo Olivetti a Ivrea il 29 ottobre 1908 come “prima fabbrica nazionale di macchine per scrivere”, ma ben presto la sua attività si estese ad altri prodotti per l’ufficio.</p>
@@ -1435,7 +1418,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
 <p>La progressiva riduzione dei margini di redditività del business informatico e i nuovi sviluppi delle telecomunicazioni, negli anni '90 spingono l'Olivetti a spostare il baricentro verso questo settore, dapprima creando Omnitel (1990) e Infostrada (1995) e poi acquisendo il controllo di Telecom Italia (1999), con la quale si fonde nel 2003.</p>
 <p>L’attuale Olivetti, controllata da TIM, mantiene viva la tradizione di qualità e innovazione della Società, operando sul mercato come solution provider che integra prodotti innovativi con servizi evoluti in grado di automatizzare processi e attività aziendali.</p>
 </div>
-<div class="page" id="ind_ap_o_archi">
+<div class="page showy" id="ind_ap_o_archi">
 <img class="inizio" src="icone industria/città.png">
 <h4>L'IMPATTO URBANISTICO</h4>
 <p>Architetture industriali capaci di integrare la funzionalità della fabbrica con la bellezza estetica e il rispetto ambientale; luoghi del lavoro pensati a misura d'uomo, ma compatibili con le esigenze economiche e produttive; piani urbanistici, quartieri residenziali, biblioteche, servizi sociali, colonie, mense, asili nido, pensati e costruiti per fare di un'area industriale un territorio dove la vita dell'uomo non sia sacrificata solo agli scopi della produzione, ma rispetti anche le esigenze delle persone e della società.</p>
@@ -1478,7 +1461,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
   <figcaption>Veduta aerea degli stabilimenti Olivetti di Ivrea. Si distinguono, sulla sinistra degli stabilimenti ICO (Ing. Camillo Olivetti), la mensa aziendale (edificio a pianta poligonale) progettata dall'architetto Ignazio Gardella ed il Centro Studi ed Esperienze Olivetti (edificio con pianta a quattro bracci) dell'architetto Eduardo Vittoria; in alto a sinistra si nota il Palazzo Uffici con pianta a tre bracci.</figcaption>
 </figure>
 </div>
-<div class="page" id="ind_ap_o_22">
+<div class="page showy" id="ind_ap_o_22">
 <img class="inizio" src="icone industria/lettera_22_olivetti.png">
 <h4>LA LETTERA 22</h4>
 <p>Il progetto di una macchina compatta e leggera, facilmente trasportabile, affidabile e pratica è del 1950. Alla fabbrica di Ivrea, incaricati dall’industriale Adriano Olivetti, ci studiano l’architetto Marcello Nizzoli e il giovane ingegnere Giuseppe Beccio. Nasce così la “Lettera 22”, carrozzeria in alluminio di colore rosa, azzurro o verde, con i suoi soli 3,7 chilogrammi di peso viene venduta accompagnata da una valigetta in similpelle con maniglia per agevolarne il trasporto.</p>
@@ -1497,7 +1480,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
 <p>La <b>Lettera 22</b>, è esposta nella collezione permanente di design al <b>MoMA</b> (Museum of Modern Art) di New York.</p>
 </div>
 
-<div class="page" id="ind_leumann">
+<div class="page showy" id="ind_leumann">
 <h3>BORGATA LEUMANN</h3>
 <h5>TRA ARTE E VITA QUOTIDIANA</h5>
 
@@ -1531,7 +1514,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
 </button>
 </div>
   
-<div class="page" id="ind_ap_napoleone">
+<div class="page showy" id="ind_ap_napoleone">
 <img class="inizio" src="icone industria/leumann.png">
 <h4>NAPOLEONE LEUMANN</h4>
 <p>Napoleone Leumann nasce a Lomello (PV) il 1° marzo 1841 da una famiglia svizzera e segue le orme del padre Isacco nell’ambito dell’imprenditoria.</p>
@@ -1541,7 +1524,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
 <p>Crea, quindi, una borgata operaia a lato dello stabilimento, affacciata su corso Francia e collegata alla città dalla linea tranviaria Torino-Rivoli, lungo la quale viene costruita una stazione, il cui progetto è affidato all'architetto Pietro Fenoglio.</p>
 <p>Muore nel 1930 e viene sepolto nel Cimitero monumentale di Torino, nel settore riservato ai non cattolici.</p>
 </div>
-<div class="page" id="ind_ap_l_storia">
+<div class="page showy" id="ind_ap_l_storia">
 <img class="inizio" src="icone industria/fabbrica.png">
 <h5>IL COTONIFICIO E IL VILLAGGIO LEUMANN</h5>
 <p>Il Villaggio Leumann venne costruito tra la fine del XIX secolo e l’inizio del XX secolo, in particolare tra il 1892 e il 1914, con contratto di società del 9 ottobre 1875 e su progetto di Pietro Fenoglio. Lo stabilimento sorgeva nei pressi della bealera di Grugliasco, utile, poiché per lavorare i tessuti serviva molta acqua e poiché era grazie a una turbina che si produceva l’energia elettrica per tutta l’area.</p>
@@ -1569,7 +1552,7 @@ Si tratta di prodotti soprattutto meccanici o elettromeccanici,ma non più all�
 </figure>
 <p>Il Villaggio Leumann venne concepito per essere del tutto autonomo. Accanto alle abitazioni una serie di strutture assistenziali gratuite supportate da iniziative assistenziali (cassa malattia, cassa nuziale, cassa pensioni, liquidazione) facilitavano la vita e il lavoro alla Borgata. Nel comprensorio est trovano spazio il Convitto per le Operaie (1890-1906), il Refettorio (1890-1909), poi trasferito nell’area dello stabilimento e ora non più visibile, l’edificio dei Bagni (1902), il Teatro (1890) e l’Albergo Il Persico (1891). Nel comprensorio ovest, l’Ufficio Postale (1911), la Scuola Materna (1900) la Scuola Elementare (1906), la Palestra (1906), la Chiesa di Santa Elisabetta (1907), il Circolo per gli Impiegati e uno Spaccio Alimentare. L’Asilo Nido (1890), un tempo ubicato all’interno dello stabilimento, fu poi trasferito in una graziosa palazzina accanto alla fabbrica, l’Ambulatorio medico (1891) era in prossimità dell’entrata all’opificio, mentre la stazionetta (1903) trova collocazione di fronte all’ingresso. L’entrata al Cotonificio è ancora oggi caratterizzata da due piccole costruzioni similari del 1880 in litocemento con decorazioni in legno munite di torrette angolari, loggia e balconi e poste l’una di fronte all’altra sul corso Francia.</p>
 </div>
-<div class="page" id="ind_ap_l_dip">
+<div class="page showy" id="ind_ap_l_dip">
 <img class="inizio" src="icone industria/popolazione Leumann.png">
 <h4>I DIPENDENTI E LA POPOLAZIONE</h4>
 <p>Il Villaggio Leumann è studiato per essere del tutto autonomo.<br> 
@@ -1586,7 +1569,7 @@ Accanto alle abitazioni una serie di strutture assistenziali gratuite supportate
 <p>Negli anni sono state raccolte numerose testimonianze dirette della vita nella Borgata, che descrivono la vita e l'ambiente e che sono contenute nell'archivio storico dell'Associazione Amici della Scuola Leumann.</p>
 <p><a class="texty" onclick="jumpTo('ind_ap_l_test')">Raccolta delle testimonianze</a></p>
 </div>
-<div class="page" id="ind_ap_l_test">
+<div class="page showy" id="ind_ap_l_test">
 <h4>TESTIMONIANZE DIRETTE</h4>
 <span style="color:blue"><p>
   [Testimonianze raccolte dai soci dell’Associazione Amici della Scuola Leumann:
@@ -1606,7 +1589,7 @@ Accanto alle abitazioni una serie di strutture assistenziali gratuite supportate
 </p>
 </span>
 </div>
-<div class="page" id="ind_ap_l_urb">
+<div class="page showy" id="ind_ap_l_urb">
 <img class="inizio" src="icone industria/città.png">
 <h4>L'IMPIANTO URBANISTICO</h4>
 <p>Il villaggio Leumann, in stile Liberty, occupa una superficie di 60.000 mq, è costituito da due comprensori residenziali accanto all’edificio industriale. La paternità della realizzazione è dell’ingegnere Pietro Fenoglio, che vi lavorò dal 1901 fino al 1912. Inizialmente il centro operaio era destinato a circa 1000 persone: operai e impiegati, con le famiglie. Si conservano 59 edifici, tra villini e case, per un totale di 120 alloggi. Ciascun alloggio era dotato dei propri servizi igienici e, al piano terra, di un giardino in condivisione, come tipico dell’urbanizzazione dell’epoca.</p>
@@ -1634,7 +1617,7 @@ Era collocata nel comprensorio ovest, con 6 classi elementari, e l’asilo infan
 <p>Nel villaggio sono stati realizzati anche altri edifici, come il Convitto delle operaie e il Circolo degli operai, la Chiesa di Santa Elisabetta, oltre al Cotonificio e alle case operaie per le famiglie.</p>
 </button>
 </div>
-<div class="page" id="ind_ap_scuola">
+<div class="page showy" id="ind_ap_scuola">
 <h4>LA SCUOLA</h4>
 
 <p>La costruzione della scuola termina nel 1903 nel comprensorio ovest del Villaggio e ospita al piano terreno l'"asilo infantile Wera", dedicato alla memoria della figlioletta dell'imprenditore morta in tenera età, ed al piano superiore sei classi elementari. Nel 1910 l'edificio viene ampliato con la realizzazione di altre due aule e servizi al secondo piano.</p> 
@@ -1663,7 +1646,7 @@ Oggi la scuola elementare si trova al primo e al secondo piano con le cinque aul
 Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomuseo Villaggio Leumann della Città di Collegno, inserito nel progetto di Cultura Materiale della Provincia di Torino.</p>
 
 </div>
-<div class="page" id="ind_ap_stazio">
+<div class="page showy" id="ind_ap_stazio">
 <h4>LA STAZIONETTA</h4>
 <p>All’inizio del 1700, per volontà di Vittorio Amedeo II, viene tracciata la Strada Reale di Francia, l’attuale corso Francia, che doveva collegare Torino con il Castello di Rivoli e con la Francia. Era uno stradone rettilineo fiancheggiato da due file di olmi lungo 11 Km e largo 12 metri che garantiva il collegamento tra Torino e Rivoli in un’ora e mezza circa a cavallo.</p> 
 <figure>
@@ -1690,7 +1673,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
   <figcaption>La stazionetta oggi</figcaption>
 </figure>
 </div>
-<div class="page" id="ind_ap_altri">
+<div class="page showy" id="ind_ap_altri">
 <h4>GLI ALTRI EDIFICI</h4>
 <p>Il <b>cotonificio</b> sorge al centro del villaggio, mentre a est e a ovest gli spazi sono stati riservati alle abitazioni degli operai. L’accesso principale su Corso Francia conduce direttamente alla fabbrica.</p>
 <figure>
@@ -1744,7 +1727,7 @@ Il piano terra è stato adibito a sede del Centro di interpretazione dell'Ecomus
 <br>
 <p style="font-size:0.8rem">Le immagini e i dati sono raccolti nel libro “Il Cotonificio Leumann e le sue Istituzioni d’igiene, di educazione e di previdenza”, Officina d’Arti Grafiche AARAU (Svizzera) 1911, consultabile presso l’Archivio e Centro Documentazione del Villaggio Leumann.</p>
 </div>
-<div class="page" id="ind_ap_l_futuro">
+<div class="page showy" id="ind_ap_l_futuro">
 <img class="inizio" src="icone industria/futuro.png">
 <h5>UNO SGUARDO AL PRESENTE E AL FUTURO</h5>
 <p>Il Villaggio Operaio Leumann è oggi un importante documento di carattere storico e architettonico. </p>
